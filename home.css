@@ -1,0 +1,72 @@
+html {
+    background: url('https://w.wallhaven.cc/full/rd/wallhaven-rd8967.jpg') center;
+    background-size: cover;
+}
+
+body {
+    font-family: sans-serif;
+    font-size: 18px;
+    margin: 0;
+    color: #333;
+    background: #f6f6fcac;
+    /* backdrop-filter: blur(12px); */
+}
+
+a {
+    transition: .2s;
+    text-decoration: none;
+    opacity: .75;
+    color: inherit;
+}
+
+a:hover {
+    opacity: 1;
+    color: #3a7;
+}
+
+#main {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100vh;
+}
+
+#main>* {
+    width: 90vw;
+    max-width: 1024px;
+}
+
+.dp2 {
+    font-size: 2em;
+}
+
+nav,
+footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.iconset {
+    display: inline-block;
+    margin: 0 -.5em;
+}
+
+.iconset>a {
+    display: inline-block;
+    margin: 0 .5em;
+}
+
+.alist {
+    display: inline-block;
+}
+
+.alist>a {
+    display: block;
+}
+
+footer,
+.dim {
+    opacity: .6;
+}
