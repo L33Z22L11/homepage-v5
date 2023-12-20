@@ -1,6 +1,24 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
 html {
-    background: url('https://w.wallhaven.cc/full/rd/wallhaven-rd8967.jpg') center;
+    animation: bgAnim 5s infinite alternate;
+    background: url('https://w.wallhaven.cc/full/rd/wallhaven-rd8967.jpg') fixed center;
+    background: linear-gradient(60deg, #23a6d5, #23d5ab, #ee7752);
     background-size: cover;
+    background-size: 500%;
+}
+
+@keyframes bgAnim {
+    0% {
+        background-position: 0 0;
+    }
+
+    100% {
+        background-position: 100% 100%;
+    }
 }
 
 body {
@@ -8,7 +26,7 @@ body {
     font-size: 18px;
     margin: 0;
     color: #333;
-    background: rgba(247, 247, 255, .8);
+    background: rgba(247, 247, 255, .5);
     /* backdrop-filter: blur(12px); */
 }
 
@@ -25,46 +43,53 @@ a:hover {
     color: #3a7;
 }
 
+code {
+    font-size: .8em;
+    margin: 0 .2em;
+    padding: .1em .2em;
+    color: #3a7;
+    border-radius: .2em;
+    background: rgba(63, 191, 127, .2);
+}
+
 #main {
     display: flex;
     align-items: center;
     flex-direction: column;
     justify-content: space-between;
-    height: 100vh;
+    min-height: 100vh;
 }
 
 #main>* {
     width: 90vw;
     max-width: 1024px;
+    margin: 1rem 0;
 }
 
 .dp2 {
     font-size: 2em;
 }
 
-nav,
-footer {
+.between {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    gap: 1em;
 }
 
-.iconset {
-    display: inline-block;
-    margin: 0 -.5em;
+.list {
+    display: flex;
+    gap: 1em;
 }
 
-.iconset>a {
-    display: inline-block;
-    margin: 0 .5em;
+.vlist {
+    display: flex;
+    flex-direction: column;
+    gap: .2em;
 }
 
-.alist {
-    display: inline-block;
-}
-
-.alist>a {
-    display: block;
+.vlist>h4 {
+    margin: .5rem 0;
 }
 
 footer,
