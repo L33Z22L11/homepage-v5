@@ -12,10 +12,7 @@ export default defineConfig({
     // https://vitepress.dev/reference/default-theme-config
     logo: '/icon.png',
     nav: nav(),
-
-    sidebar: [
-    ],
-
+    sidebar: sidebar(),
     socialLinks: [
       { icon: 'github', link: 'https://github.com/L33Z22L11' },
     ],
@@ -43,10 +40,12 @@ export default defineConfig({
       copyright: `© 2019-${new Date().getFullYear()} 纸鹿本鹿 / Zhilu / L33Z22L11`
     },
   },
+
   head: [
     ['link', { rel: 'icon', href: '/icon.png' }],
     ['link', { rel: 'stylesheet', href: '//s1.hdslb.com/bfs/static/jinkela/long/font/regular.css', media: 'none', onload: 'media="all"' }],
     ['link', { rel: 'stylesheet', href: '//s1.hdslb.com/bfs/static/jinkela/long/font/medium.css', media: 'none', onload: 'media="all"' }],
+    ['link', { rel: 'stylesheet', href: '//lib.baomitu.com/font-awesome/6.5.1/css/all.min.css', media: 'none', onload: 'media="all"' }],
   ],
 })
 
@@ -55,9 +54,13 @@ function nav(): DefaultTheme.NavItem[] {
     { text: '博客', link: 'https://blog.zhilu.cyou' },
     {
       text: '站点', items: [
-        { text: 'CO导航', link: 'https://cooo.site' },
-        { text: '考试时钟', link: 'https://exam.thisis.host' },
-        { text: 'archlinux简明指南-镜像', link: 'https://arch.cooo.site/' },
+        {
+          items: [
+            { text: 'CO导航', link: 'https://cooo.site' },
+            { text: '考试时钟', link: 'https://exam.thisis.host' },
+            { text: 'Arch指南-镜像', link: 'https://arch.cooo.site/' },
+          ]
+        },
         { text: '更多', link: '/site' },
       ]
     },
@@ -72,5 +75,10 @@ function nav(): DefaultTheme.NavItem[] {
       ]
     },
     { text: '友链', link: 'https://blog.zhilu.cyou/link' },
+  ]
+}
+
+function sidebar(): DefaultTheme.Sidebar {
+  return [
   ]
 }

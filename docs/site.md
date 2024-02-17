@@ -4,15 +4,15 @@
 
 ### [CO导航](https://cooo.site) <Badge text="西安邮电大学"/>
 西邮导航服务——更适合西邮宝宝体质的网址导航。
-[Github](https://github.com/L33Z22L11/XUPT-Nav)
+[<i class="fa-brands fa-github"></i>](https://github.com/L33Z22L11/XUPT-Nav)
 
 ### [考试时钟](https://exam.thisis.host) <Badge text="宝鸡中学"/>
 用于在考试时展示科目信息、起止时间。
-[GitHub](https://github.com/L33Z22L11/ExamClock)
+[<i class="fa-brands fa-github"></i>](https://github.com/L33Z22L11/ExamClock)
 
 ### [Arch Linux 简明指南](https://arch.cooo.site) <Badge type="info" text="镜像站"/>
 
-[archlinux 简明指南](https://arch.icekylin.online)的镜像，[仓库](https://github.com/L33Z22L11/ArchGuide-Mirror) Fork 自 [源项目](https://github.com/nakanomikuorg/arch-guide)。
+[archlinux 简明指南](https://arch.icekylin.online)的镜像，[<i class="fa-brands fa-github"></i>仓库](https://github.com/L33Z22L11/ArchGuide-Mirror) Fork 自 [<i class="fa-brands fa-github"></i>源项目](https://github.com/nakanomikuorg/arch-guide)。
 
 ## 组织门户
 

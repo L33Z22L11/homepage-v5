@@ -9,5 +9,24 @@
 
 .VPImage {
   border-radius: 100%;
-  transition: .5s;
+}
+
+.vp-doc a {
+  transition: .2s;
+  text-decoration: underline var(--vp-c-brand-soft);
+
+  border-radius: .2em;
+  outline: .1em solid transparent;
+}
+
+.vp-doc a:hover {
+  outline: .1em solid var(--vp-c-brand-soft);
+  background: var(--vp-c-brand-soft);
+}
+
+.fa-solid,
+.fa-regular,
+.fa-brands {
+  width: 1.2em;
+  text-align: center;
 }

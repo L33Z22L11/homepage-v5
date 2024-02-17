@@ -19,17 +19,17 @@ hero:
       
 
 features:
-  - icon: 📖
+  - icon: <img src="https://blog.zhilu.cyou/static/icon.png" width="50%">
     title: 纸鹿摸鱼处
     details: 折腾不止，摸鱼生活——摸门🙏🏻
     link: https://blog.zhilu.cyou
     linkText: 再多看一眼 Blog
-  - icon: 🛣
+  - icon: <img src="https://cooo.site/favicon.ico" width="50%">
     title: CO导航
     details: 更适合西邮宝宝体质的网址导航
     link: https://cooo.site
     linkText: 访问
-  - icon: ⏲️
+  - icon: <img src="https://exam.thisis.host/favicon.ico" width="50%">
     title: 考试时钟
     details: 考试科目、起止时间、进度展示。
     link: https://exam.thisis.host
