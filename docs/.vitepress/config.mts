@@ -23,7 +23,7 @@ export default defineConfig({
     lightModeSwitchTitle: '切换到浅色模式',
     darkModeSwitchTitle: '切换到深色模式',
     sidebarMenuLabel: '菜单',
-    outline: { label: '目录' },
+    outline: { level: [2, 3], label: '目录' },
     returnToTopLabel: '返回顶部',
     editLink: {
       pattern: 'https://github.com/L33Z22L11/ZhiluSite/edit/main/docs/:path',
@@ -37,7 +37,7 @@ export default defineConfig({
 
     footer: {
       message: '',
-      copyright: `© 2019-${new Date().getFullYear()} 纸鹿本鹿 / Zhilu / L33Z22L11`
+      copyright: `© <a href="/about">2016</a>-${new Date().getFullYear()} 纸鹿本鹿 (Zhilu, L33Z22L11)`
     },
   },
 
@@ -64,21 +64,13 @@ function nav(): DefaultTheme.NavItem[] {
         { text: '更多', link: '/site' },
       ]
     },
-    {
-      text: '社交',
-      items: [
-        { text: 'QQ群', link: 'https://jq.qq.com/?_wv=1027&k=lQfNSeEd' },
-        { text: '哔哩哔哩', link: 'https://space.bilibili.com/108831145' },
-        { text: '网易云音乐', link: 'https://music.163.com/#/user/home?id=444705789' },
-        { text: 'Telegram', link: 'https://t.me/L33Z22L11' },
-        { text: '邮箱', link: 'mailto:hi@zhilu.cyou' },
-      ]
-    },
     { text: '友链', link: 'https://blog.zhilu.cyou/link' },
+    { text: '关于', link: '/about' },
   ]
 }
 
 function sidebar(): DefaultTheme.Sidebar {
   return [
+    { text: '主页', link: '/' },
   ]
 }
