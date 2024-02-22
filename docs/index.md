@@ -30,7 +30,7 @@ features:
     linkText: 访问
   - icon: <img src="https://exam.thisis.host/favicon.ico" width="50%">
     title: 考试时钟
-    details: 学校考试科目/时间/进度大屏展示。
+    details: 宝鸡中学考试科目/时间/进度大屏展示。
     link: https://exam.thisis.host
     linkText: 启动
 ---
