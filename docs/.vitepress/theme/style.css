@@ -6,9 +6,14 @@
   --vp-home-hero-name-background: -webkit-linear-gradient(60deg, #5cf, #46e);
   --vp-home-hero-image-background-image: linear-gradient(120deg, #5cf 50%, #46e 50%);
   --vp-home-hero-image-filter: blur(8em);
+
+  --vp-c-brand-1: #37e;
+  --vp-c-brand-2: #58e;
+  --vp-c-brand-3: #47d;
+  --vp-c-brand-soft: rgba(50, 120, 255, 0.1);
 }
 
-.VPMenuGroup>.title{
+.VPMenuGroup>.title {
   font-size: 11px;
 }
 
@@ -18,15 +23,13 @@
 
 .vp-doc a {
   transition: .2s;
-  text-decoration: underline var(--vp-c-brand-soft);
-
-  border-radius: .2em;
-  outline: .1em solid transparent;
+  text-decoration: none;
+  background: linear-gradient(0, var(--vp-c-brand-soft), var(--vp-c-brand-soft)) no-repeat center bottom / 100% 2px;
 }
 
 .vp-doc a:hover {
-  outline: .1em solid var(--vp-c-brand-soft);
-  background: var(--vp-c-brand-soft);
+  background: linear-gradient(0, var(--vp-c-brand-soft), var(--vp-c-brand-soft)) no-repeat center bottom / 100% 100%;
+  border-radius: .2em;
 }
 
 .fa-solid,
@@ -36,7 +39,7 @@
   text-align: center;
 }
 
-.icon{
+.icon {
   display: inline-block;
   vertical-align: middle;
   height: 1.5em;
