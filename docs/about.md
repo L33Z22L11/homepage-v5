@@ -7,9 +7,7 @@ next: false
 ## 个人简介
 男，汉族，2003年9月出生，陕西人。西安邮电大学计算机学院本科在读。
 
-目前加入了 [西邮 Linux 兴趣小组](https://github.com/xiyou-linuxer)。
-
-Windows 11 和 Arch Linux 用户。
+[西邮 Linux 兴趣小组](https://github.com/xiyou-linuxer)成员，Windows 11 和 Arch Linux 用户。
 
 还是<ruby>电脑疑难杂症解决<rt>Problem Troubleshooting for PC</rt></ruby>大佬。
 

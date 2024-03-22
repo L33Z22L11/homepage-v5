@@ -26,8 +26,8 @@ export default defineConfig({
     outline: { level: [2, 3], label: '目录' },
     returnToTopLabel: '返回顶部',
     editLink: {
-      pattern: 'https://github.com/L33Z22L11/ZhiluSite/edit/main/docs/:path',
-      text: '在 GitHub 上编辑此页面'
+      pattern: 'https://github.com/L33Z22L11/ZhiluSite/blame/main/docs/:path',
+      text: '源代码'
     },
     lastUpdated: {
       text: '更新于',
@@ -37,13 +37,13 @@ export default defineConfig({
 
     footer: {
       message: '',
-      copyright: `© <a href="/about">2016</a>-${new Date().getFullYear()} 纸鹿本鹿 (Zhilu, L33Z22L11)`
+      copyright: `© ${new Date().getFullYear()} 纸鹿本鹿 (Zhilu, L33Z22L11)`
     },
   },
 
   head: [
     ['link', { rel: 'icon', href: '/icon.png' }],
-    ['link', { rel: 'stylesheet', href: '//s1.hdslb.com/bfs/static/jinkela/long/font/regular.css', media: 'none', onload: 'media="all"' }],
+    // ['link', { rel: 'stylesheet', href: '//s1.hdslb.com/bfs/static/jinkela/long/font/regular.css', media: 'none', onload: 'media="all"' }],
     ['link', { rel: 'stylesheet', href: '//s1.hdslb.com/bfs/static/jinkela/long/font/medium.css', media: 'none', onload: 'media="all"' }],
     ['link', { rel: 'stylesheet', href: '//lib.baomitu.com/font-awesome/6.5.1/css/all.min.css', media: 'none', onload: 'media="all"' }],
   ],
