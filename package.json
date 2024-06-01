@@ -1,13 +1,18 @@
 {
   "name": "zhilu-site",
-  "version": "3.0.0",
+  "version": "4.0.0",
   "private": true,
+  "type": "module",
   "devDependencies": {
-    "vitepress": "^1.0.1"
+    "@zinkawaii/stylelint-config": "^0.1.3",
+    "nuxt": "^3.11.2",
+    "nuxt-icon": "1.0.0-beta.6",
+    "sass": "^1.77.4",
+    "stylelint": "^16.6.1"
   },
   "scripts": {
-    "docs:dev": "vitepress dev docs",
-    "docs:build": "vitepress build docs",
-    "docs:preview": "vitepress preview docs"
+    "prepare": "nuxt prepare",
+    "dev": "nuxt dev --host",
+    "generate": "nuxt generate"
   }
 }
