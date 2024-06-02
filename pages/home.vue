@@ -1,11 +1,9 @@
 <script setup>
+useHead({ title: '' });
 definePageMeta({
     alias: ['/'],
     title: '主页'
-})
-useHead({
-    title: ''
-})
+});
 </script>
 
 <template>
@@ -20,18 +18,28 @@ useHead({
                 </div>
                 <p class="desc">纸鹿至麓不知路，支炉制露不止漉。</p>
                 <div>
-                    <Button icon="ph:github-logo-duotone" to="https://github.com/L33Z22L11"
-                        target="_blank">GitHub</Button>
-                    <Button icon="ph:files-duotone" to="https://blog.zhilu.cyou/" target="_blank">博客</Button>
+                    <ZButton icon="ph:github-logo-duotone" to="https://github.com/L33Z22L11" target="_blank">GitHub
+                    </ZButton>
+                    <ZButton icon="ph:files-duotone" to="https://blog.zhilu.cyou/" target="_blank">博客</ZButton>
                 </div>
             </div>
 
         </section>
+
         <section class="field-item">
             <h2>介绍</h2>
             <p>
-                <NuxtLink class="text-primary" to="https://github.com/xiyou-linuxer">西邮 Linux 兴趣小组</NuxtLink> 成员，Windows
+                <ZLink to="https://github.com/xiyou-linuxer">西邮 Linux 兴趣小组</ZLink> 成员，Windows
                 11 和 Arch Linux 用户。
+            </p>
+        </section>
+
+        <section class="field-item">
+            <h2>关于网站</h2>
+            <p>
+                还在修缮中。
+                <br>
+                Built with Nuxt.js and KazariEX.
             </p>
         </section>
     </div>
@@ -41,7 +49,7 @@ useHead({
 .field-item {
     display: grid;
     grid-template-columns: 120px 1fr;
-    gap: 1rem;
+    gap: 24px;
 
     & + & {
         margin-top: 3rem;

@@ -3,10 +3,14 @@ export default defineNuxtConfig({
         // '@nuxt/image',
         'nuxt-icon',
     ],
-    ssr: false,
     devtools: { enabled: false },
     css: [
         'assets/main.scss',
+    ],
+    components: [
+        { path: '~/components/particle', prefix: 'Z' },
+        { path: '~/components/zhilu', prefix: 'ZL' },
+        '~/components'
     ],
     app: {
         rootId: "z-root",

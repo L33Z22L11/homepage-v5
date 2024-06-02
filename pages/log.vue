@@ -1,3 +1,8 @@
+<script setup>
+useHead({ title: '日志' });
+definePageMeta({ headerText: '互联网上的活动记录' });
+</script>
+
 <template>
     <div class="wrapper">
         <table>
@@ -10,20 +15,20 @@
             <tbody>
                 <tr>
                     <td>2016-06-28</td>
-                    <td>开始使用昵称<code>纸鹿君_L33Z22L11</code>在互联网上活跃</td>
+                    <td>开始使用昵称 <code>纸鹿君_L33Z22L11</code> 在互联网上活跃</td>
                 </tr>
                 <tr>
                     <td>2017-09-08</td>
                     <td>
                         Logo：
-                        <IconZL />PaperyDeer
+                        <ZLIconOld />PaperyDeer
                     </td>
                 </tr>
                 <tr>
                     <td>2019-03-01</td>
                     <td>
                         Logo：
-                        <ZIcon />
+                        <ZLIcon />
                     </td>
                 </tr>
                 <tr>
@@ -54,3 +59,7 @@
         </table>
     </div>
 </template>
+
+<style scoped lang="scss">
+td { padding: 0.5rem 1rem; }
+</style>

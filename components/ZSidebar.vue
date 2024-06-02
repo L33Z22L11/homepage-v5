@@ -10,7 +10,7 @@ const nav = [
             { icon: "ph:files-duotone", title: "日志", link: "/log" },
         ]
     }, {
-        title: 'Social', list: [
+        title: '社交', list: [
             { icon: "ri:qq-fill", title: "群: 169994096", link: "https://jq.qq.com/?_wv=1027&k=lQfNSeEd", external: true },
             { icon: "ph:github-logo-duotone", title: "Github", link: "https://github.com/L33Z22L11", external: true },
             { icon: "ph:telegram-logo-duotone", title: "Telegram", link: "https://t.me/L33Z22L11", external: true },
@@ -22,7 +22,7 @@ const nav = [
 <template>
     <aside id="z-sidebar-nav">
         <header class="aside-header">
-            <ZIcon /> 纸鹿本鹿
+            <ZLIcon /> 纸鹿本鹿
         </header>
         <nav class="aside-nav">
             <template v-for="group in nav">
@@ -49,27 +49,28 @@ const nav = [
 #z-sidebar-nav {
     display: grid;
     grid-template-rows: auto 1fr auto;
+    position: sticky;
+    inset-block: 0;
     width: 240px;
     height: 100vh;
+    height: 100dvh;
+    border-right: 1px solid var(--c-primary-3);
     background-color: var(--c-primary-soft);
-
-    >* {
-        border: 1px solid var(--c-primary-3);
-    }
 }
 
 .aside-header {
     display: flex;
     align-items: center;
     gap: 0.5rem;
-    padding-inline: 1em;
+    padding-inline: 1rem;
+    border-bottom   : 1px solid var(--c-primary-3);
     font-weight: 600;
     line-height: 3rem;
 }
 
 .aside-nav {
+    overflow: auto;
     padding: 0.5rem;
-
 
     h2 {
         margin: 2rem 0 1rem 1rem;
@@ -110,7 +111,8 @@ const nav = [
 }
 
 .aside-footer {
-    padding: 1rem;
+    padding: 0.5rem;
+    border-top: 1px solid var(--c-primary-3);
     font-size: 0.8em;
     line-height: 1.5;
     text-align: center;

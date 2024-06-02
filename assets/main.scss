@@ -18,10 +18,15 @@ a {
     --c-primary-soft: hsl(240deg 4% 11% / 3%);
 
     font-family: sans-serif;
+    color: var(--c-text-1);
 }
 
 ::selection {
     background-color: var(--c-primary-2);
+}
+
+p {
+    line-height: 1.4;
 }
 
 mark {
