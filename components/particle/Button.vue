@@ -14,14 +14,15 @@ const isExternal = computed(() => props.to?.match(":"));
 .button {
     display: inline-flex;
     align-items: center;
-    gap: 0.4rem;
-    margin-inline: 0.4rem;
-    padding-inline: 0.6rem;
+    gap: 0.4em;
+    margin-inline: 0.4em;
+    padding-inline: 0.6em;
     border: 1px solid var(--c-bg-3);
-    border-radius: 0.4rem;
-    box-shadow: 1px 2px 4px var(--c-bg-2);
+    border-radius: 0.4em;
+    box-shadow: 0.05em 0.1em 0.5em var(--c-bg-3);
     background-color: var(--c-bg-2);
     line-height: 2;
+    vertical-align: middle;
     transition: background-color 0.2s;
 
     &:hover {

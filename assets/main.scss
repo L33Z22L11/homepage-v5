@@ -11,14 +11,29 @@ a {
 :root {
     --c-text-1: #333;
     --c-text-2: #666;
+    --c-text-a: hsl(0deg 0% 0% / 50%);
     --c-bg-1: #fff;
     --c-bg-2: #f7f9fa;
     --c-bg-3: #eee;
-    --c-primary-1: hsl(220deg 100% 60%);
+    --c-bg-a: hsl(0deg 0% 100% / 50%);
+    --c-primary-1: hsl(220deg 100% 55%);
     --c-primary-2: hsl(210deg 100% 50% / 30%);
-    --c-primary-3: hsl(220deg 100% 60% / 6%);
+    --c-primary-3: hsl(220deg 100% 60% / 15%);
     --c-primary-soft: hsl(240deg 4% 11% / 3%);
 
+    @media (prefers-color-scheme: dark) {
+        --c-text-1: #fff;
+        --c-text-2: #aaa;
+        --c-text-a: hsl(0deg 0% 100% / 50%);
+        --c-bg-1: #000;
+        --c-bg-2: #111;
+        --c-bg-3: #222;
+        --c-bg-a: hsl(0deg 0% 0% / 50%);
+        --c-primary-1: hsl(220deg 100% 70%);
+        --c-primary-2: hsl(210deg 100% 70% / 30%);
+    }
+
+    background-color: var(--c-bg-1);
     font-family: sans-serif;
     color: var(--c-text-1);
 }

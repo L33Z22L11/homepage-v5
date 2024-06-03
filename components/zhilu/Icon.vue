@@ -5,5 +5,6 @@
 <style scoped>
 .icon {
     width: 1.5em;
+    vertical-align: middle;
 }
 </style>

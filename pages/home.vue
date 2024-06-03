@@ -7,14 +7,13 @@ definePageMeta({
 </script>
 
 <template>
+    <ZLAvatar class="avatar" />
     <div class="wrapper">
         <section class="field-item">
             <h2 style="font-size: 3rem;">👋</h2>
             <div>
                 <div class="avatar-line">
                     <h1>你好，<br>我是<mark>纸鹿本鹿</mark></h1>
-                    <img class="avatar" src="https://cdn.libravatar.org/avatar/6790d5a0c7fbba6038a2bf4618cc24d9?s=512"
-                        alt="Zhilu's Avatar (2023-06-22)">
                 </div>
                 <p class="desc">纸鹿至麓不知路，支炉制露不止漉。</p>
                 <div>
@@ -37,7 +36,7 @@ definePageMeta({
         <section class="field-item">
             <h2>关于网站</h2>
             <p>
-                还在修缮中。
+                自2024年6月1日开始重构，目前还在修缮中。
                 <br>
                 Built with Nuxt.js and KazariEX.
             </p>
@@ -46,17 +45,32 @@ definePageMeta({
 </template>
 
 <style scoped lang="scss">
+.avatar {
+    position: fixed;
+    opacity: 0.2;
+    top: 0;
+    right: 20vw;
+    margin-right: -0.4em;
+    font-size: min(100vw, 60vh);
+    z-index: -1;
+}
+
 .field-item {
     display: grid;
     grid-template-columns: 120px 1fr;
     gap: 24px;
-
-    & + & {
-        margin-top: 3rem;
-    }
+    margin-top: 3rem;
 
     >:first-child {
         text-align: end;
+    }
+
+    @media (max-width: $breakpoint-mobile) {
+        grid-template-columns: 1fr;
+
+        >:first-child {
+            text-align: start;
+        }
     }
 }
 
@@ -67,9 +81,11 @@ definePageMeta({
 }
 
 .avatar-line {
-    display: flex;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, auto);
     align-items: center;
     justify-content: space-between;
+    gap: 2rem;
     font-size: 2em;
 
     .avatar {

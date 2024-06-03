@@ -16,7 +16,7 @@
         flex: 1;
 
         main {
-            padding: 1rem;
+            padding: 1rem 5vw;
         }
     }
 }

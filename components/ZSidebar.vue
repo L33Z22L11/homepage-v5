@@ -16,13 +16,17 @@ const nav = [
             { icon: "ph:telegram-logo-duotone", title: "Telegram", link: "https://t.me/L33Z22L11", external: true },
         ],
     }
-]
+];
+const sidebarStore = useSidebarStore();
+
 </script>
 
 <template>
-    <aside id="z-sidebar-nav">
+    <aside id="z-sidebar" :class="{ show: sidebarStore.isOpen }">
         <header class="aside-header">
-            <ZLIcon /> 纸鹿本鹿
+            <ZLIcon />
+            <span>纸鹿本鹿</span>
+            <Icon name="ph:x" class="close-sidebar" @click="sidebarStore.toggle()" />
         </header>
         <nav class="aside-nav">
             <template v-for="group in nav">
@@ -32,7 +36,7 @@ const nav = [
                         <NuxtLink :to="item.link" :target="item.external ? '_blank' : ''">
                             <Icon :name="item.icon" />
                             <span class="title">{{ item.title }}</span>
-                            <Icon name="ph:arrow-up-right-duotone" v-if="item.external" />
+                            <Icon class="external-tip" name="ph:arrow-up-right" v-if="item.external" />
                         </NuxtLink>
                     </li>
                 </ul>
@@ -43,33 +47,83 @@ const nav = [
             <p>aka Zhilu, L33Z22L11</p>
         </footer>
     </aside>
+    <Transition>
+        <div id="z-sidebar-bgmask" @click="sidebarStore.toggle()" v-if="sidebarStore.isOpen"></div>
+    </Transition>
 </template>
 
 <style scoped lang="scss">
-#z-sidebar-nav {
+#z-sidebar {
     display: grid;
     grid-template-rows: auto 1fr auto;
     position: sticky;
-    inset-block: 0;
-    width: 240px;
     height: 100vh;
     height: 100dvh;
     border-right: 1px solid var(--c-bg-3);
     background-color: var(--c-bg-2);
+    inset-block: 0;
 
-    @media screen and (width <= 768px) {
-        left: -240px;
+    .close-sidebar {
+        display: none;
+        cursor: pointer;
+    }
+    
+    &.v-enter-active,
+    &.v-leave-active {
+        transition: opacity 0.2s;
+    }
+
+    &.v-enter-from,
+    &.v-leave-to {
+        opacity: 0;
+    }
+
+    @media (max-width: $breakpoint-mobile) {
+        position: fixed;
+        left: -100vw;
+        transition: left 0.2s;
+        z-index: 3;
+
+        &.show {
+            left: 0;
+
+            .close-sidebar {
+                display: block;
+            }
+        }
+    }
+}
+
+#z-sidebar-bgmask {
+    position: fixed;
+    inset: 0;
+    backdrop-filter: contrast(0.8) brightness(0.9);
+    z-index: 2;
+
+    &.v-enter-active,
+    &.v-leave-active {
+        transition: opacity 0.2s;
+    }
+
+    &.v-enter-from,
+    &.v-leave-to {
+        opacity: 0;
+    }
+
+    @media (min-width: $breakpoint-mobile) {
+        display: none;
     }
 }
 
 .aside-header {
-    display: flex;
+    display: grid;
+    grid-template-columns: 1.5rem 1fr auto;
     align-items: center;
     gap: 0.5rem;
+    height: 48px;
     padding-inline: 1rem;
     border-bottom: 1px solid var(--c-bg-3);
     font-weight: 600;
-    line-height: 3rem;
 }
 
 .aside-nav {
@@ -89,12 +143,11 @@ const nav = [
 
         >a {
             display: grid;
-            grid-template-columns: 1.2em 1fr auto;
+            grid-template-columns: 1.5rem 1fr auto;
             align-items: center;
             gap: 0.5rem;
-            padding-inline: 1rem;
+            padding: 6px 12px;
             border-radius: 0.5rem;
-            line-height: 2.2em;
             transition: background-color 0.2s, color 0.1s;
 
             &:hover,
@@ -104,11 +157,12 @@ const nav = [
             }
 
             .iconify {
-                font-size: 1.2em;
+                font-size: 1.5rem;
             }
 
-            .title {
-                flex: 1;
+            .external-tip {
+                opacity: 0.5;
+                font-size: 1rem;
             }
         }
     }

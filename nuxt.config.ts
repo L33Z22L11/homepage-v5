@@ -2,11 +2,26 @@ export default defineNuxtConfig({
     modules: [
         // '@nuxt/image',
         'nuxt-icon',
+        '@pinia/nuxt',
     ],
     devtools: { enabled: false },
     css: [
-        'assets/main.scss',
+        '@/assets/main.scss',
     ],
+    vite: {
+        css: {
+            preprocessorOptions: {
+                scss: {
+                    additionalData: `
+                        @import "@/assets/variable.scss";
+                    `
+                }
+            }
+        }
+    },
+    experimental: {
+        viewTransition: true,
+    },
     components: [
         { path: '~/components/particle', prefix: 'Z' },
         { path: '~/components/zhilu', prefix: 'ZL' },
