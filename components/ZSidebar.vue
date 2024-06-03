@@ -54,8 +54,12 @@ const nav = [
     width: 240px;
     height: 100vh;
     height: 100dvh;
-    border-right: 1px solid var(--c-primary-3);
-    background-color: var(--c-primary-soft);
+    border-right: 1px solid var(--c-bg-3);
+    background-color: var(--c-bg-2);
+
+    @media screen and (width <= 768px) {
+        left: -240px;
+    }
 }
 
 .aside-header {
@@ -63,7 +67,7 @@ const nav = [
     align-items: center;
     gap: 0.5rem;
     padding-inline: 1rem;
-    border-bottom   : 1px solid var(--c-primary-3);
+    border-bottom: 1px solid var(--c-bg-3);
     font-weight: 600;
     line-height: 3rem;
 }
@@ -91,12 +95,12 @@ const nav = [
             padding-inline: 1rem;
             border-radius: 0.5rem;
             line-height: 2.2em;
-            transition: background-color 0.2s;
+            transition: background-color 0.2s, color 0.1s;
 
             &:hover,
             &.router-link-active {
                 background-color: var(--c-primary-1);
-                color: var(--c-text-revert-1);
+                color: var(--c-bg-1);
             }
 
             .iconify {
@@ -112,7 +116,7 @@ const nav = [
 
 .aside-footer {
     padding: 0.5rem;
-    border-top: 1px solid var(--c-primary-3);
+    border-top: 1px solid var(--c-bg-3);
     font-size: 0.8em;
     line-height: 1.5;
     text-align: center;

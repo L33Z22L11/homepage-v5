@@ -21,7 +21,7 @@ definePageMeta({ headerText: '互联网上的活动记录' });
                     <td>2017-09-08</td>
                     <td>
                         Logo：
-                        <ZLIconOld />PaperyDeer
+                        <ZLIconOld /> PaperyDeer
                     </td>
                 </tr>
                 <tr>
@@ -30,6 +30,10 @@ definePageMeta({ headerText: '互联网上的活动记录' });
                         Logo：
                         <ZLIcon />
                     </td>
+                </tr>
+                <tr>
+                    <td>2019-02-06</td>
+                    <td>Slogan：<code>纸鹿山行云潜日，日潜云行山路止</code></td>
                 </tr>
                 <tr>
                     <td>2019-05-24</td>

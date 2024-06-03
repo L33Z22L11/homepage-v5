@@ -4,6 +4,6 @@
 
 <style scoped>
 .icon {
-    height: 1.5em;
+    width: 1.5em;
 }
 </style>
