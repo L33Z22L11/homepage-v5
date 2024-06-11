@@ -19,7 +19,7 @@ const isExternal = computed(() => props.to?.match(":"));
 
     &:hover {
         border-radius: 0.3em;
-        background: linear-gradient(var(--c-primary-3), var(--c-primary-3)) no-repeat center bottom / 100% 100%;
+        background-size: 100% 100%;
     }
 }
 

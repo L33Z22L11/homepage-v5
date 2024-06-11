@@ -1,1 +1,43 @@
 $breakpoint-mobile: 768px;
+$dark-theme-vars: (
+    "c-text-1": hsl(0deg 0% 100%),
+    "c-text-2": hsl(0deg 0% 67%),
+    "c-text-a": hsl(0deg 0% 100% / 50%),
+    "c-border": var(--c-bg-3),
+    "c-bg-1": hsl(0deg 0% 0%),
+    "c-bg-2": hsl(0deg 0% 7%),
+    "c-bg-3": hsl(0deg 0% 13% / 50%),
+    "c-bg-a": hsl(0deg 0% 0% / 50%),
+    "c-primary-1": hsl(220deg 100% 70%),
+    "c-primary-2": hsl(210deg 100% 70% / 30%)
+);
+
+@mixin apply-dark-theme-vars {
+    @each $name, $value in $dark-theme-vars {
+        --#{$name}: #{$value};
+    }
+}
+
+:root {
+    --c-text-1: hsl(0deg 0% 20%);
+    --c-text-2: hsl(0deg 0% 40%);
+    --c-text-a: hsl(0deg 0% 0% / 50%);
+    --c-border: var(--c-bg-3);
+    --c-bg-1: hsl(0deg 0% 100%);
+    --c-bg-2: hsl(200deg 20% 97%);
+    --c-bg-3: hsl(210deg 10% 50% / 10%);
+    --c-bg-a-50: hsl(0deg 0% 100% / 50%);
+    --c-primary-1: hsl(220deg 100% 55%);
+    --c-primary-2: hsl(210deg 100% 50% / 30%);
+    --c-primary-3: hsl(215deg 100% 60% / 15%);
+    --c-primary-soft: hsl(240deg 4% 11% / 3%);
+
+    @media (prefers-color-scheme: dark) {
+        @include apply-dark-theme-vars;
+    }
+    
+    [data-theme="dark"] {
+        @include apply-dark-theme-vars;
+    }
+}
+

@@ -17,9 +17,9 @@ definePageMeta({
                 </div>
                 <p class="desc">纸鹿至麓不知路，支炉制露不止漉。</p>
                 <div>
-                    <ZButton icon="ph:github-logo-duotone" to="https://github.com/L33Z22L11" target="_blank">GitHub
+                    <ZButton icon="ph:files-duotone" to="https://blog.zhilu.cyou/">博客</ZButton>
+                    <ZButton icon="ph:github-logo-duotone" to="https://github.com/L33Z22L11">GitHub
                     </ZButton>
-                    <ZButton icon="ph:files-duotone" to="https://blog.zhilu.cyou/" target="_blank">博客</ZButton>
                 </div>
             </div>
 

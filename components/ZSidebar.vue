@@ -59,7 +59,7 @@ const sidebarStore = useSidebarStore();
     position: sticky;
     height: 100vh;
     height: 100dvh;
-    border-right: 1px solid var(--c-bg-3);
+    border-right: 1px solid var(--c-border);
     background-color: var(--c-bg-2);
     inset-block: 0;
 
@@ -122,7 +122,7 @@ const sidebarStore = useSidebarStore();
     gap: 0.5rem;
     height: 48px;
     padding-inline: 1rem;
-    border-bottom: 1px solid var(--c-bg-3);
+    border-bottom: 1px solid var(--c-border);
     font-weight: 600;
 }
 
@@ -152,8 +152,9 @@ const sidebarStore = useSidebarStore();
 
             &:hover,
             &.router-link-active {
-                background-color: var(--c-primary-1);
-                color: var(--c-bg-1);
+                background-color: var(--c-bg-3);
+
+                // color: var(--c-bg-1);
             }
 
             .iconify {
@@ -170,7 +171,7 @@ const sidebarStore = useSidebarStore();
 
 .aside-footer {
     padding: 0.5rem;
-    border-top: 1px solid var(--c-bg-3);
+    border-top: 1px solid var(--c-border);
     font-size: 0.8em;
     line-height: 1.5;
     text-align: center;
