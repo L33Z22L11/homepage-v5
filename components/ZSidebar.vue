@@ -4,8 +4,10 @@ const nav = [
     {
         title: '', list: [
             { icon: "ph:house-duotone", title: "主页", link: "/" },
-            { icon: "ph:pen-nib-duotone", title: "文章", link: "/article" },
-            { icon: "ph:code-duotone", title: "项目", link: "/project" },
+            // { icon: "ph:pen-nib-duotone", title: "文章", link: "/article" },
+            { icon: "ph:pen-nib-duotone", title: "文章", link: "https://blog.zhilu.cyou", external: true },
+            // { icon: "ph:code-duotone", title: "项目", link: "/project" },
+            { icon: "ph:code-duotone", title: "项目", link: "https://github.com/L33Z22L11/", external: true },
             { icon: "ph:globe-duotone", title: "站点", link: "/site" },
             { icon: "ph:files-duotone", title: "日志", link: "/log" },
         ]

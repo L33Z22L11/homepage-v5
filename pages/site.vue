@@ -27,12 +27,12 @@ definePageMeta({ headerText: '一些网站' });
         </div>
         <p>西邮 Linux 兴趣小组的培养计划，于2021年11月4日开源。本人于2024年3月20日使用 MkDocs 为此 Plan 构建网站。</p>
 
-        <h3>Arch Linux 简明指南（镜像站） | ArchGuideMirror</h3>
+        <h3>微信 Markdown 编辑器 (镜像站) | md</h3>
         <div>
-            <ZButton icon="ph:planet-duotone" to="https://arch.cooo.site">访问</ZButton>
+            <ZButton icon="ph:planet-duotone" to="https://md.cooo.site">访问</ZButton>
         </div>
-        <p>帮助新手快速上手 Arch Linux，包含安装、配置、维护等教程文档。<ZLink to="https://arch.icekylin.online">源站</ZLink>
-            加载速度较慢，本人于2023年7月14日后重新使用 Cloudflare Pages 部署。</p>
+        <p>好用的 Markdown 转微信公众号工具。<ZLink to="https://doocs.github.io/md/">源站</ZLink>
+            加载速度较慢，本人于2024年6月18日重新使用 Cloudflare Pages 部署。</p>
 
         <h2>组织门户</h2>
 

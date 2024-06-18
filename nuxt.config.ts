@@ -1,35 +1,4 @@
 export default defineNuxtConfig({
-    modules: [
-        // '@nuxt/image',
-        'nuxt-icon',
-        '@pinia/nuxt',
-    ],
-    devtools: { enabled: false },
-    css: [
-        '@/assets/main.scss',
-    ],
-    vite: {
-        css: {
-            preprocessorOptions: {
-                scss: {
-                    additionalData:
-                        '@import "@/assets/variable.scss";'
-                }
-            }
-        }
-    },
-    experimental: {
-        viewTransition: true,
-    },
-    vue: {
-        propsDestructure: true,
-        runtimeCompiler: true
-    },
-    components: [
-        { path: '~/components/particle', prefix: 'Z' },
-        { path: '~/components/zhilu', prefix: 'ZL' },
-        '~/components'
-    ],
     app: {
         rootId: 'z-root',
         head: {
@@ -40,10 +9,45 @@ export default defineNuxtConfig({
             link: [
                 {
                     rel: 'icon',
-                    type: 'image/x-icon',
                     href: 'https://blog.zhilu.cyou/static/icon.png',
                 },
             ],
         },
-    }
+    },
+    components: [
+        { path: '~/components/particle', prefix: 'Z' },
+        { path: '~/components/zhilu', prefix: 'ZL' },
+        '~/components',
+    ],
+    css: [
+        '@/assets/main.scss',
+    ],
+    devtools: { enabled: false },
+    experimental: {
+        viewTransition: true,
+    },
+    vite: {
+        css: {
+            preprocessorOptions: {
+                scss: {
+                    additionalData: '@import "@/assets/variable.scss";',
+                }
+            }
+        }
+    },
+    vue: {
+        propsDestructure: true,
+        runtimeCompiler: true
+    },
+    modules: [
+        'nuxt-icon',
+        'nuxt-simple-robots',
+        'nuxt-site-config',
+        '@nuxtjs/seo',
+        '@nuxtjs/sitemap',
+        '@pinia/nuxt',
+    ],
+    site: {
+        url: 'https://zhilu.cyou',
+    },
 })
