@@ -8,6 +8,7 @@
     "@nuxtjs/sitemap": "^5.2.0",
     "@pinia/nuxt": "^0.5.1",
     "@zinkawaii/stylelint-config": "^0.1.4",
+    "fast-xml-parser": "^4.4.0",
     "nuxt": "^3.12.2",
     "nuxt-icon": "1.0.0-beta.6",
     "nuxt-simple-robots": "4.0.0-rc.17",
@@ -19,5 +20,8 @@
     "prepare": "nuxt prepare",
     "dev": "nuxt dev --host",
     "generate": "nuxt generate"
+  },
+  "dependencies": {
+    "date-fns": "^3.6.0"
   }
 }

@@ -1,4 +1,4 @@
-<script setup>
+<script setup lang="ts">
 useHead({ title: '' });
 definePageMeta({
     alias: ['/'],
@@ -53,25 +53,6 @@ definePageMeta({
     margin-right: -0.4em;
     font-size: min(100vw, 60vh);
     z-index: -1;
-}
-
-.field-item {
-    display: grid;
-    grid-template-columns: 120px 1fr;
-    gap: 24px;
-    margin-top: 3rem;
-
-    >:first-child {
-        text-align: end;
-    }
-
-    @media (max-width: $breakpoint-mobile) {
-        grid-template-columns: 1fr;
-
-        >:first-child {
-            text-align: start;
-        }
-    }
 }
 
 .desc {

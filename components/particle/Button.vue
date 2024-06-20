@@ -31,7 +31,7 @@ const isExternal = computed(() => props.to?.match(":"));
     transition: background-color 0.2s;
 
     &:hover {
-        background-color: var(--c-bg-3);
+        background-color: var(--c-bg-1);
     }
 }
 
@@ -40,6 +40,10 @@ const isExternal = computed(() => props.to?.match(":"));
     grid-template-columns: auto 1fr;
     place-items: center center;
     gap: 0.2em;
+
+    .iconify {
+        font-size: 1.2em;
+    }
 }
 
 .button-desc {

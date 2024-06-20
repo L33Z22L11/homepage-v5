@@ -4,8 +4,8 @@ const nav = [
     {
         title: '', list: [
             { icon: "ph:house-duotone", title: "主页", link: "/" },
-            // { icon: "ph:pen-nib-duotone", title: "文章", link: "/article" },
-            { icon: "ph:pen-nib-duotone", title: "文章", link: "https://blog.zhilu.cyou", external: true },
+            { icon: "ph:pen-nib-duotone", title: "文章", link: "/article" },
+            // { icon: "ph:pen-nib-duotone", title: "文章", link: "https://blog.zhilu.cyou", external: true },
             // { icon: "ph:code-duotone", title: "项目", link: "/project" },
             { icon: "ph:code-duotone", title: "项目", link: "https://github.com/L33Z22L11/", external: true },
             { icon: "ph:globe-duotone", title: "站点", link: "/site" },
@@ -61,6 +61,7 @@ const sidebarStore = useSidebarStore();
     position: sticky;
     height: 100vh;
     height: 100dvh;
+    min-width: 240px;
     border-right: 1px solid var(--c-border);
     background-color: var(--c-bg-2);
     inset-block: 0;
@@ -83,6 +84,8 @@ const sidebarStore = useSidebarStore();
     @media (max-width: $breakpoint-mobile) {
         position: fixed;
         left: -100vw;
+        width: 320px;
+        box-shadow: 0 0 48px -36px;
         transition: left 0.2s;
         z-index: 3;
 
@@ -155,8 +158,6 @@ const sidebarStore = useSidebarStore();
             &:hover,
             &.router-link-active {
                 background-color: var(--c-bg-3);
-
-                // color: var(--c-bg-1);
             }
 
             .iconify {

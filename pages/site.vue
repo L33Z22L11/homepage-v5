@@ -1,4 +1,4 @@
-<script setup>
+<script setup lang="ts">
 useHead({ title: '站点' });
 definePageMeta({ headerText: '一些网站' });
 </script>
