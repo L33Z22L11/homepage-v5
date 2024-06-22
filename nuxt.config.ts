@@ -26,6 +26,7 @@ export default defineNuxtConfig({
     experimental: {
         viewTransition: true,
     },
+    srcDir: './',
     vite: {
         css: {
             preprocessorOptions: {

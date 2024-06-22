@@ -1,6 +1,6 @@
 {
   "name": "zhilu-site",
-  "version": "4.0.2",
+  "version": "4.0.3",
   "private": true,
   "type": "module",
   "devDependencies": {
@@ -14,7 +14,8 @@
     "nuxt-simple-robots": "4.0.0-rc.17",
     "nuxt-site-config": "^2.2.12",
     "sass": "^1.77.6",
-    "stylelint": "^16.6.1"
+    "stylelint": "^16.6.1",
+    "typescript": "^5.5.2"
   },
   "scripts": {
     "prepare": "nuxt prepare",

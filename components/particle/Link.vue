@@ -4,7 +4,7 @@ const isExternal = computed(() => props.to?.match(":"));
 </script>
 
 <template>
-    <NuxtLink class="z-link" :to="to">
+    <NuxtLink class="z-link" :to="to" :target="isExternal ? '_blank' : ''">
         <slot></slot>
         <Icon class="external" v-if="isExternal" name="ph:arrow-up-right" />
     </NuxtLink>

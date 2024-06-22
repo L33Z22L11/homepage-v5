@@ -63,7 +63,7 @@ const sidebarStore = useSidebarStore();
     height: 100dvh;
     min-width: 240px;
     border-right: 1px solid var(--c-border);
-    background-color: var(--c-bg-2);
+    background-color: var(--c-bg-3);
     inset-block: 0;
 
     .close-sidebar {
@@ -144,7 +144,7 @@ const sidebarStore = useSidebarStore();
 
     li {
         display: grid;
-        margin: 0.5rem 0;
+        margin: 6px 0;
 
         >a {
             display: grid;
@@ -157,7 +157,7 @@ const sidebarStore = useSidebarStore();
 
             &:hover,
             &.router-link-active {
-                background-color: var(--c-bg-3);
+                background-color: var(--c-primary-soft);
             }
 
             .iconify {

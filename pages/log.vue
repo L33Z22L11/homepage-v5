@@ -40,7 +40,7 @@ const timeline = {
         bottom: 0;
         left: 0;
         width: 4px;
-        background-color: var(--c-bg-3);
+        background-color: var(--c-primary-soft);
         z-index: 1;
     }
 }
@@ -59,7 +59,7 @@ const timeline = {
     .timeline-item-content {
         padding: 0.5em 0.8em;
         border-radius: 0.5em;
-        background-color: var(--c-bg-3);
+        background-color: var(--c-primary-soft);
     }
 }
 </style>
