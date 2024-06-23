@@ -1,11 +1,13 @@
 <script setup>
 const sidebarStore = useSidebarStore();
+const themeStore = useThemeStore();
 </script>
 
 <template>
     <div id="z-header">
         <Icon name="ph:sidebar-duotone" id="toggle-sidebar" @click="sidebarStore.toggle" />
-        <span id="headerText">{{ $route.meta.headerText }}</span>
+        <span class="header-text">{{ $route.meta.headerText }}</span>
+        <!-- <Icon name="ph:moon-duotone" id="toggle-theme" @click="themeStore.toggle" /> -->
     </div>
 </template>
 
@@ -22,15 +24,23 @@ const sidebarStore = useSidebarStore();
     backdrop-filter: blur(1rem);
     font-weight: 600;
     z-index: 1;
+
+    .header-text {
+        flex: 1;
+    }
 }
 
 #toggle-sidebar {
     display: none;
-    font-size: 1.5rem;
-    cursor: pointer;
+
 
     @media (max-width: $breakpoint-mobile) {
         display: block;
     }
+}
+
+.iconify {
+    font-size: 1.5em;
+    cursor: pointer;
 }
 </style>

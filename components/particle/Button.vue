@@ -25,7 +25,7 @@ const isExternal = computed(() => props.to?.match(":"));
     border: 1px solid var(--c-border);
     border-radius: 0.4em;
     box-shadow: 0.05em 0.1em 0.5em var(--c-primary-soft);
-    background-color: var(--c-bg-3);
+    background-color: var(--c-bg-2);
     vertical-align: middle;
     transition: background-color 0.2s;
     
@@ -34,7 +34,7 @@ const isExternal = computed(() => props.to?.match(":"));
     }
 
     &:hover {
-        background-color: var(--c-bg-1);
+        background-color: var(--c-bg-3);
     }
 }
 

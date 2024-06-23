@@ -7,9 +7,9 @@ defineProps<{
 <!-- TODO: 监听滚轮，转换为横向滚动 -->
 
 <template>
-    <div class="z-card-container">
-        <ZCard v-for="card in dataList" :key="index" :data="card" />
-    </div>
+    <ul class="z-card-container">
+        <ZCard v-for="(card, index) in dataList" :key="index" :data="card" />
+    </ul>
 </template>
 
 <style scoped>
@@ -17,11 +17,27 @@ defineProps<{
     display: flex;
     flex-wrap: nowrap;
     justify-content: space-evenly;
-    gap: 1em;
     overflow-x: auto;
+    animation: check;
+    animation-timeline: scroll(x self);
 
     >* {
-        flex-shrink: 0;
+        flex: 1;
+    }
+}
+
+@keyframes check {
+    0% {
+        mask: linear-gradient(to right, #fff 80%, transparent);
+    }
+
+    1%,
+    99% {
+        mask: linear-gradient(to right, transparent, #fff 20%, #fff 80%, transparent);
+    }
+
+    100% {
+        mask: linear-gradient(to right, transparent, #fff 20%);
     }
 }
 </style>

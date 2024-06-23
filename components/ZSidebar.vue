@@ -59,11 +59,9 @@ const sidebarStore = useSidebarStore();
     display: grid;
     grid-template-rows: auto 1fr auto;
     position: sticky;
-    height: 100vh;
-    height: 100dvh;
     min-width: 240px;
     border-right: 1px solid var(--c-border);
-    background-color: var(--c-bg-3);
+    background-color: var(--c-bg-2);
     inset-block: 0;
 
     .close-sidebar {
@@ -85,6 +83,8 @@ const sidebarStore = useSidebarStore();
         position: fixed;
         left: -100vw;
         width: 320px;
+        min-width: auto;
+        max-width: 100vw;
         box-shadow: 0 0 48px -36px;
         transition: left 0.2s;
         z-index: 3;

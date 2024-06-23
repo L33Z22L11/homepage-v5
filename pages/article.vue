@@ -43,7 +43,7 @@ function getPostTime(date: Date) {
         <p>{{ error }}</p>
     </template>
     <div v-else class="article-list">
-        <ZArticle v-for="article in articles" :article="article" :key="article.link">
+        <ZArticle v-for="article in articles" :article="article" :key="article.id">
         </ZArticle>
     </div>
 

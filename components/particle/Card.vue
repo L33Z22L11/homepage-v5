@@ -1,6 +1,6 @@
 <script setup lang="ts">
 defineProps<{
-    data: Array<{
+    data: {
         name: string,
         badges?: Array<string>,
         nameAlt?: string,
@@ -10,12 +10,12 @@ defineProps<{
             text?: string
         }>,
         desc: string
-    }>;
+    };
 }>();
 </script>
 
 <template>
-    <div class="z-card" :key="name">
+    <li class="z-card">
         <div class="z-card-title">
             <h3 v-html="data.name"></h3>
             <span v-if="data.nameAlt" class="z-card-name-alt">{{ data.nameAlt }}</span>
@@ -25,12 +25,12 @@ defineProps<{
         </div>
 
         <div class="z-card-buttons">
-            <template v-for="button in data.buttons" :key="btnIndex">
+            <template v-for="button in data.buttons">
                 <ZButton :icon="button.icon" :to="button.to">{{ button.text }}</ZButton>
             </template>
         </div>
         <ZRender :content="data.desc" tag="p"></ZRender>
-    </div>
+    </li>
 </template>
 
 <style scoped>
@@ -38,7 +38,7 @@ defineProps<{
     display: grid;
     grid-template-rows: auto auto 1fr;
     gap: 1em;
-    max-width: 240px;
+    min-width: 240px;
     padding: 2em 1em;
     border-radius: 0.5em;
 }

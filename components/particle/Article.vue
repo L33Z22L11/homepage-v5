@@ -3,7 +3,7 @@ defineProps<{ article: any[] }>();
 </script>
 
 <template>
-    <a class="article-card" :href="article.link">
+    <a class="article-card" :href="article.link || article.id">
         <div class="article-header">
             <time :datetime="article.updated" v-if="article.tPublishedLabel !== article.tUpdatedLabel">
                 {{ article.tUpdatedLabel }}</time>
