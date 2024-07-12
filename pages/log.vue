@@ -61,4 +61,22 @@ const timeline = {
         background-color: var(--c-bg-3);
     }
 }
+
+@container (min-width: $breakpoint-mobile) {
+    .timeline-item {
+        grid-column-gap: 1em;
+        grid-template-areas: "date content";
+        grid-template-columns: 1fr 1fr;
+
+        .timeline-item-date {
+            grid-area: date;
+        }
+
+        .timeline-item-content {
+            grid-area: content;
+            padding: 0.5em 1em;
+        }
+    }
+}
+
 </style>

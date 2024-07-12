@@ -45,7 +45,7 @@ const sidebarStore = useSidebarStore();
             </template>
         </nav>
         <footer class="aside-footer">
-            <p>© 2019 - {{ curYear }} 纸鹿本鹿</p>
+            <p>© {{ curYear }} 纸鹿本鹿</p>
             <p>aka Zhilu, L33Z22L11</p>
         </footer>
     </aside>
@@ -127,7 +127,6 @@ const sidebarStore = useSidebarStore();
     gap: 0.5rem;
     height: 48px;
     padding-inline: 1rem;
-    border-bottom: 1px solid var(--c-border);
     font-weight: 600;
 }
 
@@ -147,8 +146,7 @@ const sidebarStore = useSidebarStore();
         margin: 6px 0;
 
         >a {
-            display: grid;
-            grid-template-columns: 1.5rem 1fr auto;
+            display: flex;
             align-items: center;
             gap: 0.5rem;
             padding: 6px 12px;
@@ -164,6 +162,10 @@ const sidebarStore = useSidebarStore();
                 font-size: 1.5rem;
             }
 
+            .title {
+                flex-grow: 1;
+            }
+
             .external-tip {
                 opacity: 0.5;
                 font-size: 1rem;
@@ -174,7 +176,6 @@ const sidebarStore = useSidebarStore();
 
 .aside-footer {
     padding: 0.5rem;
-    border-top: 1px solid var(--c-border);
     font-size: 0.8em;
     line-height: 1.5;
     text-align: center;

@@ -26,7 +26,7 @@ const themeStore = useThemeStore();
     z-index: 1;
 
     .header-text {
-        flex: 1;
+        flex-grow: 1;
     }
 }
 

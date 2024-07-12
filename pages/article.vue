@@ -46,11 +46,20 @@ function getPostTime(date: Date) {
         <ZArticle v-for="article in articles" :article="article" :key="article.id">
         </ZArticle>
     </div>
-
-    <NuxtLink class="article-more" to="https://blog.zhilu.cyou/archives/">
-        <span>归档</span>
-        <Icon name="ph:arrow-circle-right-duotone" />
-    </NuxtLink>
+    <div class="article-more">
+        <NuxtLink to="https://blog.zhilu.cyou/">
+            <Icon name="ph:navigation-arrow-duotone" />
+            <span>访问</span>
+        </NuxtLink>
+        <NuxtLink to="https://blog.zhilu.cyou/link/">
+            <Icon name="ph:link-duotone" />
+            <span>友链</span>
+        </NuxtLink>
+        <NuxtLink to="https://blog.zhilu.cyou/archives/">
+            <Icon name="ph:archive-duotone" />
+            <span>归档</span>
+        </NuxtLink>
+    </div>
 </template>
 
 <style scoped lang="scss">
@@ -62,22 +71,27 @@ function getPostTime(date: Date) {
 
 .article-more {
     display: flex;
-    align-items: center;
     justify-content: flex-end;
-    gap: 0.5em;
-    gap: 4px;
-    opacity: 0.2;
-    margin: 16px;
-    padding: 8px;
-    border-radius: 8px;
-    font-size: 2rem;
+    gap: 8px;
+    margin: 16px 0;
+    font-size: min(2rem, 6vw);
     font-weight: bold;
-    transition: all 0.2s;
 
-    &:hover {
-        opacity: 1;
-        background-color: var(--c-primary-soft);
-        color: var(--c-primary-1);
+    a {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 4px;
+        opacity: 0.2;
+        padding: 0.3em 0.5em;
+        border-radius: 8px;
+        transition: all 0.2s;
+
+        &:hover {
+            opacity: 1;
+            background-color: var(--c-primary-soft);
+            color: var(--c-primary-1);
+        }
     }
 }
 </style>

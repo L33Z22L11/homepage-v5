@@ -3,19 +3,18 @@ defineProps<{ label?: string }>();
 </script>
 
 <template>
-    <section class="field-item">
+    <section class="z-field">
         <h2 v-html="label"></h2>
         <slot></slot>
-
     </section>
 </template>
 
 <style scoped lang="scss">
-.field-item {
+.z-field {
     display: grid;
     grid-template-columns: 120px 1fr;
-    gap: 1rem 2rem;
-    margin-top: 3rem;
+    gap: 1rem 1.5rem;
+    margin: 3em 0.5rem 1em;
 
     >:first-child {
         text-align: end;

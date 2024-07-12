@@ -15,9 +15,8 @@
     height: 100dvh;
 
     >.content {
-        flex: 1;
+        flex-grow: 1;
         overflow: auto;
-
 
         main {
             padding: 1rem 5vw;
