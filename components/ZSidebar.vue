@@ -7,7 +7,7 @@ const nav = [
             { icon: "ph:pen-nib-duotone", title: "文章", link: "/article" },
             // { icon: "ph:pen-nib-duotone", title: "文章", link: "https://blog.zhilu.cyou", external: true },
             // { icon: "ph:code-duotone", title: "项目", link: "/project" },
-            { icon: "ph:code-duotone", title: "项目", link: "https://github.com/L33Z22L11/", external: true },
+            { icon: "ph:code-duotone", title: "项目", link: "https://github.com/L33Z22L11/#user-33976233-pinned-items-reorder-form", external: true },
             { icon: "ph:globe-duotone", title: "站点", link: "/site" },
             { icon: "ph:files-duotone", title: "日志", link: "/log" },
         ]
@@ -153,9 +153,19 @@ const sidebarStore = useSidebarStore();
             border-radius: 0.5rem;
             transition: background-color 0.2s, color 0.1s;
 
-            &:hover,
+            &:hover {
+                background-color: var(--c-primary-soft);
+            }
+
             &.router-link-active {
                 background-color: var(--c-primary-soft);
+
+                &::after {
+                    content: "⦁";
+                    width: 1rem;
+                    text-align: center;
+                    color: var(--c-text-3);
+                }
             }
 
             .iconify {

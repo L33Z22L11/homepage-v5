@@ -1,5 +1,5 @@
 <script setup lang="ts">
-defineProps<{ article: any[] }>();
+defineProps<{ article: any }>();
 </script>
 
 <template>
@@ -32,11 +32,11 @@ defineProps<{ article: any[] }>();
 .article-header {
     display: flex;
     gap: 0.8em;
-    font-size: 0.6em;
-    color: var(--c-text-a);
+    font-size: 0.8em;
+    color: var(--c-text-2);
 
     >time + time {
-        opacity: 0.5;
+        color: var(--c-text-3);
     }
 }
 
@@ -46,7 +46,7 @@ defineProps<{ article: any[] }>();
 }
 
 .article-descrption {
-    color: var(--c-text-a);
+    color: var(--c-text-2);
 }
 
 </style>

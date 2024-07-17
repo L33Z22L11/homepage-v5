@@ -1,14 +1,12 @@
 <script setup lang="ts">
+import type { ButtonProps } from './Button.vue';
+
 defineProps<{
     data: {
         name: string,
         badges?: Array<string>,
         nameAlt?: string,
-        buttons: Array<{
-            icon?: string,
-            to?: string,
-            text?: string
-        }>,
+        buttons: Array<ButtonProps>,
         desc: string
     };
 }>();

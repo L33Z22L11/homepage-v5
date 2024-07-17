@@ -1,9 +1,11 @@
 <script setup lang="ts">
-const props = defineProps<{
+export interface ButtonProps {
     icon?: string,
     to?: string,
+    text?: string,
     desc?: string,
-}>();
+}
+const props = defineProps<ButtonProps>();
 const isExternal = computed(() => props.to?.match(":"));
 </script>
 

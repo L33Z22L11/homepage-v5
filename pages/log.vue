@@ -30,7 +30,7 @@ const timeline = {
 <style scoped lang="scss">
 .timeline {
     position: relative;
-    width: max-content;
+    width: fit-content;
     padding-left: 1em;
 
     &::before {

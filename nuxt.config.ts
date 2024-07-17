@@ -2,9 +2,8 @@ export default defineNuxtConfig({
     app: {
         rootId: 'z-root',
         head: {
-            titleTemplate: '%s %separator 纸鹿 (@L33Z22L11)',
-            templateParams: {
-                separator: '|',
+            htmlAttrs: {
+                lang: 'zh',
             },
             link: [
                 {
@@ -12,6 +11,10 @@ export default defineNuxtConfig({
                     href: 'https://blog.zhilu.cyou/static/icon.png',
                 },
             ],
+            templateParams: {
+                separator: '|',
+            },
+            titleTemplate: '%s %separator 纸鹿 (@L33Z22L11)',
         },
     },
     components: [

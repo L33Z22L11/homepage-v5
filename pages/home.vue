@@ -47,6 +47,6 @@ definePageMeta({
 .desc {
     margin: 1rem 0;
     font-size: 1.5rem;
-    color: var(--c-text-a);
+    color: var(--c-text-2);
 }
 </style>
