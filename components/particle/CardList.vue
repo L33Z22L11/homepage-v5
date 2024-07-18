@@ -1,6 +1,8 @@
 <script setup lang="ts">
+import type { CardProps } from './Card.vue';
+
 defineProps<{
-    dataList: Array<any>;
+    dataList: Array<CardProps>;
 }>();
 </script>
 
@@ -8,7 +10,7 @@ defineProps<{
 
 <template>
     <ul class="z-card-container">
-        <ZCard v-for="(card, index) in dataList" :key="index" :data="card" />
+        <ZCard v-for="(card, index) in dataList" :key="index" v-bind="card" />
     </ul>
 </template>
 

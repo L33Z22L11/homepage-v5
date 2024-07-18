@@ -1,8 +1,10 @@
 <script setup lang="ts">
+import type { CardProps } from '~/components/particle/Card.vue';
+
 useHead({ title: '站点' });
 definePageMeta({ headerText: '一些网站' });
 
-const toolSites = [
+const toolSites: Array<CardProps> = [
     {
         name: 'CO导航', nameAlt: 'XUPT-Nav',
         buttons: [
@@ -35,7 +37,7 @@ const toolSites = [
     }
 ];
 
-const orgSites = [
+const orgSites: Array<CardProps> = [
     {
         name: '西邮 Linux 兴趣小组', nameAlt: 'Xiyou Linux Group',
         buttons: [

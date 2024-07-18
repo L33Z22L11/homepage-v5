@@ -13,9 +13,10 @@ const isExternal = computed(() => props.to?.match(":"));
     <NuxtLink class="button" :to="to" :target="isExternal ? '_blank' : ''">
         <div class="button-main">
             <Icon v-if="icon" :name="icon"></Icon>
+            {{ text }}
             <slot></slot>
         </div>
-        <div class="button-desc">{{ desc }}</div>
+        <div class="button-desc">{{ desc || '' }}</div>
     </NuxtLink>
 </template>
 
