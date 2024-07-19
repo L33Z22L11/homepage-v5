@@ -1,11 +1,11 @@
 <script setup lang="ts">
-defineProps<{ label?: string }>();
+defineProps<{ label?: string }>()
 </script>
 
 <template>
     <section class="z-field">
-        <h2 v-html="label"></h2>
-        <slot></slot>
+        <h2 v-html="label" />
+        <slot />
     </section>
 </template>
 

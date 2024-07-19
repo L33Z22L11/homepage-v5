@@ -1,30 +1,32 @@
 <script setup lang="ts">
-import type { ButtonProps } from './Button.vue';
+import type { ButtonProps } from './Button.vue'
 
 export interface CardProps {
-    name: string,
-    badges?: Array<string>,
-    nameAlt?: string,
-    buttons: Array<ButtonProps>,
+    name: string
+    badges?: Array<string>
+    nameAlt?: string
+    buttons: Array<ButtonProps>
     desc: string
 }
-defineProps<CardProps>();
+defineProps<CardProps>()
 </script>
 
 <template>
     <li class="z-card">
         <div class="z-card-title">
-            <h3 v-html="name"></h3>
+            <h3 v-html="name" />
             <span v-if="nameAlt" class="z-card-name-alt">{{ nameAlt }}</span>
             <div v-if="badges" class="badges">
-                <ZBadge v-for="badge in badges">{{ badge }}</ZBadge>
+                <ZBadge v-for="(badge, badgeIndex) in badges" :key="badgeIndex">
+                    {{ badge }}
+                </ZBadge>
             </div>
         </div>
 
         <div class="z-card-buttons">
-            <ZButton v-for="button in buttons" v-bind="button"></ZButton>
+            <ZButton v-for="(button, buttonIndex) in buttons" v-bind="button" :key="buttonIndex" />
         </div>
-        <ZRender :content="desc" tag="p"></ZRender>
+        <ZRender :content="desc" tag="p" />
     </li>
 </template>
 

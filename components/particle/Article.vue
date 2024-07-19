@@ -1,11 +1,11 @@
 <script setup lang="ts">
-defineProps<{ article: any }>();
+defineProps<{ article: any }>()
 </script>
 
 <template>
     <a class="article-card" :href="article.link || article.id">
         <div class="article-header">
-            <time :datetime="article.updated" v-if="article.tPublishedLabel !== article.tUpdatedLabel">
+            <time v-if="article.tPublishedLabel !== article.tUpdatedLabel" :datetime="article.updated">
                 {{ article.tUpdatedLabel }}</time>
             <time :datetime="article.published">{{ article.tPublishedLabel }}</time>
         </div>
@@ -48,5 +48,4 @@ defineProps<{ article: any }>();
 .article-descrption {
     color: var(--c-text-2);
 }
-
 </style>

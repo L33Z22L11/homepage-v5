@@ -1,22 +1,24 @@
 <script setup lang="ts">
 export interface ButtonProps {
-    icon?: string,
-    to?: string,
-    text?: string,
-    desc?: string,
+    icon?: string
+    to?: string
+    text?: string
+    desc?: string
 }
-const props = defineProps<ButtonProps>();
-const isExternal = computed(() => props.to?.match(":"));
+const props = defineProps<ButtonProps>()
+const isExternal = computed(() => props.to?.match(':'))
 </script>
 
 <template>
     <NuxtLink class="button" :to="to" :target="isExternal ? '_blank' : ''">
         <div class="button-main">
-            <Icon v-if="icon" :name="icon"></Icon>
+            <Icon v-if="icon" :name="icon" />
             {{ text }}
-            <slot></slot>
+            <slot />
         </div>
-        <div class="button-desc">{{ desc || '' }}</div>
+        <div class="button-desc">
+            {{ desc || '' }}
+        </div>
     </NuxtLink>
 </template>
 
@@ -31,7 +33,7 @@ const isExternal = computed(() => props.to?.match(":"));
     background-color: var(--c-bg-2);
     vertical-align: middle;
     transition: background-color 0.2s;
-    
+
     & + & {
         margin-left: 0.8em;
     }
@@ -40,8 +42,6 @@ const isExternal = computed(() => props.to?.match(":"));
         background-color: var(--c-bg-3);
     }
 }
-
-
 
 .button-main {
     display: grid;

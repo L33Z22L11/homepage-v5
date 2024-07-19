@@ -1,22 +1,9 @@
 {
   "name": "zhilu-site",
+  "type": "module",
   "version": "4.0.3",
   "private": true,
-  "type": "module",
-  "devDependencies": {
-    "@nuxtjs/seo": "2.0.0-rc.10",
-    "@nuxtjs/sitemap": "^5.2.0",
-    "@pinia/nuxt": "^0.5.1",
-    "@zinkawaii/stylelint-config": "^0.1.4",
-    "fast-xml-parser": "^4.4.0",
-    "nuxt": "^3.12.2",
-    "nuxt-icon": "1.0.0-beta.6",
-    "nuxt-simple-robots": "4.0.0-rc.17",
-    "nuxt-site-config": "^2.2.12",
-    "sass": "^1.77.6",
-    "stylelint": "^16.6.1",
-    "typescript": "^5.5.2"
-  },
+  "packageManager": "pnpm@9.5.0+sha512.140036830124618d624a2187b50d04289d5a087f326c9edfc0ccd733d76c4f52c3a313d4fc148794a2a9d81553016004e6742e8cf850670268a7387fc220c903",
   "scripts": {
     "prepare": "nuxt prepare",
     "dev": "nuxt dev --host",
@@ -24,5 +11,20 @@
   },
   "dependencies": {
     "date-fns": "^3.6.0"
+  },
+  "devDependencies": {
+    "@antfu/eslint-config": "^2.23.0",
+    "@nuxtjs/seo": "2.0.0-rc.10",
+    "@nuxtjs/sitemap": "^5.3.5",
+    "@pinia/nuxt": "^0.5.1",
+    "@zinkawaii/stylelint-config": "^0.1.4",
+    "fast-xml-parser": "^4.4.0",
+    "nuxt": "^3.12.4",
+    "nuxt-icon": "1.0.0-beta.6",
+    "nuxt-simple-robots": "4.0.0-rc.17",
+    "nuxt-site-config": "^2.2.15",
+    "sass": "^1.77.8",
+    "stylelint": "^16.7.0",
+    "typescript": "^5.5.3"
   }
 }

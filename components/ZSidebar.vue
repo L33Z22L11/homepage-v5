@@ -1,26 +1,28 @@
 <script setup>
-const curYear = new Date().getFullYear();
+const curYear = new Date().getFullYear()
 const nav = [
     {
-        title: '', list: [
-            { icon: "ph:house-duotone", title: "主页", link: "/" },
-            { icon: "ph:pen-nib-duotone", title: "文章", link: "/article" },
+        title: '',
+        list: [
+            { icon: 'ph:house-duotone', title: '主页', link: '/' },
+            { icon: 'ph:pen-nib-duotone', title: '文章', link: '/article' },
             // { icon: "ph:pen-nib-duotone", title: "文章", link: "https://blog.zhilu.cyou", external: true },
             // { icon: "ph:code-duotone", title: "项目", link: "/project" },
-            { icon: "ph:code-duotone", title: "项目", link: "https://github.com/L33Z22L11/#user-33976233-pinned-items-reorder-form", external: true },
-            { icon: "ph:globe-duotone", title: "站点", link: "/site" },
-            { icon: "ph:files-duotone", title: "日志", link: "/log" },
-        ]
-    }, {
-        title: '社交', list: [
-            { icon: "ri:qq-fill", title: "群: 169994096", link: "https://jq.qq.com/?_wv=1027&k=lQfNSeEd", external: true },
-            { icon: "ph:github-logo-duotone", title: "Github", link: "https://github.com/L33Z22L11", external: true },
-            { icon: "ph:telegram-logo-duotone", title: "Telegram", link: "https://t.me/L33Z22L11", external: true },
+            { icon: 'ph:code-duotone', title: '项目', link: 'https://github.com/L33Z22L11/#user-33976233-pinned-items-reorder-form', external: true },
+            { icon: 'ph:globe-duotone', title: '站点', link: '/site' },
+            { icon: 'ph:files-duotone', title: '日志', link: '/log' },
         ],
-    }
-];
-const sidebarStore = useSidebarStore();
-
+    },
+    {
+        title: '社交',
+        list: [
+            { icon: 'ri:qq-fill', title: '群: 169994096', link: 'https://jq.qq.com/?_wv=1027&k=lQfNSeEd', external: true },
+            { icon: 'ph:github-logo-duotone', title: 'Github', link: 'https://github.com/L33Z22L11', external: true },
+            { icon: 'ph:telegram-logo-duotone', title: 'Telegram', link: 'https://t.me/L33Z22L11', external: true },
+        ],
+    },
+]
+const sidebarStore = useSidebarStore()
 </script>
 
 <template>
@@ -31,14 +33,16 @@ const sidebarStore = useSidebarStore();
             <Icon name="ph:x" class="close-sidebar" @click="sidebarStore.toggle()" />
         </header>
         <nav class="aside-nav">
-            <template v-for="group in nav">
-                <h2 v-if="group.title">{{ group.title }}</h2>
+            <template v-for="(group, groupIndex) in nav" :key="groupIndex">
+                <h2 v-if="group.title">
+                    {{ group.title }}
+                </h2>
                 <ul>
-                    <li v-for="item in group.list">
+                    <li v-for="(item, itemIndex) in group.list" :key="itemIndex">
                         <NuxtLink :to="item.link" :target="item.external ? '_blank' : ''">
                             <Icon :name="item.icon" />
                             <span class="title">{{ item.title }}</span>
-                            <Icon class="external-tip" name="ph:arrow-up-right" v-if="item.external" />
+                            <Icon v-if="item.external" class="external-tip" name="ph:arrow-up-right" />
                         </NuxtLink>
                     </li>
                 </ul>
@@ -50,7 +54,7 @@ const sidebarStore = useSidebarStore();
         </footer>
     </aside>
     <Transition>
-        <div id="z-sidebar-bgmask" @click="sidebarStore.toggle()" v-if="sidebarStore.isOpen"></div>
+        <div v-if="sidebarStore.isOpen" id="z-sidebar-bgmask" @click="sidebarStore.toggle()" />
     </Transition>
 </template>
 
@@ -68,7 +72,7 @@ const sidebarStore = useSidebarStore();
         display: none;
         cursor: pointer;
     }
-    
+
     &.v-enter-active,
     &.v-leave-active {
         transition: opacity 0.2s;

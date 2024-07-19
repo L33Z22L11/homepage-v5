@@ -1,5 +1,5 @@
 <template>
-    <img class="icon" src="https://blog.zhilu.cyou/static/icon.png" alt="avatar_2019_03_01" />
+    <img class="icon" src="https://blog.zhilu.cyou/static/icon.png" alt="avatar_2019_03_01">
 </template>
 
 <style scoped>

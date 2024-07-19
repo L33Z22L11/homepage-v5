@@ -1,16 +1,16 @@
 <script setup lang="ts">
-import type { CardProps } from './Card.vue';
+import type { CardProps } from './Card.vue'
 
 defineProps<{
-    dataList: Array<CardProps>;
-}>();
+    dataList: Array<CardProps>
+}>()
 </script>
 
 <!-- TODO: 监听滚轮，转换为横向滚动 -->
 
 <template>
     <ul class="z-card-container">
-        <ZCard v-for="(card, index) in dataList" :key="index" v-bind="card" />
+        <ZCard v-for="(card, cardIndex) in dataList" :key="cardIndex" v-bind="card" />
     </ul>
 </template>
 

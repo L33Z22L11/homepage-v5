@@ -1,6 +1,6 @@
 <script setup lang="ts">
-useHead({ title: '日志' });
-definePageMeta({ headerText: '互联网上的活动记录' });
+useHead({ title: '日志' })
+definePageMeta({ headerText: '互联网上的活动记录' })
 const timeline = {
     '2024-06-01': '个人网站：使用 Nuxt.js 重构',
     '2024-02-17': '个人网站：使用 VitePress 重写',
@@ -20,9 +20,11 @@ const timeline = {
 
 <template>
     <div class="timeline wrapper">
-        <div class="timeline-item" v-for="(content, date) in timeline" :key="date">
-            <div class="timeline-item-date">{{ date }}</div>
-            <ZRender class="timeline-item-content" :content="content"></ZRender>
+        <div v-for="(content, date) in timeline" :key="date" class="timeline-item">
+            <div class="timeline-item-date">
+                {{ date }}
+            </div>
+            <ZRender class="timeline-item-content" :content="content" />
         </div>
     </div>
 </template>
@@ -78,5 +80,4 @@ const timeline = {
         }
     }
 }
-
 </style>

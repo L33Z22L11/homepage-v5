@@ -1,18 +1,18 @@
 <script setup lang="ts">
-import { ZLIcon, ZLIconOld, ZLink } from "#components";
+import { ZLIcon, ZLIconOld, ZLink } from '#components'
 
 const props = defineProps<{
-    tag?: string,
-    content: string,
-}>();
+    tag?: string
+    content: string
+}>()
 
-const render = () => {
-    const { tag = 'div', content } = props;
+function render() {
+    const { tag = 'div', content } = props
     return h({
         template: `<${tag}>${content}</${tag}>`,
-        components: { ZLIcon, ZLIconOld, ZLink }
-    });
-};
+        components: { ZLIcon, ZLIconOld, ZLink },
+    })
+}
 </script>
 
 <template>

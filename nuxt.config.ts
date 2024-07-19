@@ -35,13 +35,13 @@ export default defineNuxtConfig({
             preprocessorOptions: {
                 scss: {
                     additionalData: '@import "@/assets/variable.scss";',
-                }
-            }
-        }
+                },
+            },
+        },
     },
     vue: {
         propsDestructure: true,
-        runtimeCompiler: true
+        runtimeCompiler: true,
     },
     modules: [
         'nuxt-icon',

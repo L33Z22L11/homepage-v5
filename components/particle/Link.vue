@@ -1,12 +1,12 @@
 <script setup lang="ts">
-const props = defineProps<{ to?: string }>();
-const isExternal = computed(() => props.to?.match(":"));
+const props = defineProps<{ to?: string }>()
+const isExternal = computed(() => props.to?.match(':'))
 </script>
 
 <template>
     <NuxtLink class="z-link" :to="to" :target="isExternal ? '_blank' : ''">
-        <slot></slot>
-        <Icon class="external" v-if="isExternal" name="ph:arrow-up-right" />
+        <slot />
+        <Icon v-if="isExternal" class="external" name="ph:arrow-up-right" />
     </NuxtLink>
 </template>
 

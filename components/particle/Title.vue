@@ -1,17 +1,17 @@
 <script setup lang="ts">
 defineProps<{
-    icon?: string,
-    center?: boolean,
+    icon?: string
+    center?: boolean
 }>()
 </script>
 
 <template>
     <h2 class="z-title" :class="{ 'z-title-center': center }">
-        <Icon v-if="icon?.match(':')" :name="icon"></Icon>
+        <Icon v-if="icon?.match(':')" :name="icon" />
         <span v-else-if="icon">{{ icon }}</span>
-        <div v-else-if="!center" class="title-mark"></div>
+        <div v-else-if="!center" class="title-mark" />
         <span class="text">
-            <slot></slot>
+            <slot />
         </span>
     </h2>
 </template>

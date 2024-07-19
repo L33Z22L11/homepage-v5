@@ -1,13 +1,13 @@
 <script setup lang="ts">
 defineProps<{
-    text?: string;
-}>();
+    text?: string
+}>()
 </script>
 
 <template>
     <span class="badge">
         {{ text }}
-        <slot></slot>
+        <slot />
     </span>
 </template>
 
