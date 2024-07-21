@@ -1,9 +1,9 @@
 import { XMLParser } from 'fast-xml-parser'
 
-export default defineCachedEventHandler(async (event) => {
-    const resp = await fetch('https://blog.zhilu.cyou/atom.xml');
-    const rawXML = await resp.text();
-    const objAtom = new XMLParser().parse(rawXML);
+export default defineCachedEventHandler(async (_event) => {
+    const resp = await fetch('https://blog.zhilu.cyou/atom.xml')
+    const rawXML = await resp.text()
+    const objAtom = new XMLParser().parse(rawXML)
 
     // 不要 content
     // const feed = objAtom.feed.entry.map((article: any) => {
@@ -14,9 +14,9 @@ export default defineCachedEventHandler(async (event) => {
     //         updated: article.updated,
     //         summary: article.summary,
     //     }
-    // });
+    // })
 
-    return objAtom.feed.entry;
+    return objAtom.feed.entry
 }, {
     maxAge: 60 * 60 * 24,
 })

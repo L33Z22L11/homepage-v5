@@ -4,6 +4,7 @@ definePageMeta({
     alias: ['/'],
     title: '主页',
 })
+const appConfig = useAppConfig()
 </script>
 
 <template>
@@ -12,10 +13,10 @@ definePageMeta({
         <ZField label="<span style='font-size: 3rem;'>👋</span>">
             <div>
                 <h1 style="font-size: 3rem;">
-                    你好，<br>我是<mark>纸鹿本鹿</mark>
+                    你好，<br>我是<mark>{{ appConfig.author.name }}</mark>
                 </h1>
                 <p class="desc">
-                    纸鹿至麓不知路，支炉制露不止漉。
+                    {{ appConfig.description }}
                 </p>
                 <div>
                     <ZButton icon="ph:files-duotone" to="https://blog.zhilu.cyou/">

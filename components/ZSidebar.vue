@@ -22,6 +22,7 @@ const nav = [
         ],
     },
 ]
+const appConfig = useAppConfig()
 const sidebarStore = useSidebarStore()
 </script>
 
@@ -29,7 +30,7 @@ const sidebarStore = useSidebarStore()
     <aside id="z-sidebar" :class="{ show: sidebarStore.isOpen }">
         <header class="aside-header">
             <ZLIcon />
-            <span>纸鹿本鹿</span>
+            <span>{{ appConfig.author.name }}</span>
             <Icon name="ph:x" class="close-sidebar" @click="sidebarStore.toggle()" />
         </header>
         <nav class="aside-nav">
@@ -49,7 +50,7 @@ const sidebarStore = useSidebarStore()
             </template>
         </nav>
         <footer class="aside-footer">
-            <p>© {{ curYear }} 纸鹿本鹿</p>
+            <p>© {{ curYear }} {{ appConfig.author.name }}</p>
             <p>aka Zhilu, L33Z22L11</p>
         </footer>
     </aside>
