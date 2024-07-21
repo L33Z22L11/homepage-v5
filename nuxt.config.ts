@@ -44,11 +44,8 @@ export default defineNuxtConfig({
         runtimeCompiler: true,
     },
     modules: [
-        'nuxt-icon',
-        'nuxt-simple-robots',
-        'nuxt-site-config',
+        '@nuxt/icon',
         '@nuxtjs/seo',
-        '@nuxtjs/sitemap',
         '@pinia/nuxt',
     ],
     site: {
