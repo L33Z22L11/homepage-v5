@@ -14,7 +14,7 @@ defineProps<{
     </ul>
 </template>
 
-<style scoped>
+<style lang="scss" scoped>
 .z-card-container {
     display: flex;
     flex-wrap: nowrap;
@@ -22,9 +22,11 @@ defineProps<{
     overflow-x: auto;
     animation: check;
     animation-timeline: scroll(x self);
+    scroll-snap-type: x mandatory;
 
     >* {
         flex: 1;
+        scroll-snap-align: center;
     }
 }
 

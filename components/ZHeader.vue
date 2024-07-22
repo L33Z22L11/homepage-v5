@@ -1,4 +1,4 @@
-<script setup>
+<script setup lang="ts">
 const sidebarStore = useSidebarStore()
 const _themeStore = useThemeStore()
 </script>

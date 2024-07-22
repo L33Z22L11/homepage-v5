@@ -1,4 +1,4 @@
-<script setup>
+<script setup lang="ts">
 const curYear = new Date().getFullYear()
 const nav = [
     {

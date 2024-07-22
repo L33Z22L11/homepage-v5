@@ -30,7 +30,7 @@ defineProps<CardProps>()
     </li>
 </template>
 
-<style scoped>
+<style lang="scss" scoped>
 .z-card {
     display: grid;
     grid-template-rows: auto auto 1fr;
