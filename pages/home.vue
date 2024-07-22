@@ -39,9 +39,32 @@ const appConfig = useAppConfig()
 
         <ZField label="关于网站">
             <p>
-                自2024年6月1日开始重构，目前还在修缮中。<br>
-                Built with Nuxt.js and KazariEX.
+                自2024年6月1日开始重构，目前还在修缮中。
             </p>
+        </ZField>
+        <ZField label="开源衍生">
+            <div>
+                <p>
+                    感谢
+                    <ZBadge img="https://cdn.libravatar.org/avatar/ecb2ea87c4532f007838d86d02798f89" to="https://github.com/KazariEX">
+                        KazariEX
+                    </ZBadge>
+                    和众多朋友的帮助。<br>
+                    网站开源在
+                    <ZLink to="https://github.com/L33Z22L11/ZhiluSite" icon="ph:github-logo-duotone">
+                        L33Z22L11/ZhiluSite
+                    </ZLink>上。
+                </p>
+                <p>
+                    欢迎参考：<br>
+                    <ZBadge img="https://image.m-c.top/?/images/2024/07/21/iyt3mhQCDe/b_a3f6e95501bcc4ce64c19c63a1211bcd.png" to="https://oio.mckfs.com/" rel="nofollow">
+                        Oiolosse MC 服务器
+                    </ZBadge>
+                    <ZBadge rel="nofollow" img="https://bu.dusays.com/2024/07/13/66929d307adb9.png" to="https://henrywhu.cn/">
+                        Henry Moreau
+                    </ZBadge>
+                </p>
+            </div>
         </ZField>
     </div>
 </template>

@@ -32,7 +32,7 @@ function getPostTime(date: Date) {
 
 <template>
     <ZTitle icon="👀">
-        <span class="text">来自博客
+        <span class="badge-text">来自博客
             <NuxtLink to="https://blog.zhilu.cyou"><mark>纸鹿摸鱼处</mark></NuxtLink>
             的文章
         </span>
@@ -48,18 +48,18 @@ function getPostTime(date: Date) {
         <ZArticle v-for="article in articles" :key="article.id" :article="article" />
     </div>
     <div class="article-more">
-        <NuxtLink to="https://blog.zhilu.cyou/">
+        <ZRawLink to="https://blog.zhilu.cyou/">
             <Icon name="ph:navigation-arrow-duotone" />
             <span>访问</span>
-        </NuxtLink>
-        <NuxtLink to="https://blog.zhilu.cyou/link/">
+        </ZRawLink>
+        <ZRawLink to="https://blog.zhilu.cyou/link/">
             <Icon name="ph:link-duotone" />
             <span>友链</span>
-        </NuxtLink>
-        <NuxtLink to="https://blog.zhilu.cyou/archives/">
+        </ZRawLink>
+        <ZRawLink to="https://blog.zhilu.cyou/archives/">
             <Icon name="ph:archive-duotone" />
             <span>归档</span>
-        </NuxtLink>
+        </ZRawLink>
     </div>
 </template>
 

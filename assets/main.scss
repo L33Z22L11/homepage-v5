@@ -30,6 +30,10 @@ code, pre {
 
 p {
     line-height: 1.4;
+
+    & + & {
+        margin-top: 0.5em;
+    }
 }
 
 mark {

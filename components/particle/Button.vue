@@ -1,16 +1,14 @@
 <script setup lang="ts">
 export interface ButtonProps {
     icon?: string
-    to?: string
     text?: string
     desc?: string
 }
-const props = defineProps<ButtonProps>()
-const isExternal = computed(() => props.to?.match(':'))
+defineProps<ButtonProps>()
 </script>
 
 <template>
-    <NuxtLink class="button" :to="to" :target="isExternal ? '_blank' : ''">
+    <ZRawLink class="button">
         <div class="button-main">
             <Icon v-if="icon" :name="icon" />
             {{ text }}
@@ -19,7 +17,7 @@ const isExternal = computed(() => props.to?.match(':'))
         <div class="button-desc">
             {{ desc || '' }}
         </div>
-    </NuxtLink>
+    </ZRawLink>
 </template>
 
 <style scoped lang="scss">

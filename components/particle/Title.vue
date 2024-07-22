@@ -10,7 +10,7 @@ defineProps<{
         <Icon v-if="icon?.match(':')" :name="icon" />
         <span v-else-if="icon">{{ icon }}</span>
         <div v-else-if="!center" class="title-mark" />
-        <span class="text">
+        <span class="badge-text">
             <slot />
         </span>
     </h2>
