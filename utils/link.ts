@@ -1,3 +1,3 @@
-export function isExtLink(url: string | undefined) {
-    return url?.match(':')
+export function isExtLink(url: string | undefined): boolean {
+    return !!url?.match(':')
 }

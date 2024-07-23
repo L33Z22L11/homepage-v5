@@ -36,6 +36,7 @@ defineProps<{
 }
 
 .badge-width-icon {
+    margin-block: 2px;
     border-radius: 1em;
     font-size: 0.8em;
 

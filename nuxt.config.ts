@@ -17,19 +17,25 @@ export default defineNuxtConfig({
             titleTemplate: '%s %separator 纸鹿 (@L33Z22L11)',
         },
     },
+
     components: [
         { path: '~/components/particle', prefix: 'Z' },
         { path: '~/components/zhilu', prefix: 'ZL' },
         '~/components',
     ],
+
     css: [
         '@/assets/main.scss',
     ],
+
     devtools: { enabled: false },
+
     experimental: {
         viewTransition: true,
     },
+
     srcDir: './',
+
     vite: {
         css: {
             preprocessorOptions: {
@@ -39,16 +45,21 @@ export default defineNuxtConfig({
             },
         },
     },
+
     vue: {
         propsDestructure: true,
         runtimeCompiler: true,
     },
+
     modules: [
         '@nuxt/icon',
         '@nuxtjs/seo',
         '@pinia/nuxt',
     ],
+
     site: {
         url: 'https://zhilu.cyou',
     },
+
+    compatibilityDate: '2024-07-23',
 })

@@ -1,16 +1,36 @@
 <script setup lang="ts">
-defineProps<{ article: any }>()
+import { format, formatDistanceToNow } from 'date-fns'
+import { zhCN } from 'date-fns/locale'
+import type FeedProps from '~/types/feed'
+
+const props = defineProps<FeedProps>()
+
+const tPublishedLabel = getPostTime(props.published)
+const tUpdatedLabel = getPostTime(props.updated)
+function getPostTime(date: string) {
+    const postDate = new Date(date)
+    const now = new Date()
+    if (postDate.getTime() > now.getTime() - 1000 * 60 * 60 * 24 * 7) {
+        return formatDistanceToNow(postDate, { addSuffix: true, locale: zhCN })
+    }
+    else if (postDate.getFullYear() === now.getFullYear()) {
+        return format(postDate, 'M月d日')
+    }
+    else {
+        return format(postDate, 'yy年M月d日')
+    }
+}
 </script>
 
 <template>
-    <a class="article-card" :href="article.link || article.id">
+    <a class="article-card" :href="link.$href || id">
         <div class="article-header">
-            <time v-if="article.tPublishedLabel !== article.tUpdatedLabel" :datetime="article.updated">
-                {{ article.tUpdatedLabel }}</time>
-            <time :datetime="article.published">{{ article.tPublishedLabel }}</time>
+            <time v-if="tPublishedLabel !== tUpdatedLabel" :datetime="updated">
+                {{ tUpdatedLabel }}</time>
+            <time :datetime="published">{{ tPublishedLabel }}</time>
         </div>
-        <h2 class="article-title">{{ article.title }}</h2>
-        <p class="article-descrption">{{ article.summary }}</p>
+        <h2 class="article-title">{{ title }}</h2>
+        <p class="article-descrption">{{ summary['#text'] || summary }}</p>
     </a>
 </template>
 

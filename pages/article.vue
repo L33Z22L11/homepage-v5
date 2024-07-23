@@ -1,39 +1,18 @@
 <script setup lang="ts">
-import { format, formatDistanceToNow } from 'date-fns'
-import { zhCN } from 'date-fns/locale'
+import type FeedProps from '~/types/feed'
 
 useHead({ title: '文章' })
 definePageMeta({ headerText: '最近更新' })
 
 const { data, error, status } = useLazyFetch('/api/feed/blog')
 
-const articles = computed(() =>
-    data.value.map((feed: any) => ({
-        ...feed,
-        tPublishedLabel: getPostTime(feed.published),
-        tUpdatedLabel: getPostTime(feed.updated),
-    })).slice(0, 11),
-)
-
-function getPostTime(date: Date) {
-    const postDate = new Date(date)
-    const now = new Date()
-    if (postDate.getTime() > now.getTime() - 1000 * 60 * 60 * 24 * 7) {
-        return formatDistanceToNow(postDate, { addSuffix: true, locale: zhCN })
-    }
-    else if (postDate.getFullYear() === now.getFullYear()) {
-        return format(postDate, 'M月d日')
-    }
-    else {
-        return format(postDate, 'yy年M月d日')
-    }
-}
+const articles = computed(() => data.value.slice(0, 11))
 </script>
 
 <template>
     <ZTitle icon="👀">
         <span class="badge-text">来自博客
-            <NuxtLink to="https://blog.zhilu.cyou"><mark>纸鹿摸鱼处</mark></NuxtLink>
+            <ZRawLink to="https://blog.zhilu.cyou"><mark>纸鹿摸鱼处</mark></ZRawLink>
             的文章
         </span>
     </ZTitle>
@@ -45,7 +24,7 @@ function getPostTime(date: Date) {
         <p>{{ error }}</p>
     </template>
     <div v-else class="article-list">
-        <ZArticle v-for="article in articles" :key="article.id" :article="article" />
+        <ZArticle v-for="article in articles" :key="article.id" v-bind="article" />
     </div>
     <div class="article-more">
         <ZRawLink to="https://blog.zhilu.cyou/">
