@@ -11,6 +11,7 @@
 <style lang="scss">
 #z-root {
     display: flex;
+    justify-content: center;
     height: 100vh;
     height: 100dvh;
 

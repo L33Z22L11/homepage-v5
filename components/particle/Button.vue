@@ -42,9 +42,9 @@ defineProps<ButtonProps>()
 }
 
 .button-main {
-    display: grid;
-    grid-template-columns: auto 1fr;
-    place-items: center center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     gap: 0.2em;
 
     .iconify {
@@ -54,6 +54,7 @@ defineProps<ButtonProps>()
 
 .button-desc {
     font-size: 0.75em;
+    text-align: center;
     color: var(--c-text-2);
 }
 </style>
