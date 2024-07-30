@@ -34,7 +34,7 @@ $breakpoint-mobile: 768px;
             @include apply-dark-theme-vars;
         }
     }
-    
+
     &[data-theme="dark"] {
         @include apply-dark-theme-vars;
     }

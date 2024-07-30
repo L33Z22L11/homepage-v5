@@ -14,8 +14,8 @@ defineProps<ButtonProps>()
             {{ text }}
             <slot />
         </div>
-        <div class="button-desc">
-            {{ desc || '' }}
+        <div v-if="desc" class="button-desc">
+            {{ desc }}
         </div>
     </ZRawLink>
 </template>

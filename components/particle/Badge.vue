@@ -7,7 +7,7 @@ defineProps<{
 
 <template>
     <ZRawLink class="badge" :class="{ 'badge-width-icon': img }">
-        <img v-if="img" class="badge-icon" :src="img" alt="avatar">
+        <NuxtImg v-if="img" class="badge-icon" :src="img" alt="avatar" />
         <span class="badge-text">
             {{ text }}
             <slot />

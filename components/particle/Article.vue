@@ -23,15 +23,19 @@ function getPostTime(date: string) {
 </script>
 
 <template>
-    <a class="article-card" :href="link.$href || id">
+    <ZRawLink class="article-card" :to="link.$href || id">
         <div class="article-header">
             <time v-if="tPublishedLabel !== tUpdatedLabel" :datetime="updated">
                 {{ tUpdatedLabel }}</time>
             <time :datetime="published">{{ tPublishedLabel }}</time>
         </div>
-        <h2 class="article-title">{{ title }}</h2>
-        <p class="article-descrption">{{ summary['#text'] || summary }}</p>
-    </a>
+        <h2 class="article-title">
+            {{ title }}
+        </h2>
+        <p class="article-descrption">
+            {{ summary['#text'] || summary }}
+        </p>
+    </ZRawLink>
 </template>
 
 <style lang="scss" scoped>

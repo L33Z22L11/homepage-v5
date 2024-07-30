@@ -4,8 +4,10 @@ defineProps<{ label?: string }>()
 
 <template>
     <section class="z-field">
-        <h2 v-html="label" />
-        <slot />
+        <h2 class="z-field-label" v-html="label" />
+        <div>
+            <slot />
+        </div>
     </section>
 </template>
 
@@ -16,14 +18,14 @@ defineProps<{ label?: string }>()
     gap: 1rem 1.5rem;
     margin: 3em 0.5rem 1em;
 
-    >:first-child {
+    >.z-field-label {
         text-align: end;
     }
 
     @media (max-width: $breakpoint-mobile) {
         grid-template-columns: 1fr;
 
-        >:first-child {
+        >.z-field-label {
             text-align: start;
         }
     }

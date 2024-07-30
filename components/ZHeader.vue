@@ -1,13 +1,11 @@
 <script setup lang="ts">
 const sidebarStore = useSidebarStore()
-const _themeStore = useThemeStore()
 </script>
 
 <template>
     <div id="z-header">
         <Icon id="toggle-sidebar" name="ph:sidebar-duotone" @click="sidebarStore.toggle" />
         <span class="header-text">{{ $route.meta.headerText }}</span>
-        <!-- <Icon name="ph:moon-duotone" id="toggle-theme" @click="themeStore.toggle" /> -->
     </div>
 </template>
 

@@ -27,6 +27,7 @@ const sidebarStore = useSidebarStore()
             </template>
         </nav>
         <footer class="aside-footer">
+            <ZThemeToggle />
             <p>{{ appConfig.footer.copyright }}<br>{{ appConfig.footer.message }}</p>
         </footer>
     </aside>

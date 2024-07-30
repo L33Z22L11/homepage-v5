@@ -53,9 +53,18 @@ export default defineNuxtConfig({
 
     modules: [
         '@nuxt/icon',
+        '@nuxt/image',
         '@nuxtjs/seo',
         '@pinia/nuxt',
+        '@vueuse/nuxt',
     ],
+
+    image: {
+        domains: [
+            'blog.zhilu.cyou',
+        ],
+        format: ['avif', 'webp'],
+    },
 
     site: {
         url: 'https://zhilu.cyou',
