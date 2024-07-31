@@ -57,7 +57,14 @@ export default defineNuxtConfig({
         '@nuxtjs/seo',
         '@pinia/nuxt',
         '@vueuse/nuxt',
+        '@nuxtjs/color-mode',
     ],
+
+    colorMode: {
+        preference: 'system',
+        fallback: 'light',
+        classSuffix: '',
+    },
 
     image: {
         domains: [

@@ -1,6 +1,4 @@
 <script setup lang="ts">
-import type FeedProps from '~/types/feed'
-
 useHead({ title: '文章' })
 definePageMeta({ headerText: '最近更新' })
 
