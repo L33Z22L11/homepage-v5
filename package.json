@@ -17,7 +17,7 @@
   },
   "devDependencies": {
     "@antfu/eslint-config": "^2.24.0",
-    "@nuxt/icon": "^1.4.0",
+    "@nuxt/icon": "^1.4.3",
     "@nuxt/image": "^1.7.0",
     "@nuxtjs/color-mode": "^3.4.2",
     "@nuxtjs/seo": "2.0.0-rc.16",
@@ -28,7 +28,7 @@
     "fast-xml-parser": "^4.4.1",
     "nuxt": "^3.12.4",
     "sass": "^1.77.8",
-    "stylelint": "^16.8.0",
+    "stylelint": "^16.8.1",
     "typescript": "^5.5.4"
   }
 }

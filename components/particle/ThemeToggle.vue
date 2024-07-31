@@ -52,37 +52,37 @@ onMounted(() => {
 
 <style scoped lang="scss">
 .theme-toggle {
-  display: flex;
-  justify-content: center;
-  gap: 3px;
-  width: fit-content;
-  margin: 0 auto;
-  padding: 2px;
-  border: 1px solid var(--c-border);
-  border-radius: 1rem;
-  background-color: var(--c-bg-3);
-  font-size: 1rem;
-
-  > button {
-    display: grid;
-    place-items: center;
-    padding: 4px 1rem;
+    display: flex;
+    justify-content: center;
+    gap: 3px;
+    width: fit-content;
+    margin: 0 auto;
+    padding: 2px;
+    border: 1px solid var(--c-border);
     border-radius: 1rem;
-    background: none;
-    color: currentcolor;
-    transition: 0.1s;
-    cursor: pointer;
+    background-color: var(--c-bg-3);
+    font-size: 1rem;
 
-    &:hover {
-      background-color: var(--c-primary-soft);
-      color: var(--c-text-1);
-    }
+    > button {
+        display: grid;
+        place-items: center;
+        padding: 4px 1rem;
+        border-radius: 1rem;
+        background: none;
+        color: currentcolor;
+        transition: 0.1s;
+        cursor: pointer;
 
-    &.active {
-      background-color: var(--c-bg-1);
-      color: var(--c-text-1);
-      cursor: auto;
+        &:hover {
+            background-color: var(--c-primary-soft);
+            color: var(--c-text-1);
+        }
+
+        &.active {
+            background-color: var(--c-bg-1);
+            color: var(--c-text-1);
+            cursor: auto;
+        }
     }
-  }
 }
 </style>
