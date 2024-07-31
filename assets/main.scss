@@ -16,8 +16,9 @@ a {
 
 :root {
     background-color: var(--c-bg-1);
-    font-family: sans-serif;
+    font-family: system-ui, sans-serif;
     color: var(--c-text-1);
+    scrollbar-color: var(--c-text-3) var(--c-bg-2);
 }
 
 code, pre {

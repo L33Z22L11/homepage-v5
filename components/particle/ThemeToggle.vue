@@ -60,7 +60,7 @@ onMounted(() => {
     justify-content: center;
     gap: 3px;
     width: fit-content;
-    margin: 1rem auto;
+    margin: 0 auto;
     padding: 2px;
     border: 1px solid var(--c-border);
     border-radius: 1rem;
@@ -74,13 +74,18 @@ onMounted(() => {
         border-radius: 1rem;
         background: none;
         color: currentcolor;
-        transition: 0.2s;
+        transition: 0.1s;
+        cursor: pointer;
 
-        // cursor: pointer;
+        &:hover {
+            background-color: var(--c-primary-soft);
+            color: var(--c-text-1);
+        }
 
-        &.active, &:hover {
+        &.active {
             background-color: var(--c-bg-1);
             color: var(--c-text-1);
+            cursor: auto;
         }
     }
 }

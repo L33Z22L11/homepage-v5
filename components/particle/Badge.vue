@@ -2,11 +2,12 @@
 defineProps<{
     img?: string
     text?: string
+    square?: boolean
 }>()
 </script>
 
 <template>
-    <ZRawLink class="badge" :class="{ 'badge-width-icon': img }">
+    <ZRawLink class="badge" :class="{ 'badge-img': img, 'badge-square': square }">
         <NuxtImg v-if="img" class="badge-icon" :src="img" alt="avatar" />
         <span class="badge-text">
             {{ text }}
@@ -19,6 +20,7 @@ defineProps<{
 .badge {
     display: inline-flex;
     align-items: center;
+    border: 1px solid var(--c-border);
     border-radius: 4px;
     background-color: var(--c-bg-3);
     font-size: 0.9em;
@@ -35,14 +37,24 @@ defineProps<{
     }
 }
 
-.badge-width-icon {
+.badge-img {
     margin-block: 2px;
     border-radius: 1em;
     font-size: 0.8em;
 
     .badge-icon {
         height: 1.8em;
+        aspect-ratio: 1;
         border-radius: 1em;
+        object-fit: cover;
+    }
+}
+
+.badge-square {
+    border-radius: 4px;
+
+    .badge-icon {
+        border-radius: 3px;
     }
 }
 

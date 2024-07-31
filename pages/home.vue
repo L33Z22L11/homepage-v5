@@ -54,7 +54,7 @@ const appConfig = useAppConfig()
             </p>
             <p>
                 欢迎参考：<br>
-                <ZBadge img="https://image.m-c.top/?/images/2024/07/21/iyt3mhQCDe/b_a3f6e95501bcc4ce64c19c63a1211bcd.png" to="https://oio.mckfs.com/" rel="nofollow">
+                <ZBadge img="https://image.m-c.top/?/images/2024/07/21/iyt3mhQCDe/b_a3f6e95501bcc4ce64c19c63a1211bcd.png" to="https://oio.mckfs.com/" rel="nofollow" square>
                     Oiolosse MC 服务器
                 </ZBadge>
                 <ZBadge rel="nofollow" img="https://bu.dusays.com/2024/07/13/66929d307adb9.png" to="https://henrywhu.cn/">

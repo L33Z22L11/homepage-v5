@@ -61,7 +61,7 @@ const articles = computed(() => data.value.slice(0, 11))
         display: flex;
         align-items: center;
         justify-content: center;
-        gap: 4px;
+        gap: 8px;
         opacity: 0.2;
         padding: 0.3em 0.5em;
         border-radius: 8px;

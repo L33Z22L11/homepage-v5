@@ -15,16 +15,22 @@ const handleError = () => clearError({ redirect: '/' })
         <main>
             <div>
                 <ZTitle>出错了</ZTitle>
-                <ZField :label="error?.statusCode">
-                    <div>
-                        <p>{{ error?.message }}</p>
-                        <br>
-                        <ZButton @click="handleError">
-                            返回主页
-                        </ZButton>
+                <ZField :label="error?.statusCode?.toString()">
+                    <div class="error-message">
+                        <pre>{{ error?.message }}</pre>
                     </div>
+                    <br>
+                    <ZButton @click="handleError">
+                        返回主页
+                    </ZButton>
                 </ZField>
             </div>
         </main>
     </div>
 </template>
+
+<style scoped lang="scss">
+.z-field {
+    overflow: auto;
+}
+</style>
