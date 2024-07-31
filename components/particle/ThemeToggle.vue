@@ -3,16 +3,15 @@ import tippy from 'tippy.js'
 import 'tippy.js/dist/tippy.css'
 import type { ThemeType, Themes } from '~/types/theme'
 
-useHead({ script: [{ src: '/scripts/theme.js' }] })
+const colorMode = useColorMode()
+const themeToggle = ref<Array<HTMLDivElement> | null>(null)
 
-const theme = useLocalStorage<ThemeType>('theme', 'auto')
-const themeToggle = ref<Array<HTMLDivElement> | null>()
 const themes: Themes = {
     light: {
         icon: 'ph:sun-duotone',
         tip: '浅色模式',
     },
-    auto: {
+    system: {
         icon: 'ph:monitor-duotone',
         tip: '跟随系统',
     },
@@ -22,15 +21,12 @@ const themes: Themes = {
     },
 }
 
-watch(theme, (value) => {
-    document.documentElement.dataset.theme = value
-}, {
-    // by KazariEX
-    immediate: import.meta.browser,
-})
+function toggleTheme(key: ThemeType) {
+    colorMode.preference = key
+}
 
 onMounted(() => {
-    themeToggle.value!.forEach((button, index) => {
+    themeToggle.value?.forEach((button, index) => {
         const key = Object.keys(themes)[index] as ThemeType
         const tip = themes[key].tip
         tippy(button, {
@@ -43,13 +39,13 @@ onMounted(() => {
 <template>
     <div class="theme-toggle">
         <button
-            v-for="({ icon }, key) in themes"
+            v-for="(themeData, key) in themes"
             :key="key"
             ref="themeToggle"
-            :class="[key, { active: theme === key }]"
-            @click="theme = key"
+            :class="{ active: colorMode.preference === key }"
+            @click="toggleTheme(key)"
         >
-            <Icon :name="icon" />
+            <Icon :name="themeData.icon" />
         </button>
     </div>
 </template>
@@ -67,7 +63,7 @@ onMounted(() => {
     background-color: var(--c-bg-3);
     font-size: 1rem;
 
-    >button {
+    > button {
         display: grid;
         place-items: center;
         padding: 4px 1rem;
