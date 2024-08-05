@@ -24,6 +24,15 @@ const toolSites: Array<CardProps> = [
         desc: '用于宝鸡中学校内考试，可以在大屏上展示科目信息、起止时间、考试进度，支持切换年级、文理科，于2021年4月1日上线并投入使用。',
     },
     {
+        name: '西邮&thinsp;Wiki',
+        nameAlt: 'xupt-wiki',
+        buttons: [
+            { icon: 'ph:planet-duotone', text: '访问', to: 'https://wiki.cooo.site' },
+            { icon: 'ph:github-logo-duotone', text: 'GitHub', to: 'https://github.com/xupt-wiki/xupt-wiki' },
+        ],
+        desc: '西安邮电大学第三方公益校园生活百科，于2024年6月30立项。本人于2024年7月30日使用 VitePress 搭建，持续更新中。',
+    },
+    {
         name: '西邮&thinsp;Linux&thinsp;兴趣小组<br>培养计划',
         nameAlt: 'Plan',
         buttons: [
@@ -34,11 +43,10 @@ const toolSites: Array<CardProps> = [
     },
     {
         name: '公众号 MD 编辑器',
-        nameAlt: 'md',
+        nameAlt: 'md4mp',
         badges: ['镜像'],
         buttons: [
-            { icon: 'ph:planet-duotone', text: '访问', to: 'https://md.xiyoulinux.com' },
-            { icon: 'ph:github-logo-duotone', text: 'GitHub', to: 'https://github.com/xiyoulinuxer/md' },
+            { icon: 'ph:planet-duotone', text: '访问', to: 'https://md.cooo.site' },
         ],
         desc: '好用的 Markdown 转微信公众号工具。<ZLink to="https://doocs.github.io/md/">源站</ZLink>加载速度较慢，本人于2024年6月18日重新使用 Cloudflare Pages 部署。',
     },

@@ -29,7 +29,7 @@ defineProps<{
     transition: all 0.2s;
 
     & + & {
-        margin-left: 1em;
+        margin-left: 0.6em;
     }
 
     &[href]:hover {

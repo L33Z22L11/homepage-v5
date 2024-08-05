@@ -1,14 +1,30 @@
-import type { NavGroup } from './types/nav'
+import type { NavGroup } from '~/types/nav'
 
-export default defineAppConfig({
-    author: {
-        name: '纸鹿本鹿',
-    },
+const author = {
+    name: '纸鹿本鹿',
+    avatar: 'https://blog.zhilu.cyou/static/avatar.jpg',
+    email: 'hi@zhilu.cyou',
+    homepage: 'https://zhilu.cyou',
+}
+export default {
+    title: '纸鹿 (@L33Z22L11)',
     description: '纸鹿至麓不知路，支炉制露不止漉。',
+    author,
+    language: 'zh-CN',
+    timezone: 'Asia/Shanghai',
+    favicon: 'https://blog.zhilu.cyou/static/icon.png',
+    url: 'https://zhilu.cyou',
     footer: {
         copyright: `© ${new Date().getFullYear()} 纸鹿本鹿`,
         message: 'aka Zhilu, L33Z22L11',
     },
+    imageDomains: [
+        'blog.zhilu.cyou',
+        // '7.isyangs.cn',
+    ],
+    injectHeadLinks: [
+        // { rel: 'stylesheet', href: '//s1.hdslb.com/bfs/static/jinkela/long/font/medium.css', media: 'none', onload: 'this.media="all"' },
+    ],
     nav: <NavGroup[]> [
         {
             title: '',
@@ -31,4 +47,4 @@ export default defineAppConfig({
             ],
         },
     ],
-})
+}

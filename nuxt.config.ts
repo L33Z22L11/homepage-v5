@@ -1,25 +1,32 @@
+import homepageConfig from './homepage.config'
+
 export default defineNuxtConfig({
     app: {
         rootId: 'z-root',
         head: {
             htmlAttrs: {
-                lang: 'zh',
+                lang: homepageConfig.language,
             },
             link: [
+                ...homepageConfig.injectHeadLinks,
                 {
                     rel: 'icon',
-                    href: 'https://blog.zhilu.cyou/static/icon.png',
+                    href: homepageConfig.favicon,
                 },
             ],
             templateParams: {
                 separator: '|',
             },
-            titleTemplate: '%s %separator 纸鹿 (@L33Z22L11)',
+            titleTemplate: `%s %separator ${homepageConfig.title}`,
         },
     },
 
+    appConfig: homepageConfig,
+
+    compatibilityDate: '2024-08-03',
+
     components: [
-        { path: '~/components/particle', prefix: 'Z' },
+        { path: '~/components/partial', prefix: 'Z' },
         { path: '~/components/zhilu', prefix: 'ZL' },
         '~/components',
     ],
@@ -28,13 +35,13 @@ export default defineNuxtConfig({
         '@/assets/main.scss',
     ],
 
-    devtools: { enabled: false },
-
     experimental: {
         viewTransition: true,
     },
 
-    srcDir: './',
+    future: {
+        compatibilityVersion: 4,
+    },
 
     vite: {
         css: {
@@ -54,10 +61,10 @@ export default defineNuxtConfig({
     modules: [
         '@nuxt/icon',
         '@nuxt/image',
+        '@nuxtjs/color-mode',
         '@nuxtjs/seo',
         '@pinia/nuxt',
         '@vueuse/nuxt',
-        '@nuxtjs/color-mode',
     ],
 
     colorMode: {
@@ -67,15 +74,9 @@ export default defineNuxtConfig({
     },
 
     image: {
-        domains: [
-            'blog.zhilu.cyou',
-        ],
+        domains: homepageConfig.imageDomains,
         format: ['avif', 'webp'],
     },
 
-    site: {
-        url: 'https://zhilu.cyou',
-    },
-
-    compatibilityDate: '2024-07-23',
+    site: { url: homepageConfig.url },
 })

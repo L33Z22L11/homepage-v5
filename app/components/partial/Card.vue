@@ -35,6 +35,7 @@ defineProps<CardProps>()
     display: grid;
     grid-template-rows: auto auto 1fr;
     gap: 1em;
+    position: relative;
     min-width: 240px;
     padding: 2em 1em;
     border-radius: 0.5em;
@@ -44,9 +45,12 @@ defineProps<CardProps>()
     display: grid;
     align-content: center;
     gap: 2px;
-    position: relative;
     height: 4em;
     text-align: center;
+
+    h3 {
+        font-size: 1.4em;
+    }
 }
 
 .z-card-buttons {
@@ -56,8 +60,9 @@ defineProps<CardProps>()
 .z-card-name-alt {
     position: absolute;
     opacity: 0.1;
-    inset: 0;
-    font-size: 2em;
+    inset: 0 0 auto;
+    mask: linear-gradient(#fff, #fff3);
+    font-size: 2rem;
     font-weight: 900;
     text-align: center;
     z-index: -1;
