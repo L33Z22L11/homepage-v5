@@ -1,5 +1,9 @@
+<script setup lang="ts">
+const appConfig = useAppConfig()
+</script>
+
 <template>
-    <NuxtImg class="icon" src="https://blog.zhilu.cyou/static/icon.png" alt="avatar_2019_03_01" />
+    <NuxtImg class="icon" :src="appConfig.favicon" :alt="`${appConfig.title}的图标`" />
 </template>
 
 <style scoped>

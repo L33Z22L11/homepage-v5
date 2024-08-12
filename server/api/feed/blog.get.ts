@@ -1,7 +1,8 @@
 import { type X2jOptions, XMLParser } from 'fast-xml-parser'
+import homepageConfig from '~~/homepage.config'
 
 export default defineCachedEventHandler(async (_event) => {
-    const resp = await fetch('https://blog.zhilu.cyou/atom.xml')
+    const resp = await fetch(homepageConfig.blogAtom)
     const parseOptions: X2jOptions = {
         ignoreAttributes: false,
         attributeNamePrefix: '$',

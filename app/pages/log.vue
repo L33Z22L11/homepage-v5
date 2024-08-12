@@ -2,6 +2,7 @@
 useHead({ title: '日志' })
 definePageMeta({ headerText: '互联网上的活动记录' })
 const timeline = {
+    '2024-08-11': '博客：使用 Nuxt Content 重构',
     '2024-06-01': '个人网站：使用 Nuxt.js 重构',
     '2024-02-17': '个人网站：使用 VitePress 重写',
     '2023-05-24': '博客：使用 Hexo 构建纸鹿摸鱼处',

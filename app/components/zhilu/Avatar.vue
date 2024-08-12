@@ -1,7 +1,11 @@
+<script setup lang="ts">
+const appConfig = useAppConfig()
+</script>
+
 <template>
     <NuxtPicture
-        class="avatar" alt="Zhilu's Avatar (2023-06-22)"
-        src="https://cdn.libravatar.org/avatar/6790d5a0c7fbba6038a2bf4618cc24d9?s=480"
+        class="avatar" :alt="`${appConfig.author.name} 的头像`"
+        :src="appConfig.author.avatar"
     />
 </template>
 
