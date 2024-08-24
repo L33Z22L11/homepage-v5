@@ -30,7 +30,7 @@ function getPostTime(date: string) {
             <time :datetime="published">{{ tPublishedLabel }}</time>
         </div>
         <h2 class="article-title">
-            {{ title }}
+            {{ title['#text'] || title }}
         </h2>
         <p class="article-descrption">
             {{ summary['#text'] || summary }}

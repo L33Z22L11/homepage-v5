@@ -35,12 +35,20 @@ const appConfig = useAppConfig()
             </p>
         </ZField>
 
-        <ZField label="关于网站">
+        <ZField label="近期活动">
+            <p>
+                7 月完善<ZLink to="https://wiki.cooo.site/">
+                    西邮Wiki
+                </ZLink>，8 月使用 Nuxt Content 重构了<ZLink to="https://blog.zhilu.cyou/">
+                    个人博客
+                </ZLink>，但还未完成。
+            </p>
+        </ZField>
+
+        <ZField label="关于主页">
             <p>
                 自2024年6月1日开始重构，目前还在修缮中。
             </p>
-        </ZField>
-        <ZField label="开源衍生">
             <p>
                 感谢
                 <ZBadge img="https://cdn.libravatar.org/avatar/ecb2ea87c4532f007838d86d02798f89" to="https://github.com/KazariEX">
@@ -65,6 +73,9 @@ const appConfig = useAppConfig()
                 </ZBadge>
                 <ZBadge rel="nofollow" img="https://api-space.tnxg.top/avatar?s=qq" to="https://tnxg.top/">
                     天翔TNXG
+                </ZBadge>
+                <ZBadge rel="nofollow" img="https://ykc.im/icon.png" to="https://ykc.im/">
+                    York Chou
                 </ZBadge>
             </p>
         </ZField>
