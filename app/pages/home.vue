@@ -18,7 +18,7 @@ const appConfig = useAppConfig()
                 {{ appConfig.description }}
             </p>
             <div>
-                <ZButton icon="ph:files-duotone" to="https://blog.zhilu.cyou/">
+                <ZButton icon="ph:files-duotone" to="https://blog.zhilu.cyou/" primary>
                     博客
                 </ZButton>
                 <ZButton icon="ph:github-logo-duotone" to="https://github.com/L33Z22L11">
@@ -41,13 +41,13 @@ const appConfig = useAppConfig()
                 <!-- eslint-disable-next-line vue/singleline-html-element-content-newline -->
                 <ZLink to="https://wiki.cooo.site/">西邮Wiki</ZLink>，8 月使用 Nuxt Content 重构了
                 <!-- eslint-disable-next-line vue/singleline-html-element-content-newline -->
-                <ZLink to="https://blog.zhilu.cyou/">个人博客</ZLink>，但还未完成。
+                <ZLink to="https://blog.zhilu.cyou/">个人博客</ZLink>，近期持续开发中。
             </p>
         </ZField>
 
         <ZField label="关于主页">
             <p>
-                自2024年6月1日开始重构，目前还在修缮中。
+                自2024年6月1日开始重构，目前缓慢修缮中。
             </p>
             <p>
                 感谢

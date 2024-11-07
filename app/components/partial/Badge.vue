@@ -71,8 +71,8 @@ const tip = computed(() => {
 
 .badge-img {
     .badge-icon {
+        width: 1.6em;
         height: 1.6em;
-        aspect-ratio: 1;
         border-radius: 3.5px;
         object-fit: cover;
     }

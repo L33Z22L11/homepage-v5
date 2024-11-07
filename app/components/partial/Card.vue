@@ -26,7 +26,7 @@ defineProps<CardProps>()
         <div class="z-card-buttons">
             <ZButton v-for="(button, buttonIndex) in buttons" v-bind="button" :key="buttonIndex" />
         </div>
-        <p v-html="desc" />
+        <p class="z-card-desc" v-html="desc" />
     </li>
 </template>
 
@@ -36,8 +36,7 @@ defineProps<CardProps>()
     grid-template-rows: auto auto 1fr;
     gap: 1em;
     position: relative;
-    min-width: 240px;
-    padding: 2em 1em;
+    padding: 2em 3%;
     border-radius: 0.5em;
 }
 
@@ -68,7 +67,10 @@ defineProps<CardProps>()
     z-index: -1;
 }
 
-p {
+.z-card-desc {
+    padding: 0.8em 1em;
+    border-radius: 0.5em;
+    background-color: var(--c-bg-1);
     text-align: justify;
 }
 </style>

@@ -91,7 +91,6 @@ const orgSites: Array<CardProps> = [
 <template>
     <ZTitle>工具类站点</ZTitle>
     <ZCardList :data-list="toolSites" />
-
     <ZTitle>组织门户</ZTitle>
     <ZCardList :data-list="orgSites" />
 </template>
