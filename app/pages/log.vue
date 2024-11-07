@@ -1,4 +1,6 @@
 <script setup lang="ts">
+import { ZhiluIcon, ZhiluIconOld } from '#components'
+
 useHead({ title: '日志' })
 definePageMeta({ headerText: '互联网上的活动记录' })
 const timeline = {
@@ -12,9 +14,9 @@ const timeline = {
     '2019-12-27': 'Slogan：纸鹿至麓不知路，支炉制露不止漉',
     '2019-07-19': '个人网站：使用 Jekyll，发布第一篇文章',
     '2019-05-24': '个人网站：购买域名 <code>zhilu.fun</code>',
-    '2019-03-01': 'Logo：<ZLIcon />',
+    '2019-03-01': h('span', ['Logo：', h(ZhiluIcon)]),
     '2019-02-06': 'Slogan：纸鹿山行云潜日，日潜云行山路止',
-    '2017-09-08': 'Logo：<ZLIconOld /> PaperyDeer',
+    '2017-09-08': h('span', ['Logo：', h(ZhiluIconOld), ' PaperyDeer']),
     '2016-06-28': '开始使用昵称 <code>纸鹿君_L33Z22L11</code> 在互联网上活跃',
 }
 </script>
@@ -25,12 +27,15 @@ const timeline = {
             <div class="timeline-item-date">
                 {{ date }}
             </div>
-            <ZRender class="timeline-item-content" :content="content" />
+            <p v-if="typeof content === 'string'" class="timeline-item-content" v-html="content" />
+            <p v-else class="timeline-item-content">
+                <component :is="content" />
+            </p>
         </div>
     </div>
 </template>
 
-<style scoped lang="scss">
+<style lang="scss" scoped>
 .timeline {
     position: relative;
     width: fit-content;
@@ -43,7 +48,7 @@ const timeline = {
         bottom: 0;
         left: 0;
         width: 4px;
-        background-color: var(--c-bg-3);
+        background-color: var(--c-bg-2);
     }
 }
 
@@ -61,7 +66,7 @@ const timeline = {
     .timeline-item-content {
         padding: 0.5em 0.8em;
         border-radius: 0.5em;
-        background-color: var(--c-bg-3);
+        background-color: var(--c-bg-2);
     }
 }
 

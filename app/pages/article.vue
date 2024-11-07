@@ -40,7 +40,7 @@ const articles = computed(() => data.value.slice(0, 11))
     </div>
 </template>
 
-<style scoped lang="scss">
+<style lang="scss" scoped>
 .article-list {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
@@ -68,7 +68,7 @@ const articles = computed(() => data.value.slice(0, 11))
         &:hover {
             opacity: 1;
             background-color: var(--c-primary-soft);
-            color: var(--c-primary-1);
+            color: var(--c-primary);
         }
     }
 }

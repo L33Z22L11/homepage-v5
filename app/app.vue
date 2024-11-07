@@ -8,6 +8,7 @@
     </div>
 </template>
 
+<!-- eslint-disable-next-line vue/enforce-style-attribute -->
 <style lang="scss">
 #z-root {
     display: flex;

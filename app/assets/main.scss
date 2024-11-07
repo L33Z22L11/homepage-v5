@@ -1,3 +1,11 @@
+:root {
+    background-color: var(--c-bg);
+    font-family: system-ui, sans-serif;
+    color: var(--c-text-1);
+    transition: color 0.1s, background-color 0.2s;
+    scrollbar-color: var(--c-text-3) var(--c-bg-2);
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -8,40 +16,53 @@
     box-sizing: border-box;
 }
 
+::selection {
+    background-color: var(--c-primary-soft);
+}
+
 a {
     text-decoration: none;
     color: inherit;
-    -webkit-tap-highlight-color: var(--c-primary-3);
-}
-
-:root {
-    background-color: var(--c-bg-1);
-    font-family: system-ui, sans-serif;
-    color: var(--c-text-1);
-    scrollbar-color: var(--c-text-3) var(--c-bg-2);
+    -webkit-tap-highlight-color: var(--c-primary-soft);
 }
 
 code, pre {
     /* stylelint-disable-next-line font-family-name-quotes */
-    font-family: "Sarasa Mono SC", SFMono-Regular, "Fira Code", "JetBrains Mono", "Cascadia Code", Monaco, "Noto Sans Mono", Consolas, "monospace", monospace;
+    font-family: "SFMono-Regular", "Cascadia Code", "Fira Code", "JetBrains Mono", "Menlo", "Monaco", "Consolas", "Noto Sans Mono", "monospace", "MiSans VF", "MiSans", "PingFang SC", system-ui, monospace;
+    font-size: 0.9em;
 }
 
-::selection {
-    background-color: var(--c-primary-2);
+button {
+    cursor: pointer;
+}
+
+button, input, textarea {
+    background: none;
+    font: inherit;
+    color: currentcolor;
+
+    &:disabled {
+        color: var(--c-text-3);
+        cursor: not-allowed;
+    }
+
+    .iconify:only-child {
+        display: block;
+    }
 }
 
 p {
     line-height: 1.4;
 
-    & + & {
+    & + p {
         margin-top: 0.5em;
     }
 }
 
 mark {
-    background: linear-gradient(var(--c-primary-2), var(--c-primary-2)) no-repeat left bottom / 100% 0.3em;
+    background: linear-gradient(var(--c-primary-soft), var(--c-primary-soft)) no-repeat left bottom / 100% 0.3em;
     text-decoration: none;
-    color: var(--c-primary-1);
+    color: var(--c-primary);
     transition: 0.2s;
     animation: line-spread 0.5s;
 
@@ -54,8 +75,15 @@ mark {
     }
 }
 
+:where(.iconify) {
+    display: inline-block;
+    flex-shrink: 0;
+    font-size: 1.2em;
+    vertical-align: sub;
+}
+
 .text-primary {
-    color: var(--c-primary-1);
+    color: var(--c-primary);
 }
 
 .wrapper {

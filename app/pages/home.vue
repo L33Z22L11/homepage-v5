@@ -8,7 +8,7 @@ const appConfig = useAppConfig()
 </script>
 
 <template>
-    <ZLAvatar class="avatar" />
+    <ZhiluAvatar class="avatar" />
     <div class="wrapper">
         <ZField label="<span style='font-size: 3rem;'>👋</span>">
             <h1 style="font-size: 3rem;">
@@ -29,19 +29,19 @@ const appConfig = useAppConfig()
 
         <ZField label="介绍">
             <p>
-                <ZLink to="https://github.com/xiyou-linuxer">
-                    西邮&thinsp;Linux&thinsp;兴趣小组
-                </ZLink> 成员，Windows 11 和 Arch Linux 用户。
+                <!-- eslint-disable-next-line vue/singleline-html-element-content-newline -->
+                <ZLink to="https://github.com/xiyou-linuxer">西邮&thinsp;Linux&thinsp;兴趣小组</ZLink>
+                成员，Windows 11 和 Arch Linux 用户。
             </p>
         </ZField>
 
         <ZField label="近期活动">
             <p>
-                7 月完善<ZLink to="https://wiki.cooo.site/">
-                    西邮Wiki
-                </ZLink>，8 月使用 Nuxt Content 重构了<ZLink to="https://blog.zhilu.cyou/">
-                    个人博客
-                </ZLink>，但还未完成。
+                7 月完善
+                <!-- eslint-disable-next-line vue/singleline-html-element-content-newline -->
+                <ZLink to="https://wiki.cooo.site/">西邮Wiki</ZLink>，8 月使用 Nuxt Content 重构了
+                <!-- eslint-disable-next-line vue/singleline-html-element-content-newline -->
+                <ZLink to="https://blog.zhilu.cyou/">个人博客</ZLink>，但还未完成。
             </p>
         </ZField>
 
@@ -51,30 +51,26 @@ const appConfig = useAppConfig()
             </p>
             <p>
                 感谢
-                <ZBadge img="https://cdn.libravatar.org/avatar/ecb2ea87c4532f007838d86d02798f89" to="https://github.com/KazariEX">
+                <ZBadge link="https://github.com/KazariEX">
                     KazariEX
-                </ZBadge>
-                <ZBadge img="https://7.isyangs.cn/8/655c9835780a0-8.jpg" to="https://github.com/isYangs">
+                </ZBadge> <ZBadge link="https://github.com/isYangs">
                     isYangs
                 </ZBadge>
                 等众多朋友为个人主页提供帮助。<br>
                 主页开源在
-                <ZLink to="https://github.com/L33Z22L11/homepage-v5" icon="ph:github-logo-duotone">
-                    L33Z22L11/homepage-v5
-                </ZLink>上。
+                <!-- eslint-disable-next-line vue/singleline-html-element-content-newline -->
+                <ZLink to="https://github.com/L33Z22L11/homepage-v5" icon="ph:github-logo-duotone">L33Z22L11/homepage-v5</ZLink>
+                上。
             </p>
             <p>
                 欢迎使用、参考样式：<br>
-                <ZBadge rel="nofollow" img="https://image.m-c.top/?/images/2024/07/21/iyt3mhQCDe/b_a3f6e95501bcc4ce64c19c63a1211bcd.png" to="https://oio.mckfs.com/">
+                <ZBadge rel="nofollow" img="https://image.m-c.top/?/images/2024/07/21/iyt3mhQCDe/b_a3f6e95501bcc4ce64c19c63a1211bcd.png" link="https://oio.mckfs.com/">
                     Oiolosse MC服
-                </ZBadge>
-                <ZBadge rel="nofollow" img="https://bu.dusays.com/2024/07/13/66929d307adb9.png" to="https://henrywhu.cn/">
+                </ZBadge> <ZBadge rel="nofollow" img="https://bu.dusays.com/2024/07/13/66929d307adb9.png" link="https://henrywhu.cn/">
                     Henry Moreau
-                </ZBadge>
-                <ZBadge rel="nofollow" img="https://api-space.tnxg.top/avatar?s=qq" to="https://tnxg.top/">
+                </ZBadge> <ZBadge rel="nofollow" img="https://api-space.tnxg.top/avatar?s=qq" link="https://tnxg.top/">
                     天翔TNXG
-                </ZBadge>
-                <ZBadge rel="nofollow" img="https://ykc.im/icon.png" to="https://ykc.im/">
+                </ZBadge> <ZBadge rel="nofollow" img="https://ykc.im/icon.png" link="https://ykc.im/">
                     York Chou
                 </ZBadge>
             </p>
@@ -82,7 +78,7 @@ const appConfig = useAppConfig()
     </div>
 </template>
 
-<style scoped lang="scss">
+<style lang="scss" scoped>
 .avatar {
     position: fixed;
     opacity: 0.2;

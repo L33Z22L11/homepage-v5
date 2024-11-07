@@ -6,7 +6,7 @@ const sidebarStore = useSidebarStore()
 <template>
     <aside id="z-sidebar" :class="{ show: sidebarStore.isOpen }">
         <header class="aside-header">
-            <ZLIcon />
+            <ZhiluIcon />
             <span>{{ appConfig.author.name }}</span>
             <Icon name="ph:x" class="close-sidebar" @click="sidebarStore.toggle()" />
         </header>
@@ -15,15 +15,15 @@ const sidebarStore = useSidebarStore()
                 <h2 v-if="group.title">
                     {{ group.title }}
                 </h2>
-                <ul>
-                    <li v-for="(item, itemIndex) in group.list" :key="itemIndex">
-                        <NuxtLink :to="item.link" :target="item.external ? '_blank' : ''">
+                <menu>
+                    <li v-for="(item, itemIndex) in group.items" :key="itemIndex">
+                        <ZRawLink :to="item.url" class="aside-nav-item">
                             <Icon :name="item.icon" />
-                            <span class="title">{{ item.title }}</span>
+                            <span class="nav-text">{{ item.text }}</span>
                             <Icon v-if="item.external" class="external-tip" name="ph:arrow-up-right" />
-                        </NuxtLink>
+                        </ZRawLink>
                     </li>
-                </ul>
+                </menu>
             </template>
         </nav>
         <footer class="aside-footer">
@@ -37,14 +37,14 @@ const sidebarStore = useSidebarStore()
     </Transition>
 </template>
 
-<style scoped lang="scss">
+<style lang="scss" scoped>
 #z-sidebar {
     display: grid;
     grid-template-rows: auto 1fr auto;
     position: sticky;
     min-width: 240px;
     border-right: 1px solid var(--c-border);
-    background-color: var(--c-bg-2);
+    background-color: var(--c-bg-1);
     inset-block: 0;
 
     .close-sidebar {
@@ -68,7 +68,7 @@ const sidebarStore = useSidebarStore()
         width: 320px;
         min-width: auto;
         max-width: 100vw;
-        box-shadow: 0 0 48px -36px;
+        box-shadow: 0 0 1rem var(--ld-shadow);
         transition: left 0.2s;
         z-index: 3;
 
@@ -116,6 +116,7 @@ const sidebarStore = useSidebarStore()
 .aside-nav {
     overflow: auto;
     padding: 0.5rem;
+    font-size: 0.9em;
 
     h2 {
         margin: 2rem 0 1rem 1rem;
@@ -127,43 +128,40 @@ const sidebarStore = useSidebarStore()
     li {
         display: grid;
         margin: 6px 0;
+    }
+}
 
-        >a {
-            display: flex;
-            align-items: center;
-            gap: 0.5rem;
-            padding: 6px 12px;
-            border-radius: 0.5rem;
-            transition: background-color 0.2s, color 0.1s;
+.aside-nav-item {
+    display: flex;
+    align-items: center;
+    gap: 0.5em;
+    padding: 0.5em 1em;
+    border-radius: 0.5em;
+    transition: all 0.2s;
 
-            &:hover {
-                background-color: var(--c-primary-soft);
-            }
+    &:hover, &.router-link-active {
+        background-color: var(--c-bg-soft);
+        color: var(--c-text);
+    }
 
-            &.router-link-active {
-                background-color: var(--c-primary-soft);
+    &.router-link-active::after {
+        content: "⦁";
+        width: 1em;
+        text-align: center;
+        color: var(--c-text-3);
+    }
 
-                &::after {
-                    content: "⦁";
-                    width: 1rem;
-                    text-align: center;
-                    color: var(--c-text-3);
-                }
-            }
+    .iconify {
+        font-size: 1.5em;
+    }
 
-            .iconify {
-                font-size: 1.5rem;
-            }
+    .nav-text {
+        flex-grow: 1;
+    }
 
-            .title {
-                flex-grow: 1;
-            }
-
-            .external-tip {
-                opacity: 0.5;
-                font-size: 1rem;
-            }
-        }
+    .external-tip {
+        opacity: 0.5;
+        font-size: 1em;
     }
 }
 

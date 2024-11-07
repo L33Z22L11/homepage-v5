@@ -9,6 +9,7 @@ const appConfig = useAppConfig()
     />
 </template>
 
+<!-- eslint-disable-next-line vue/block-lang -->
 <style scoped>
 :deep(img) {
     height: 1em;

@@ -11,7 +11,7 @@ defineProps<{ label?: string }>()
     </section>
 </template>
 
-<style scoped lang="scss">
+<style lang="scss" scoped>
 .z-field {
     display: grid;
     grid-template-columns: 120px 1fr;

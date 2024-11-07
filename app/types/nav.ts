@@ -1,11 +1,11 @@
 export interface NavItem {
     icon: string
-    title: string
-    link: string
+    text: string
+    url: string
     external?: boolean
 }
 
-export interface NavGroup {
+export type Nav = {
     title: string
-    list: NavItem[]
-}
+    items: NavItem[]
+}[]

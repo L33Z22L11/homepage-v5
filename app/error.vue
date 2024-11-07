@@ -29,7 +29,7 @@ const handleError = () => clearError({ redirect: '/' })
     </div>
 </template>
 
-<style scoped lang="scss">
+<style lang="scss" scoped>
 .z-field {
     overflow: auto;
 }

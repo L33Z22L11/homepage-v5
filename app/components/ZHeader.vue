@@ -4,20 +4,21 @@ const sidebarStore = useSidebarStore()
 
 <template>
     <div id="z-header">
-        <Icon id="toggle-sidebar" name="ph:sidebar-duotone" @click="sidebarStore.toggle" />
+        <button id="toggle-sidebar" type="button" aria-label="切换侧边栏" @click="sidebarStore.toggle">
+            <Icon name="ph:sidebar-duotone" />
+        </button>
         <span class="header-text">{{ $route.meta.headerText }}</span>
     </div>
 </template>
 
-<style scoped lang="scss">
+<style lang="scss" scoped>
 #z-header {
     display: flex;
     align-items: center;
-    gap: 0.5rem;
     position: sticky;
     top: 0;
     height: 48px;
-    padding-inline: 1rem;
+    padding: 0 0.5rem;
     background-color: var(--c-bg-a50);
     backdrop-filter: blur(1rem);
     font-weight: 600;
@@ -25,19 +26,22 @@ const sidebarStore = useSidebarStore()
 
     .header-text {
         flex-grow: 1;
+        padding: 0 0.7em;
     }
 }
 
 #toggle-sidebar {
     display: none;
+    padding: 0.2em;
+    border-radius: 0.2em;
+    font-size: 1.2em;
+
+    &:hover {
+        background-color: var(--c-bg-soft);
+    }
 
     @media (max-width: $breakpoint-mobile) {
         display: block;
     }
-}
-
-.iconify {
-    font-size: 1.5em;
-    cursor: pointer;
 }
 </style>

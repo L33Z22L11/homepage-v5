@@ -1,43 +1,54 @@
 <script setup lang="ts">
+import { ZRawLink } from '#components'
+
 export interface ButtonProps {
     icon?: string
     text?: string
+    to?: string
     desc?: string
 }
 defineProps<ButtonProps>()
 </script>
 
 <template>
-    <ZRawLink class="button">
+    <component :is="to ? ZRawLink : 'button'" :to class="button" type="button">
         <div class="button-main">
             <Icon v-if="icon" :name="icon" />
-            {{ text }}
-            <slot />
+            <slot>{{ text }}</slot>
         </div>
         <div v-if="desc" class="button-desc">
             {{ desc }}
         </div>
-    </ZRawLink>
+    </component>
 </template>
 
-<style scoped lang="scss">
+<style lang="scss" scoped>
 .button {
     display: inline-block;
-    align-items: center;
     padding: 0.4em 0.6em;
     border: 1px solid var(--c-border);
-    border-radius: 0.4em;
-    box-shadow: 0.05em 0.1em 0.5em var(--c-primary-soft);
-    background-color: var(--c-bg-2);
-    vertical-align: middle;
+    border-radius: 0.5em;
+    box-shadow: 0 2px 0.5em var(--ld-shadow);
+    background-color: var(--ld-bg-card);
+    line-height: normal;
     transition: background-color 0.2s;
+    cursor: pointer;
 
-    & + & {
+    & + .button {
         margin-left: 0.8em;
     }
 
     &:hover {
-        background-color: var(--c-bg-3);
+        background-color: var(--c-bg-2);
+    }
+
+    &:active {
+        background-color: var(--ld-shadow);
+    }
+
+    &:disabled {
+        background-color: initial;
+        cursor: not-allowed;
     }
 }
 
@@ -46,10 +57,6 @@ defineProps<ButtonProps>()
     align-items: center;
     justify-content: center;
     gap: 0.2em;
-
-    .iconify {
-        font-size: 1.2em;
-    }
 }
 
 .button-desc {

@@ -30,10 +30,10 @@ function getPostTime(date: string) {
             <time :datetime="published">{{ tPublishedLabel }}</time>
         </div>
         <h2 class="article-title">
-            {{ title['#text'] || title }}
+            {{ title._ || title }}
         </h2>
         <p class="article-descrption">
-            {{ summary['#text'] || summary }}
+            {{ summary._ || summary }}
         </p>
     </ZRawLink>
 </template>
@@ -45,7 +45,7 @@ function getPostTime(date: string) {
     transition: all 0.2s;
 
     &:hover {
-        background-color: var(--c-primary-soft);
+        background-color: var(--c-bg-soft);
     }
 
     >* {

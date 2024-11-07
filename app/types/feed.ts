@@ -8,8 +8,8 @@ export default interface FeedProps {
     published: string
     updated: string
     summary: {
-        '#text': string
-        '$type': string
+        _: string
+        $type: string
     }
     content?: {
         $src: string
