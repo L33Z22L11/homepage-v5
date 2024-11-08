@@ -20,7 +20,7 @@
   },
   "devDependencies": {
     "@antfu/eslint-config": "^3.8.0",
-    "@nuxt/icon": "^1.6.1",
+    "@nuxt/icon": "^1.7.0",
     "@nuxt/image": "^1.8.1",
     "@nuxtjs/color-mode": "^3.5.2",
     "@nuxtjs/seo": "2.0.0-rc.21",
@@ -30,7 +30,7 @@
     "@zinkawaii/stylelint-config": "^0.1.5",
     "eslint": "^9.14.0",
     "fast-xml-parser": "^4.5.0",
-    "nuxt": "^3.14.159",
+    "nuxt": "3.13.2",
     "sass": "^1.80.6",
     "stylelint": "^16.10.0",
     "typescript": "^5.6.3"
