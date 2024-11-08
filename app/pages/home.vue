@@ -30,18 +30,14 @@ const appConfig = useAppConfig()
         <ZField label="介绍">
             <p>
                 <!-- eslint-disable-next-line vue/singleline-html-element-content-newline -->
-                <ZLink to="https://github.com/xiyou-linuxer">西邮&thinsp;Linux&thinsp;兴趣小组</ZLink>
-                成员，Windows 11 和 Arch Linux 用户。
+                <ZLink to="https://github.com/xiyou-linuxer">西邮&thinsp;Linux&thinsp;兴趣小组</ZLink>成员，Windows 11 和 Arch Linux 用户。
             </p>
         </ZField>
 
         <ZField label="近期活动">
             <p>
-                7 月完善
                 <!-- eslint-disable-next-line vue/singleline-html-element-content-newline -->
-                <ZLink to="https://wiki.cooo.site/">西邮Wiki</ZLink>，8 月使用 Nuxt Content 重构了
-                <!-- eslint-disable-next-line vue/singleline-html-element-content-newline -->
-                <ZLink to="https://blog.zhilu.cyou/">个人博客</ZLink>，近期持续开发中。
+                7 月完善<ZLink to="https://wiki.cooo.site/">西邮Wiki</ZLink>，8 月使用 Nuxt Content 重构了<ZLink to="https://blog.zhilu.cyou/">个人博客</ZLink>，近期持续开发中。
             </p>
         </ZField>
 
@@ -57,10 +53,8 @@ const appConfig = useAppConfig()
                     isYangs
                 </ZBadge>
                 等众多朋友为个人主页提供帮助。<br>
-                主页开源在
                 <!-- eslint-disable-next-line vue/singleline-html-element-content-newline -->
-                <ZLink to="https://github.com/L33Z22L11/homepage-v5" icon="ph:github-logo-duotone">L33Z22L11/homepage-v5</ZLink>
-                上。
+                主页开源在<ZLink to="https://github.com/L33Z22L11/homepage-v5" icon="ph:github-logo-duotone">L33Z22L11/homepage-v5</ZLink>上。
             </p>
             <p>
                 欢迎使用、参考样式：<br>

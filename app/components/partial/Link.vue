@@ -17,6 +17,7 @@ const tip = computed(() => (isExtLink(props.to) && getDomain(props.to)) || decod
 
 <style lang="scss" scoped>
 .z-link {
+    padding: 0 0.1em;
     background: linear-gradient(var(--c-primary-soft), var(--c-primary-soft)) no-repeat center bottom / 100% 0.1em;
     color: var(--c-primary);
     transition: all 0.2s;
