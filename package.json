@@ -1,26 +1,28 @@
 {
   "name": "zhilu-site",
   "type": "module",
-  "version": "4.2.0",
+  "version": "4.2.1",
   "private": true,
   "packageManager": "pnpm@9.12.3",
   "scripts": {
     "prepare": "nuxt prepare",
-    "dev": "nuxt dev --no-qr --host",
+    "dev": "nuxt dev --no-qr",
+    "build": "nuxt build",
     "generate": "nuxt generate",
-    "preview": "nuxi preview",
+    "preview": "nuxt preview",
     "lint": "eslint .",
-    "lint:fix": "eslint . --fix"
+    "lint:fix": "eslint --fix ."
   },
   "dependencies": {
     "date-fns": "^4.1.0",
     "embla-carousel-autoplay": "^8.3.1",
     "embla-carousel-vue": "^8.3.1",
+    "fast-xml-parser": "^4.5.0",
     "vue-tippy": "^6.5.0"
   },
   "devDependencies": {
     "@antfu/eslint-config": "^3.8.0",
-    "@nuxt/icon": "^1.7.0",
+    "@nuxt/icon": "^1.7.2",
     "@nuxt/image": "^1.8.1",
     "@nuxtjs/color-mode": "^3.5.2",
     "@nuxtjs/seo": "2.0.0-rc.21",
@@ -29,10 +31,11 @@
     "@vueuse/nuxt": "^11.2.0",
     "@zinkawaii/stylelint-config": "^0.1.5",
     "eslint": "^9.14.0",
-    "fast-xml-parser": "^4.5.0",
     "nuxt": "3.13.2",
     "sass": "^1.80.6",
     "stylelint": "^16.10.0",
-    "typescript": "^5.6.3"
+    "typescript": "^5.6.3",
+    "vue": "3.5.12",
+    "vue-router": "4.4.5"
   }
 }

@@ -9,7 +9,6 @@ export default defineNuxtConfig({
             },
             link: [
                 { rel: 'icon', href: homepageConfig.favicon },
-                // { rel: 'stylesheet', href: 'https://s1.hdslb.com/bfs/static/jinkela/long/font/medium.css', media: 'none', onload: 'this.media="all"' },
             ],
             templateParams: {
                 separator: '|',
@@ -49,10 +48,6 @@ export default defineNuxtConfig({
         },
     },
 
-    vue: {
-        propsDestructure: true,
-    },
-
     modules: [
         '@nuxt/icon',
         '@nuxt/image',
@@ -69,11 +64,12 @@ export default defineNuxtConfig({
     },
 
     image: {
-        domains: [
-            // 'blog.zhilu.cyou',
-            // '7.isyangs.cn',
-        ],
+        domains: [],
         format: ['avif', 'webp'],
+    },
+
+    ogImage: {
+        enabled: false,
     },
 
     site: {
