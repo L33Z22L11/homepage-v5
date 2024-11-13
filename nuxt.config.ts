@@ -10,6 +10,11 @@ export default defineNuxtConfig({
             link: [
                 { rel: 'icon', href: homepageConfig.favicon },
             ],
+            meta: [
+                { name: 'author', content: homepageConfig.author.name },
+                { name: 'color-scheme', content: 'light dark' },
+                { 'name': 'generator', 'data-github-repo': 'https://github.com/L33Z22L11/homepage-v5' },
+            ],
             templateParams: {
                 separator: '|',
             },

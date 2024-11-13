@@ -7,10 +7,10 @@ definePageMeta({ headerText: '一些网站' })
 const toolSites: Array<CardProps> = [
     {
         name: 'CO导航',
-        nameAlt: 'XUPT-Nav',
+        nameAlt: 'xupt-nav',
         buttons: [
             { icon: 'ph:planet-duotone', text: '访问', to: 'https://cooo.site' },
-            { icon: 'ph:github-logo-duotone', text: 'GitHub', to: 'https://github.com/L33Z22L11/XUPT-Nav' },
+            { icon: 'ph:github-logo-duotone', text: 'GitHub', to: 'https://github.com/xupt-wiki/xupt-nav' },
         ],
         desc: '为西安邮电大学学生提供网址导航服务，于2023年2月7日开始运营，是“更适合西邮宝宝体质的网址导航”。',
     },

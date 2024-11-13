@@ -15,7 +15,7 @@ const appConfig = useAppConfig()
                 你好，<br>我是<mark>{{ appConfig.author.name }}</mark>
             </h1>
             <p class="desc">
-                {{ appConfig.description }}
+                {{ appConfig.subtitle }}
             </p>
             <div>
                 <ZButton icon="ph:files-duotone" to="https://blog.zhilu.cyou/" primary>
