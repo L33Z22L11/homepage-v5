@@ -5,7 +5,7 @@
   "private": true,
   "packageManager": "pnpm@9.12.3",
   "scripts": {
-    "prepare": "nuxt prepare",
+    "postinstall": "nuxt prepare",
     "dev": "nuxt dev --no-qr",
     "build": "nuxt build",
     "generate": "nuxt generate",
@@ -21,8 +21,8 @@
     "vue-tippy": "^6.5.0"
   },
   "devDependencies": {
-    "@antfu/eslint-config": "^3.8.0",
-    "@nuxt/icon": "^1.7.2",
+    "@antfu/eslint-config": "^3.9.1",
+    "@nuxt/icon": "^1.7.5",
     "@nuxt/image": "^1.8.1",
     "@nuxtjs/color-mode": "^3.5.2",
     "@nuxtjs/seo": "2.0.0-rc.21",
@@ -30,12 +30,12 @@
     "@vueuse/core": "^11.2.0",
     "@vueuse/nuxt": "^11.2.0",
     "@zinkawaii/stylelint-config": "^0.1.5",
-    "eslint": "^9.14.0",
+    "eslint": "^9.15.0",
     "nuxt": "3.13.2",
-    "sass": "^1.80.6",
+    "sass": "^1.81.0",
     "stylelint": "^16.10.0",
     "typescript": "^5.6.3",
-    "vue": "3.5.12",
-    "vue-router": "4.4.5"
+    "vue": "^3.5.13",
+    "vue-router": "^4.4.5"
   }
 }
