@@ -66,6 +66,8 @@ const appConfig = useAppConfig()
                     天翔TNXG
                 </ZBadge> <ZBadge rel="nofollow" img="https://ykc.im/icon.png" link="https://ykc.im/">
                     York Chou
+                </ZBadge> <ZBadge rel="nofollow" img="https://www.xxfer.cn/icon.png" link="https://www.xxfer.cn/">
+                    小李同学
                 </ZBadge>
             </p>
         </ZField>

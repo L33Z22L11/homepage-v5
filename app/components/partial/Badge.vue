@@ -15,7 +15,7 @@ const img = computed(() => {
     if (ghUsername)
         return getGhAvatar(ghUsername)
     if (props.link && isExtLink(props.link))
-        return `https://unavatar.webp.se/${getDomain(props.link)}`
+        return `https://unavatar.webp.se/${getDomain(props.link)}?w`
     return ''
 })
 
@@ -45,7 +45,7 @@ const tip = computed(() => {
 .badge {
     display: inline-flex;
     align-items: center;
-    border: 1px solid var(--c-bg-soft);
+    border: 1px solid var(--c-border);
     border-radius: 4px;
     background-color: var(--c-bg-2);
     font-size: 0.875em;
@@ -74,10 +74,9 @@ const tip = computed(() => {
 
 .badge-img {
     .badge-icon {
-        width: 1.6em;
         height: 1.6em;
+        max-width: 2em;
         border-radius: 3.5px;
-        object-fit: cover;
     }
 
     .badge-text {
