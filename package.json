@@ -15,27 +15,28 @@
   },
   "dependencies": {
     "date-fns": "^4.1.0",
-    "embla-carousel-autoplay": "^8.4.0",
-    "embla-carousel-vue": "^8.4.0",
+    "embla-carousel-autoplay": "^8.5.1",
+    "embla-carousel-vue": "^8.5.1",
+    "embla-carousel-wheel-gestures": "^8.0.1",
     "fast-xml-parser": "^4.5.0",
     "vue-tippy": "^6.5.0"
   },
   "devDependencies": {
-    "@antfu/eslint-config": "^3.9.2",
-    "@nuxt/icon": "1.7.6",
+    "@antfu/eslint-config": "^3.11.2",
+    "@nuxt/icon": "^1.9.1",
     "@nuxt/image": "^1.8.1",
     "@nuxtjs/color-mode": "^3.5.2",
-    "@nuxtjs/seo": "2.0.0-rc.21",
-    "@pinia/nuxt": "^0.7.0",
-    "@vueuse/core": "^11.2.0",
-    "@vueuse/nuxt": "^11.2.0",
-    "@zinkawaii/stylelint-config": "^0.1.5",
-    "eslint": "^9.15.0",
+    "@nuxtjs/seo": "^2.0.2",
+    "@pinia/nuxt": "^0.9.0",
+    "@vueuse/core": "^12.0.0",
+    "@vueuse/nuxt": "^12.0.0",
+    "@zinkawaii/stylelint-config": "^0.2.2",
+    "eslint": "^9.16.0",
     "nuxt": "3.13.2",
-    "sass": "^1.81.0",
-    "stylelint": "^16.10.0",
-    "typescript": "^5.6.3",
+    "sass": "^1.82.0",
+    "stylelint": "^16.11.0",
+    "typescript": "^5.7.2",
     "vue": "^3.5.13",
-    "vue-router": "^4.4.5"
+    "vue-router": "^4.5.0"
   }
 }
