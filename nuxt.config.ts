@@ -11,8 +11,7 @@ export default defineNuxtConfig({
                 { rel: 'icon', href: homepageConfig.favicon },
             ],
             meta: [
-                { name: 'author', content: homepageConfig.author.name },
-                { name: 'color-scheme', content: 'light dark' },
+                { name: 'author', content: `${homepageConfig.author.name} <${homepageConfig.author.email}>` },
                 { 'name': 'generator', 'data-github-repo': 'https://github.com/L33Z22L11/homepage-v5' },
             ],
             templateParams: {
@@ -36,6 +35,10 @@ export default defineNuxtConfig({
 
     experimental: {
         viewTransition: true,
+    },
+
+    features: {
+        inlineStyles: false,
     },
 
     future: {

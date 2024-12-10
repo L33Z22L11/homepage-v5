@@ -1,5 +1,5 @@
-import homepageConfig from '~~/homepage.config'
 import { type X2jOptions, XMLParser } from 'fast-xml-parser'
+import homepageConfig from '~~/homepage.config'
 
 export default defineCachedEventHandler(async (_event) => {
     const resp = await fetch(homepageConfig.blogAtom)

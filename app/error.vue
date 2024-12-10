@@ -30,7 +30,12 @@ const handleError = () => clearError({ redirect: '/' })
 </template>
 
 <style lang="scss" scoped>
-.z-field {
+.error-message {
+    display: flex;
     overflow: auto;
+
+    > pre {
+        max-width: 0;
+    }
 }
 </style>
