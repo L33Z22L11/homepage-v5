@@ -10,7 +10,7 @@ const sidebarStore = useSidebarStore()
             <span>{{ appConfig.author.name }}</span>
             <Icon name="ph:x" class="close-sidebar" @click="sidebarStore.toggle()" />
         </header>
-        <nav class="aside-nav">
+        <nav class="aside-nav scrollcheck-y">
             <template v-for="(group, groupIndex) in appConfig.nav" :key="groupIndex">
                 <h2 v-if="group.title">
                     {{ group.title }}
@@ -28,7 +28,6 @@ const sidebarStore = useSidebarStore()
         </nav>
         <footer class="aside-footer">
             <ZThemeToggle />
-            <br>
             <p>{{ appConfig.footer.copyright }}<br>{{ appConfig.footer.message }}</p>
         </footer>
     </aside>
@@ -39,41 +38,31 @@ const sidebarStore = useSidebarStore()
 
 <style lang="scss" scoped>
 #z-sidebar {
-    display: grid;
-    grid-template-rows: auto 1fr auto;
-    position: sticky;
-    min-width: 240px;
+    display: flex;
+    flex-direction: column;
+    flex-shrink: 0;
+    width: 240px;
     border-right: 1px solid var(--c-border);
     background-color: var(--c-bg-1);
-    inset-block: 0;
 
     .close-sidebar {
         display: none;
         cursor: pointer;
     }
 
-    &.v-enter-active,
-    &.v-leave-active {
-        transition: opacity 0.2s;
-    }
-
-    &.v-enter-from,
-    &.v-leave-to {
-        opacity: 0;
-    }
-
     @media (max-width: $breakpoint-mobile) {
         position: fixed;
-        left: -100vw;
+        left: 0;
         width: 320px;
-        min-width: auto;
-        max-width: 100vw;
+        height: 100%;
+        max-width: 100%;
         box-shadow: 0 0 1rem var(--ld-shadow);
-        transition: left 0.2s;
+        transform: translateX(-100%);
+        transition: transform 0.2s;
         z-index: 3;
 
         &.show {
-            left: 0;
+            transform: none;
 
             .close-sidebar {
                 display: block;
@@ -86,12 +75,8 @@ const sidebarStore = useSidebarStore()
     position: fixed;
     inset: 0;
     backdrop-filter: contrast(0.8) brightness(0.9);
+    transition: opacity 0.2s;
     z-index: 2;
-
-    &.v-enter-active,
-    &.v-leave-active {
-        transition: opacity 0.2s;
-    }
 
     &.v-enter-from,
     &.v-leave-to {
@@ -114,8 +99,9 @@ const sidebarStore = useSidebarStore()
 }
 
 .aside-nav {
+    flex-grow: 1;
     overflow: auto;
-    padding: 0.5rem;
+    padding: 0 5%;
     font-size: 0.9em;
 
     h2 {
@@ -126,8 +112,7 @@ const sidebarStore = useSidebarStore()
     }
 
     li {
-        display: grid;
-        margin: 6px 0;
+        margin: 0.5em 0;
     }
 }
 
@@ -166,9 +151,12 @@ const sidebarStore = useSidebarStore()
 }
 
 .aside-footer {
-    padding: 0.5rem;
+    --gap: clamp(0.5rem, 3vh, 1rem);
+
+    display: grid;
+    gap: var(--gap);
+    padding: var(--gap);
     font-size: 0.8em;
-    line-height: 1.5;
     text-align: center;
     color: var(--c-text-2);
 }

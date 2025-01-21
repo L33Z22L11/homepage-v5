@@ -1,5 +1,5 @@
-import homepageConfig from '~~/homepage.config'
 import type { Nav } from '~/types/nav'
+import homepageConfig from '~~/homepage.config'
 
 export default defineAppConfig({
     ...homepageConfig,

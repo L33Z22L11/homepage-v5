@@ -6,8 +6,8 @@ export function getDomain(url: string) {
 export function getGhUsername(url?: string) {
     if (!url)
         return ''
-    const regex = /github\.com\/([a-zA-Z0-9-]+)(?:\/[^/]+)?(\/?)$/
-    return url.match(regex)?.[1] ?? ''
+    const usernameRagex = /github\.com\/([a-zA-Z0-9-]+)(?:\/[^/]+)?(\/?)$/
+    return url.match(usernameRagex)?.[1] ?? ''
 }
 
 export function getGhAvatar(name: string, options?: Record<string, any>) {
