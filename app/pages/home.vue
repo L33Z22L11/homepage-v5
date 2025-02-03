@@ -68,6 +68,8 @@ const appConfig = useAppConfig()
                     York Chou
                 </ZBadge> <ZBadge rel="nofollow" img="https://www.xxfer.cn/icon.png" link="https://www.xxfer.cn/">
                     小李同学
+                </ZBadge> <ZBadge rel="nofollow" img="https://q1.qlogo.cn/g?b=qq&nk=1043865083&s=2" link="https://www.xlenco.top/">
+                    Xlenco
                 </ZBadge>
             </p>
         </ZField>

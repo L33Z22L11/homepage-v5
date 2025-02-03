@@ -33,6 +33,10 @@ export default defineNuxtConfig({
         '@/assets/main.scss',
     ],
 
+    devtools: {
+        enabled: false,
+    },
+
     experimental: {
         viewTransition: true,
     },

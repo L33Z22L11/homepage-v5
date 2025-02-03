@@ -13,4 +13,9 @@ export default antfu({
         'vue/enforce-style-attribute': ['warn', { allow: ['scoped'] }],
         'yaml/indent': ['error', 2],
     },
+}, {
+    files: ['*.json'],
+    rules: {
+        'style/eol-last': ['warn', 'never'],
+    },
 })

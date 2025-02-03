@@ -85,6 +85,14 @@ const orgSites: Array<CardProps> = [
         ],
         desc: '宝鸡中学校内的 Minecraft 爱好群体，由 <ZLink icon="ph:github-logo-duotone" to="https://github.com/guuguai/">古古怪怪GuuGuai </ZLink> 于2020年7月17日建立。帮助文档网站于2022年6月12日建立，并于2024年2月21日迁移。',
     },
+    {
+        name: '相侵相碍异家人',
+        nameAlt: 'Alien Family Hub',
+        buttons: [
+            { icon: 'ph:planet-duotone', text: '访问', to: 'https://alienfamily.us.kg/' },
+        ],
+        desc: 'Hexo博客交流群“糖果屋”的群友组织的Minecraft服务器，于2024年7月18日建群。2025年2月2日创建了成员列表页面。',
+    },
 ]
 </script>
 
