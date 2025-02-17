@@ -1,4 +1,5 @@
-import homepageConfig from './homepage.config'
+import process from 'node:process'
+import homepageConfig, { routeRules } from './homepage.config'
 
 export default defineNuxtConfig({
     app: {
@@ -33,9 +34,8 @@ export default defineNuxtConfig({
         '@/assets/main.scss',
     ],
 
-    devtools: {
-        enabled: false,
-    },
+    // BUG: 3.14+ Windows 平台内存泄漏
+    devtools: { enabled: false },
 
     experimental: {
         viewTransition: true,
@@ -49,6 +49,8 @@ export default defineNuxtConfig({
         compatibilityVersion: 4,
     },
 
+    routeRules,
+
     vite: {
         css: {
             preprocessorOptions: {
@@ -57,6 +59,9 @@ export default defineNuxtConfig({
                     api: 'modern-compiler',
                 },
             },
+        },
+        server: {
+            allowedHosts: true,
         },
     },
 
@@ -76,6 +81,8 @@ export default defineNuxtConfig({
     },
 
     image: {
+        // BUG: https://github.com/nuxt/image/issues/1353
+        provider: process.env.NUXT_IMAGE_PROVIDER || undefined,
         domains: [],
         format: ['avif', 'webp'],
     },

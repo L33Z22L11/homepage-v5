@@ -1,6 +1,9 @@
 import type { Nav } from '~/types/nav'
 import homepageConfig from '~~/homepage.config'
 
+// 图标查询：https://yesicon.app/ph
+// 图标插件：https://marketplace.visualstudio.com/items?itemName=antfu.iconify
+
 export default defineAppConfig({
     ...homepageConfig,
 
