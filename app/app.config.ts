@@ -12,7 +12,7 @@ export default defineAppConfig({
         message: 'aka Zhilu, L33Z22L11',
     },
 
-    nav: <Nav>[
+    nav: [
         {
             title: '',
             items: [
@@ -33,7 +33,7 @@ export default defineAppConfig({
                 { icon: 'ph:telegram-logo-duotone', text: 'Telegram', url: 'https://t.me/L33Z22L11', external: true },
             ],
         },
-    ],
+    ] satisfies Nav,
 
     themes: {
         light: {

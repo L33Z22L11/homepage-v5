@@ -9,7 +9,7 @@ const tip = computed(() => (isExtLink(props.to) && getDomain(props.to)) || decod
 </script>
 
 <template>
-    <ZRawLink v-tippy="tip" class="z-link" :to>
+    <ZRawLink v-tip="tip" class="z-link" :to>
         <Icon v-if="icon" class="domain-icon" :name="icon" />
         <slot />
     </ZRawLink>

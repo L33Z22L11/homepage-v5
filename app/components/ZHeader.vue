@@ -4,7 +4,7 @@ const sidebarStore = useSidebarStore()
 
 <template>
     <div id="z-header">
-        <button id="toggle-sidebar" type="button" aria-label="切换侧边栏" @click="sidebarStore.toggle">
+        <button id="toggle-sidebar" aria-label="切换侧边栏" @click="sidebarStore.toggle">
             <Icon name="ph:sidebar-duotone" />
         </button>
         <span class="header-text">{{ $route.meta.headerText }}</span>

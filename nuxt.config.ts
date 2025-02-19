@@ -81,8 +81,8 @@ export default defineNuxtConfig({
     },
 
     image: {
-        // BUG: https://github.com/nuxt/image/issues/1353
-        provider: process.env.NUXT_IMAGE_PROVIDER || undefined,
+        // Netlify 需要特殊处理
+        provider: process.env.NUXT_IMAGE_PROVIDER,
         domains: [],
         format: ['avif', 'webp'],
     },
