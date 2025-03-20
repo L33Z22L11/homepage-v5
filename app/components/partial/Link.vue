@@ -1,6 +1,7 @@
 <script setup lang="ts">
 const props = defineProps<{
     to: string
+    text?: string
     icon?: string
     tip?: string
 }>()
@@ -11,12 +12,15 @@ const tip = computed(() => (isExtLink(props.to) && getDomain(props.to)) || decod
 <template>
     <ZRawLink v-tip="tip" class="z-link" :to>
         <Icon v-if="icon" class="domain-icon" :name="icon" />
-        <slot />
+        <slot>{{ text }}</slot>
     </ZRawLink>
 </template>
 
 <style lang="scss" scoped>
+// 消除空格并对齐到基线，同时保持图标垂直居中
 .z-link {
+    display: inline-flex;
+    align-items: baseline;
     padding: 0 0.1em;
     background: linear-gradient(var(--c-primary-soft), var(--c-primary-soft)) no-repeat center bottom / 100% 0.1em;
     color: var(--c-primary);
@@ -28,6 +32,7 @@ const tip = computed(() => (isExtLink(props.to) && getDomain(props.to)) || decod
     }
 
     .domain-icon {
+        align-self: center;
         margin-right: 0.1em;
     }
 }

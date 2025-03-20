@@ -33,7 +33,7 @@ defineProps<ButtonProps>()
     background-color: var(--c-bg-1);
     line-height: normal;
     vertical-align: middle;
-    transition: color 0.1s, background-color 0.2s;
+    transition: filter 0.2s;
     cursor: pointer;
 
     &.primary {
@@ -42,8 +42,7 @@ defineProps<ButtonProps>()
     }
 
     &:hover {
-        background-color: var(--c-bg-2);
-        color: var(--c-text);
+        filter: contrast(0.9);
     }
 
     &:active {

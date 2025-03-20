@@ -29,15 +29,20 @@ const appConfig = useAppConfig()
 
         <ZField label="介绍">
             <p>
-                <!-- eslint-disable-next-line vue/singleline-html-element-content-newline -->
-                <ZLink to="https://github.com/xiyou-linuxer">西邮&thinsp;Linux&thinsp;兴趣小组</ZLink>成员，Windows 11 和 Arch Linux 用户。
+                <ZLink to="https://github.com/xiyou-linuxer">
+                    西邮 Linux 兴趣小组
+                </ZLink>成员，Windows 11 和 Arch
+                Linux 用户。
             </p>
         </ZField>
 
         <ZField label="近期活动">
             <p>
-                <!-- eslint-disable-next-line vue/singleline-html-element-content-newline -->
-                7 月完善<ZLink to="https://wiki.cooo.site/">西邮Wiki</ZLink>，8 月使用 Nuxt Content 重构了<ZLink to="https://blog.zhilu.cyou/">个人博客</ZLink>，近期持续开发中。
+                2024 年 7 月完善<ZLink to="https://wiki.cooo.site/">
+                    西邮Wiki
+                </ZLink>，8 月使用 Nuxt Content 重构了<ZLink to="https://blog.zhilu.cyou/">
+                    个人博客
+                </ZLink>，2025 年 3 月重构了西邮 Linux 兴趣小组博客后端，近期正在寻找前端实习。
             </p>
         </ZField>
 
@@ -46,33 +51,53 @@ const appConfig = useAppConfig()
                 自2024年6月1日开始重构，目前缓慢修缮中。
             </p>
             <p>
-                感谢
-                <ZBadge link="https://github.com/KazariEX">
+                感谢<ZBadge link="https://github.com/KazariEX">
                     KazariEX
-                </ZBadge> <ZBadge link="https://github.com/isYangs">
-                    isYangs
                 </ZBadge>
-                等众多朋友为个人主页提供帮助。<br>
-                <!-- eslint-disable-next-line vue/singleline-html-element-content-newline -->
-                主页开源在<ZLink to="https://github.com/L33Z22L11/homepage-v5" icon="ph:github-logo-duotone">L33Z22L11/homepage-v5</ZLink>上。
+                <ZBadge link="https://github.com/isYangs">
+                    isYangs
+                </ZBadge>等众多朋友为个人主页提供帮助。<br>
+                主页开源在<ZLink to="https://github.com/L33Z22L11/homepage-v5" icon="ph:github-logo-duotone">
+                    L33Z22L11/homepage-v5
+                </ZLink>上。
             </p>
             <p>
                 欢迎使用、参考样式：<br>
-                <ZBadge rel="nofollow" img="https://image.m-c.top/?/images/2024/07/21/iyt3mhQCDe/b_a3f6e95501bcc4ce64c19c63a1211bcd.png" link="https://oio.mckfs.com/">
-                    Oiolosse MC服
-                </ZBadge> <ZBadge rel="nofollow" img="https://bu.dusays.com/2024/07/13/66929d307adb9.png" link="https://henrywhu.cn/">
-                    Henry Moreau
-                </ZBadge> <ZBadge rel="nofollow" img="https://api-space.tnxg.top/avatar?s=qq" link="https://tnxg.top/">
-                    天翔TNXG
-                </ZBadge> <ZBadge rel="nofollow" img="https://ykc.im/icon.png" link="https://ykc.im/">
-                    York Chou
-                </ZBadge> <ZBadge rel="nofollow" img="https://www.xxfer.cn/icon.png" link="https://www.xxfer.cn/">
-                    小李同学
-                </ZBadge> <ZBadge rel="nofollow" img="https://q1.qlogo.cn/g?b=qq&nk=1043865083&s=2" link="https://www.xlenco.top/">
-                    Xlenco
-                </ZBadge> <ZBadge rel="nofollow" img="https://www.mugzx.top/icon.png" link="https://www.mugzx.top/">
-                    Mugzx
-                </ZBadge>
+                <ZBadge
+                    img="https://image.m-c.top/?/images/2024/07/21/iyt3mhQCDe/b_a3f6e95501bcc4ce64c19c63a1211bcd.png"
+                    link="https://oio.mckfs.com/"
+                    text="Oiolosse MC服"
+                />
+                <ZBadge
+                    img="https://bu.dusays.com/2024/07/13/66929d307adb9.png"
+                    link="https://henrywhu.cn/"
+                    text="Henry Moreau"
+                />
+                <ZBadge
+                    img="https://api-space.tnxg.top/avatar?s=qq"
+                    link="https://tnxg.top/"
+                    text="天翔TNXG"
+                />
+                <ZBadge
+                    img="https://ykc.im/icon.png"
+                    link="https://ykc.im/"
+                    text="York Chou"
+                />
+                <ZBadge
+                    img="https://www.xxfer.cn/icon.png"
+                    link="https://www.xxfer.cn/"
+                    text="小李同学"
+                />
+                <ZBadge
+                    img="https://q1.qlogo.cn/g?b=qq&nk=1043865083&s=2"
+                    link="https://www.xlenco.top/"
+                    text="Xlenco"
+                />
+                <ZBadge
+                    img="https://www.mugzx.top/icon.png"
+                    link="https://www.mugzx.top/"
+                    text="Mugzx"
+                />
             </p>
         </ZField>
     </div>
