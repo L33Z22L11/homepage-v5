@@ -14,7 +14,7 @@ defineProps<CardProps>()
 <template>
     <li class="z-card">
         <div class="z-card-title">
-            <h3 v-html="name" />
+            <h3>{{ name }}</h3>
             <span v-if="nameAlt" class="z-card-name-alt">{{ nameAlt }}</span>
             <div v-if="badges" class="badges">
                 <ZBadge v-for="(badge, badgeIndex) in badges" :key="badgeIndex">
@@ -26,7 +26,9 @@ defineProps<CardProps>()
         <div class="z-card-buttons">
             <ZButton v-for="(button, buttonIndex) in buttons" v-bind="button" :key="buttonIndex" />
         </div>
-        <p class="z-card-desc" v-html="desc" />
+        <p class="z-card-desc">
+            {{ desc }}
+        </p>
     </li>
 </template>
 

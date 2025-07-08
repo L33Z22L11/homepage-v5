@@ -3,6 +3,7 @@ import { ZhiluIcon, ZhiluIconOld } from '#components'
 
 useHead({ title: '日志' })
 definePageMeta({ headerText: '互联网上的活动记录' })
+
 const timeline = {
     '2024-08-11': '博客：使用 Nuxt Content 重构',
     '2024-06-01': '个人网站：使用 Nuxt.js 重构',
@@ -27,7 +28,9 @@ const timeline = {
             <div class="timeline-item-date">
                 {{ date }}
             </div>
-            <p v-if="typeof content === 'string'" class="timeline-item-content" v-html="content" />
+            <p v-if="typeof content === 'string'" class="timeline-item-content">
+                {{ content }}
+            </p>
             <p v-else class="timeline-item-content">
                 <component :is="content" />
             </p>

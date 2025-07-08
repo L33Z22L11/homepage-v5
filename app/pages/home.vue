@@ -10,7 +10,10 @@ const appConfig = useAppConfig()
 <template>
     <ZhiluAvatar class="avatar" />
     <div class="wrapper">
-        <ZField label="<span style='font-size: 3rem;'>👋</span>">
+        <ZField>
+            <template #label>
+                <span style="font-size: 3rem;">👋</span>
+            </template>
             <h1 style="font-size: 3rem;">
                 你好，<br>我是<mark>{{ appConfig.author.name }}</mark>
             </h1>
@@ -42,7 +45,7 @@ const appConfig = useAppConfig()
                     西邮Wiki
                 </ZLink>，8 月使用 Nuxt Content 重构了<ZLink to="https://blog.zhilu.cyou/">
                     个人博客
-                </ZLink>，2025 年 3 月重构了西邮 Linux 兴趣小组博客后端，近期正在寻找前端实习。
+                </ZLink>，2025 年 3 月重构了西邮 Linux 兴趣小组博客后端，近期正在寻找前端秋招。
             </p>
         </ZField>
 
@@ -97,6 +100,16 @@ const appConfig = useAppConfig()
                     img="https://www.mugzx.top/icon.png"
                     link="https://www.mugzx.top/"
                     text="Mugzx"
+                />
+                <ZBadge
+                    img="https://cn.cravatar.com/avatar/1F6C8947D35A8186A1647009BA8BC5F2?size=256"
+                    link="https://www.kemiao.online/"
+                    text="克喵爱吃卤面"
+                />
+                <ZBadge
+                    img="https://cd.ahhf45.top/img/IMG_0555.jpeg"
+                    link="https://ahhf45.top/"
+                    text="GreenRoc"
                 />
             </p>
         </ZField>

@@ -4,7 +4,11 @@ defineProps<{ label?: string }>()
 
 <template>
     <section class="z-field">
-        <h2 class="z-field-label" v-html="label" />
+        <h2 class="z-field-label">
+            <slot name="label">
+                {{ label }}
+            </slot>
+        </h2>
         <div>
             <slot />
         </div>

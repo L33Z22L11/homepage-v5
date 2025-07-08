@@ -5,13 +5,21 @@ import emblaCarouselVue from 'embla-carousel-vue'
 import { WheelGesturesPlugin } from 'embla-carousel-wheel-gestures'
 
 defineProps<{ dataList: CardProps[] }>()
-const [emblaRef] = emblaCarouselVue({
+const [emblaRef, emblaApi] = emblaCarouselVue({
     skipSnaps: true,
     loop: true,
 }, [
     Autoplay({ stopOnInteraction: false, stopOnMouseEnter: true }),
     WheelGesturesPlugin(),
 ])
+
+// 鼠标横向滚动 / Shift + 纵向滚轮事件
+useEventListener(emblaRef, 'wheel', (e) => {
+    const delta = e.deltaX + (e.shiftKey ? e.deltaY : 0)
+    if (Math.abs(delta) < 80)
+        return
+    delta > 0 ? emblaApi.value?.scrollNext() : emblaApi.value?.scrollPrev()
+})
 </script>
 
 <template>

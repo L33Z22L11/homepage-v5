@@ -1,9 +1,9 @@
 {
   "name": "zhilu-site",
   "type": "module",
-  "version": "4.3.0",
+  "version": "4.4.0",
   "private": true,
-  "packageManager": "pnpm@10.6.5",
+  "packageManager": "pnpm@10.12.4",
   "scripts": {
     "postinstall": "nuxt prepare",
     "dev": "nuxt dev --no-qr",
@@ -14,37 +14,29 @@
     "lint:fix": "eslint --fix ."
   },
   "dependencies": {
-    "date-fns": "^4.1.0",
-    "embla-carousel-autoplay": "^8.5.2",
-    "embla-carousel-vue": "^8.5.2",
-    "embla-carousel-wheel-gestures": "^8.0.1",
-    "fast-xml-parser": "^5.0.9",
-    "vue-tippy": "^6.7.0"
+    "date-fns": "catalog:",
+    "embla-carousel-autoplay": "catalog:",
+    "embla-carousel-vue": "catalog:",
+    "embla-carousel-wheel-gestures": "catalog:",
+    "fast-xml-parser": "catalog:",
+    "vue-tippy": "catalog:"
   },
   "devDependencies": {
-    "@antfu/eslint-config": "^4.10.1",
-    "@nuxt/icon": "^1.11.0",
-    "@nuxt/image": "^1.10.0",
-    "@nuxtjs/color-mode": "^3.5.2",
-    "@nuxtjs/seo": "^3.0.1",
-    "@pinia/nuxt": "^0.10.1",
-    "@vueuse/core": "^13.0.0",
-    "@vueuse/nuxt": "^13.0.0",
-    "@zinkawaii/stylelint-config": "^0.3.0",
-    "eslint": "^9.22.0",
-    "nuxt": "^3.16.1",
-    "sass": "^1.86.0",
-    "stylelint": "^16.16.0",
-    "typescript": "^5.8.2",
-    "vue": "^3.5.13",
-    "vue-router": "^4.5.0"
-  },
-  "pnpm": {
-    "onlyBuiltDependencies": [
-      "@parcel/watcher",
-      "esbuild",
-      "sharp",
-      "vue-demi"
-    ]
+    "@antfu/eslint-config": "catalog:",
+    "@nuxt/icon": "catalog:",
+    "@nuxt/image": "catalog:",
+    "@nuxtjs/color-mode": "catalog:",
+    "@nuxtjs/seo": "catalog:",
+    "@pinia/nuxt": "catalog:",
+    "@vueuse/core": "catalog:",
+    "@vueuse/nuxt": "catalog:",
+    "@zinkawaii/stylelint-config": "catalog:",
+    "eslint": "catalog:",
+    "nuxt": "catalog:",
+    "sass": "catalog:",
+    "stylelint": "catalog:",
+    "typescript": "catalog:",
+    "vue": "catalog:",
+    "vue-router": "catalog:"
   }
 }

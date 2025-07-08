@@ -46,7 +46,7 @@ defineProps<ButtonProps>()
     }
 
     &:active {
-        background-color: var(--ld-shadow);
+        filter: contrast(0.8);
     }
 
     &:disabled {
