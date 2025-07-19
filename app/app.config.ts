@@ -1,4 +1,5 @@
 import type { Nav } from '~/types/nav'
+import { h } from 'vue'
 import homepageConfig from '~~/homepage.config'
 
 // 图标查询：https://yesicon.app/ph
@@ -8,8 +9,8 @@ export default defineAppConfig({
     ...homepageConfig,
 
     footer: {
-        copyright: `© ${new Date().getFullYear()} 纸鹿本鹿`,
-        message: 'aka Zhilu, L33Z22L11',
+        copyright: `© ${new Date().getFullYear()} 纸鹿本鹿 (L33Z22L11)`,
+        message: h('a', { href: 'https://beian.miit.gov.cn/', target: '_blank', rel: 'noopener nofollow' }, '陕ICP备2025072742号-1'),
     },
 
     nav: [

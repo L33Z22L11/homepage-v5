@@ -53,7 +53,7 @@ const tip = computed(() => {
     display: inline-flex;
     align-items: baseline;
     height: 1.6em;
-    margin: 0.1em 0.2em;
+    margin: 0.1em;
     border: 1px solid var(--c-border);
     border-radius: 4px;
     background-color: var(--c-bg-2);

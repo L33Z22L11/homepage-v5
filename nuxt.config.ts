@@ -6,7 +6,8 @@ export default defineNuxtConfig({
         rootId: 'z-root',
         head: {
             htmlAttrs: {
-                lang: homepageConfig.language,
+                'lang': homepageConfig.language,
+                'data-lang': homepageConfig.language,
             },
             link: [
                 { rel: 'icon', href: homepageConfig.favicon },
@@ -56,7 +57,6 @@ export default defineNuxtConfig({
             preprocessorOptions: {
                 scss: {
                     additionalData: '@use "@/assets/_variable.scss" as *;',
-                    api: 'modern-compiler',
                 },
             },
         },
@@ -65,6 +65,7 @@ export default defineNuxtConfig({
         },
     },
 
+    // @keep-sorted
     modules: [
         '@nuxt/icon',
         '@nuxt/image',

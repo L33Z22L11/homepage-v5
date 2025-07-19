@@ -1,4 +1,5 @@
 <script setup lang="ts">
+import type { VNode } from 'vue'
 import type { ButtonProps } from './Button.vue'
 
 export interface CardProps {
@@ -6,7 +7,7 @@ export interface CardProps {
     badges?: Array<string>
     nameAlt?: string
     buttons: Array<ButtonProps>
-    desc: string
+    desc: string | VNode | (() => VNode)
 }
 defineProps<CardProps>()
 </script>
@@ -27,7 +28,7 @@ defineProps<CardProps>()
             <ZButton v-for="(button, buttonIndex) in buttons" v-bind="button" :key="buttonIndex" />
         </div>
         <p class="z-card-desc">
-            {{ desc }}
+            <ZRender :content="desc" />
         </p>
     </li>
 </template>
@@ -48,6 +49,7 @@ defineProps<CardProps>()
     gap: 2px;
     height: 4em;
     text-align: center;
+    text-wrap: balance;
 
     h3 {
         font-size: 1.4em;

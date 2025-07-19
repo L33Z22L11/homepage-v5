@@ -13,6 +13,10 @@ export default antfu({
         }],
         'vue/enforce-style-attribute': ['warn', { allow: ['scoped'] }],
         'yaml/indent': ['error', 2],
+        'vue/singleline-html-element-content-newline': ['error', {
+            // @keep-sorted
+            externalIgnores: ['ZLink', 'ZRawLink'],
+        }],
     },
 }, {
     files: ['*.json'],
