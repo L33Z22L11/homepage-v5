@@ -33,7 +33,7 @@
     "@zinkawaii/stylelint-config": "catalog:",
     "eslint": "catalog:",
     "nuxt": "catalog:",
-    "sass": "catalog:",
+    "sass-embedded": "catalog:",
     "stylelint": "catalog:",
     "typescript": "catalog:",
     "vue": "catalog:",

@@ -5,6 +5,9 @@ useHead({ title: '日志' })
 definePageMeta({ headerText: '互联网上的活动记录' })
 
 const timeline = {
+    '2025-07-26': h('span', ['博客：迁移 Nuxt Content 3，并更换域名 ', h('code', 'zhilu.site')]),
+    '2025-05-04': '工作：第一份前端实习',
+    '2025-03-11': '简历：使用 Nuxt.js 开发',
     '2024-08-11': '博客：使用 Nuxt Content 重构',
     '2024-06-01': '个人网站：使用 Nuxt.js 重构',
     '2024-02-17': '个人网站：使用 VitePress 重写',

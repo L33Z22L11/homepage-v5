@@ -5,6 +5,7 @@ export default antfu({
         indent: 4,
     },
     pnpm: true,
+    // @keep-sorted
     rules: {
         'jsonc/indent': ['error', 2],
         'vue/block-lang': ['warn', {
@@ -12,11 +13,11 @@ export default antfu({
             style: { lang: ['scss'] },
         }],
         'vue/enforce-style-attribute': ['warn', { allow: ['scoped'] }],
-        'yaml/indent': ['error', 2],
         'vue/singleline-html-element-content-newline': ['error', {
             // @keep-sorted
             externalIgnores: ['ZLink', 'ZRawLink'],
         }],
+        'yaml/indent': ['error', 2],
     },
 }, {
     files: ['*.json'],

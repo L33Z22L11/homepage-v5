@@ -64,51 +64,7 @@ const appConfig = useAppConfig()
             </p>
             <p>
                 欢迎使用、参考样式：<br>
-                <ZBadge
-                    img="https://image.m-c.top/?/images/2024/07/21/iyt3mhQCDe/b_a3f6e95501bcc4ce64c19c63a1211bcd.png"
-                    link="https://oio.mckfs.com/"
-                    text="Oiolosse MC服"
-                />
-                <ZBadge
-                    img="https://bu.dusays.com/2024/07/13/66929d307adb9.png"
-                    link="https://henrywhu.cn/"
-                    text="Henry Moreau"
-                />
-                <ZBadge
-                    img="https://api-space.tnxg.top/avatar?s=qq"
-                    link="https://tnxg.top/"
-                    text="天翔TNXG"
-                />
-                <ZBadge
-                    img="https://ykc.im/icon.png"
-                    link="https://ykc.im/"
-                    text="York Chou"
-                />
-                <ZBadge
-                    img="https://www.xxfer.cn/icon.png"
-                    link="https://www.xxfer.cn/"
-                    text="小李同学"
-                />
-                <ZBadge
-                    img="https://q1.qlogo.cn/g?b=qq&nk=1043865083&s=2"
-                    link="https://www.xlenco.top/"
-                    text="Xlenco"
-                />
-                <ZBadge
-                    img="https://www.mugzx.top/icon.png"
-                    link="https://www.mugzx.top/"
-                    text="Mugzx"
-                />
-                <ZBadge
-                    img="https://cn.cravatar.com/avatar/1F6C8947D35A8186A1647009BA8BC5F2?size=256"
-                    link="https://www.kemiao.online/"
-                    text="克喵爱吃卤面"
-                />
-                <ZBadge
-                    img="https://cd.ahhf45.top/img/IMG_0555.jpeg"
-                    link="https://ahhf45.top/"
-                    text="GreenRoc"
-                />
+                <ZBadge v-for="item in appConfig.fork" :key="item.link" v-bind="item" />
             </p>
         </ZField>
     </div>

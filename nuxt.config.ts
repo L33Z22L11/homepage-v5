@@ -3,7 +3,6 @@ import homepageConfig, { routeRules } from './homepage.config'
 
 export default defineNuxtConfig({
     app: {
-        rootId: 'z-root',
         head: {
             htmlAttrs: {
                 'lang': homepageConfig.language,
@@ -20,6 +19,9 @@ export default defineNuxtConfig({
                 separator: '|',
             },
             titleTemplate: `%s %separator ${homepageConfig.title}`,
+        },
+        rootAttrs: {
+            id: 'z-root',
         },
     },
 
