@@ -1,6 +1,6 @@
 declare module 'vue-router' {
-    interface RouteMeta {
-        headerText?: string
-    }
+	interface RouteMeta {
+		headerText?: string
+	}
 }
 export {}

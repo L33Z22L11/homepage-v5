@@ -1,23 +1,23 @@
 catalog:
-  '@antfu/eslint-config': ^5.0.0
+  '@antfu/eslint-config': ^5.2.0
   '@nuxt/icon': ^1.15.0
-  '@nuxt/image': ^1.10.0
+  '@nuxt/image': ^1.11.0
   '@nuxtjs/color-mode': ^3.5.2
   '@nuxtjs/seo': ^3.1.0
   '@pinia/nuxt': ^0.11.2
-  '@vueuse/core': ^13.5.0
-  '@vueuse/nuxt': ^13.5.0
+  '@vueuse/core': ^13.6.0
+  '@vueuse/nuxt': ^13.6.0
   '@zinkawaii/stylelint-config': ^0.3.3
   date-fns: ^4.1.0
   embla-carousel-autoplay: ^8.6.0
   embla-carousel-vue: ^8.6.0
   embla-carousel-wheel-gestures: ^8.0.2
-  eslint: ^9.32.0
+  eslint: ^9.33.0
   fast-xml-parser: ^5.2.5
-  nuxt: ^4.0.1
-  sass-embedded: ^1.89.2
-  stylelint: ^16.22.0
-  typescript: ^5.8.3
+  nuxt: ^4.0.3
+  sass-embedded: ^1.90.0
+  stylelint: ^16.23.1
+  typescript: ^5.9.2
   vue: ^3.5.18
   vue-router: ^4.5.1
   vue-tippy: ^6.7.1

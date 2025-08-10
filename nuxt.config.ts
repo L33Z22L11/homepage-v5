@@ -2,100 +2,97 @@ import process from 'node:process'
 import homepageConfig, { routeRules } from './homepage.config'
 
 export default defineNuxtConfig({
-    app: {
-        head: {
-            htmlAttrs: {
-                'lang': homepageConfig.language,
-                'data-lang': homepageConfig.language,
-            },
-            link: [
-                { rel: 'icon', href: homepageConfig.favicon },
-            ],
-            meta: [
-                { name: 'author', content: `${homepageConfig.author.name} <${homepageConfig.author.email}>` },
-                { 'name': 'generator', 'data-github-repo': 'https://github.com/L33Z22L11/homepage-v5' },
-            ],
-            templateParams: {
-                separator: '|',
-            },
-            titleTemplate: `%s %separator ${homepageConfig.title}`,
-        },
-        rootAttrs: {
-            id: 'z-root',
-        },
-    },
+	app: {
+		head: {
+			link: [
+				{ rel: 'icon', href: homepageConfig.favicon },
+			],
+			meta: [
+				{ name: 'author', content: `${homepageConfig.author.name} <${homepageConfig.author.email}>` },
+				{ 'name': 'generator', 'data-github-repo': 'https://github.com/L33Z22L11/homepage-v5' },
+			],
+			templateParams: {
+				separator: '|',
+			},
+			titleTemplate: `%s %separator ${homepageConfig.title}`,
+		},
+		rootAttrs: {
+			id: 'z-root',
+		},
+	},
 
-    compatibilityDate: '2024-08-03',
+	compatibilityDate: '2024-08-03',
 
-    components: [
-        { path: '~/components/partial', prefix: 'Z' },
-        '~/components',
-    ],
+	components: [
+		{ path: '~/components/partial', prefix: 'Z' },
+		'~/components',
+	],
 
-    css: [
-        '@/assets/color.scss',
-        '@/assets/main.scss',
-    ],
+	css: [
+		'@/assets/color.scss',
+		'@/assets/main.scss',
+	],
 
-    // BUG: 3.14+ Windows 平台内存泄漏
-    devtools: { enabled: false },
+	// BUG: 3.14+ Windows 平台内存泄漏
+	devtools: { enabled: false },
 
-    experimental: {
-        viewTransition: true,
-    },
+	experimental: {
+		viewTransition: true,
+	},
 
-    features: {
-        inlineStyles: false,
-    },
+	features: {
+		inlineStyles: false,
+	},
 
-    future: {
-        compatibilityVersion: 4,
-    },
+	future: {
+		compatibilityVersion: 4,
+	},
 
-    routeRules,
+	routeRules,
 
-    vite: {
-        css: {
-            preprocessorOptions: {
-                scss: {
-                    additionalData: '@use "@/assets/_variable.scss" as *;',
-                },
-            },
-        },
-        server: {
-            allowedHosts: true,
-        },
-    },
+	vite: {
+		css: {
+			preprocessorOptions: {
+				scss: {
+					additionalData: '@use "@/assets/_variable.scss" as *;',
+				},
+			},
+		},
+		server: {
+			allowedHosts: true,
+		},
+	},
 
-    // @keep-sorted
-    modules: [
-        '@nuxt/icon',
-        '@nuxt/image',
-        '@nuxtjs/color-mode',
-        '@nuxtjs/seo',
-        '@pinia/nuxt',
-        '@vueuse/nuxt',
-    ],
+	// @keep-sorted
+	modules: [
+		'@nuxt/icon',
+		'@nuxt/image',
+		'@nuxtjs/color-mode',
+		'@nuxtjs/seo',
+		'@pinia/nuxt',
+		'@vueuse/nuxt',
+	],
 
-    colorMode: {
-        preference: 'system',
-        fallback: 'light',
-        classSuffix: '',
-    },
+	colorMode: {
+		preference: 'system',
+		fallback: 'light',
+		classSuffix: '',
+	},
 
-    image: {
-        // Netlify 需要特殊处理
-        provider: process.env.NUXT_IMAGE_PROVIDER,
-        domains: [],
-        format: ['avif', 'webp'],
-    },
+	image: {
+		// Netlify 需要特殊处理
+		provider: process.env.NUXT_IMAGE_PROVIDER,
+		domains: [],
+		format: ['avif', 'webp'],
+	},
 
-    ogImage: {
-        enabled: false,
-    },
+	ogImage: {
+		enabled: false,
+	},
 
-    site: {
-        name: homepageConfig.title,
-        url: homepageConfig.url,
-    },
+	site: {
+		name: homepageConfig.title,
+		url: homepageConfig.url,
+		defaultLocale: homepageConfig.language,
+	},
 })
