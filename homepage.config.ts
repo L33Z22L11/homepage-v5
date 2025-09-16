@@ -6,7 +6,7 @@ const author = {
 	name: '纸鹿本鹿',
 	avatar: 'https://wsrv.nl/?url=github.com/L33Z22L11.png',
 	email: 'hi@zhilu.cyou',
-	homepage: 'https://www.zhilu.cyou/',
+	homepage: 'https://www.zhilu.site/',
 }
 
 const homepageConfig = {
@@ -17,8 +17,8 @@ const homepageConfig = {
 	language: 'zh-CN',
 	timezone: 'Asia/Shanghai',
 	favicon: '/icon.png',
-	url: 'https://www.zhilu.cyou/',
-	blogAtom: 'https://blog.zhilu.cyou/atom.xml',
+	url: 'https://www.zhilu.site/',
+	blogAtom: 'https://blog.zhilu.site/atom.xml',
 }
 
 // https://nitro.build/config#routerules

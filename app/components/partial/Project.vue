@@ -57,17 +57,17 @@ onMounted(async () => {
 
 	<div class="project-stats">
 		<div>
-			<Icon name="ph:star-duotone" />
+			<Icon name="ri:star-line" />
 			{{ repo.stars }}
 		</div>
 
 		<div>
-			<Icon name="ph:git-fork-duotone" />
+			<Icon name="ri:git-fork-line" />
 			{{ repo.forks }}
 		</div>
 
 		<div>
-			<Icon name="ph:calendar-check-duotone" />
+			<Icon name="ri:calendar-line" />
 			{{ lastUpdate }}
 		</div>
 	</div>

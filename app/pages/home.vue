@@ -22,13 +22,13 @@ const appConfig = useAppConfig()
 		</p>
 		<div>
 			<ZButton
-				icon="ph:files-duotone"
-				to="https://blog.zhilu.cyou/"
+				icon="ri:file-list-3-line"
+				to="https://blog.zhilu.site/"
 				text="博客"
 				primary
 			/>
 			<ZButton
-				icon="ph:github-logo-duotone"
+				icon="ri:github-line"
 				to="https://github.com/L33Z22L11"
 				text="GitHub"
 			/>
@@ -44,7 +44,7 @@ const appConfig = useAppConfig()
 		<p>
 			2024 年 7 月完善
 			<ZLink to="https://wiki.cooo.site/">西邮Wiki</ZLink>，8 月使用 Nuxt Content 重构了
-			<ZLink to="https://blog.zhilu.cyou/">个人博客</ZLink>，2025 年 3 月重构了西邮 Linux 兴趣小组博客后端，近期正在寻找前端秋招。
+			<ZLink to="https://blog.zhilu.site/">个人博客</ZLink>，2025 年 3 月重构了西邮 Linux 兴趣小组博客后端，近期正在寻找前端秋招。
 		</p>
 	</ZField>
 	<ZField label="关于主页">
@@ -59,7 +59,7 @@ const appConfig = useAppConfig()
 			</ZBadge>等众多朋友为个人主页提供帮助。
 			<br>
 			主页开源在
-			<ZLink to="https://github.com/L33Z22L11/homepage-v5" icon="ph:github-logo-duotone">L33Z22L11/homepage-v5</ZLink>
+			<ZLink to="https://github.com/L33Z22L11/homepage-v5" icon="ri:github-line">L33Z22L11/homepage-v5</ZLink>
 			上。
 		</p>
 		<p>

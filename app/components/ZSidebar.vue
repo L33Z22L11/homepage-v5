@@ -8,7 +8,7 @@ const sidebarStore = useSidebarStore()
 	<header class="aside-header">
 		<ZhiluIcon />
 		<span>{{ appConfig.author.name }}</span>
-		<Icon name="ph:x" class="close-sidebar" @click="sidebarStore.toggle()" />
+		<Icon name="ri:close-line" class="close-sidebar" @click="sidebarStore.toggle()" />
 	</header>
 	<nav class="aside-nav scrollcheck-y">
 		<template v-for="(group, groupIndex) in appConfig.nav" :key="groupIndex">
@@ -17,10 +17,10 @@ const sidebarStore = useSidebarStore()
 			</h2>
 			<menu>
 				<li v-for="(item, itemIndex) in group.items" :key="itemIndex">
-					<ZRawLink :to="item.url" class="aside-nav-item">
+					<ZRawLink v-slot="{ external }" :to="item.url" class="aside-nav-item">
 						<Icon :name="item.icon" />
 						<span class="nav-text">{{ item.text }}</span>
-						<Icon v-if="item.external" class="external-tip" name="ph:arrow-up-right" />
+						<Icon v-if="external" class="external-tip" name="ri:arrow-right-up-line" />
 					</ZRawLink>
 				</li>
 			</menu>
@@ -28,11 +28,7 @@ const sidebarStore = useSidebarStore()
 	</nav>
 	<footer class="aside-footer">
 		<ZThemeToggle />
-		<p>
-			<ZRender :content="appConfig.footer.copyright" />
-			<br>
-			<ZRender :content="appConfig.footer.message" />
-		</p>
+		<ZRender v-for="(item, index) in appConfig.footer" :key="index" :content="item" />
 	</footer>
 </aside>
 <Transition>
@@ -60,12 +56,12 @@ const sidebarStore = useSidebarStore()
 		width: 320px;
 		height: 100%;
 		max-width: 100%;
-		box-shadow: 0 0 1rem var(--ld-shadow);
 		transform: translateX(-100%);
 		transition: transform 0.2s;
 		z-index: 3;
 
 		&.show {
+			box-shadow: 0 0 1rem var(--ld-shadow);
 			transform: none;
 
 			.close-sidebar {
@@ -94,6 +90,7 @@ const sidebarStore = useSidebarStore()
 
 .aside-header {
 	display: grid;
+	flex-shrink: 0;
 	grid-template-columns: 1.5rem 1fr auto;
 	align-items: center;
 	gap: 0.5rem;
@@ -155,13 +152,15 @@ const sidebarStore = useSidebarStore()
 }
 
 .aside-footer {
-	--gap: clamp(0.5rem, 3vh, 1rem);
-
 	display: grid;
-	gap: var(--gap);
-	padding: var(--gap);
+	gap: 0.2rem;
+	padding: 1rem;
 	font-size: 0.8em;
 	text-align: center;
 	color: var(--c-text-2);
+
+	> .theme-toggle {
+		margin-bottom: 0.8rem;
+	}
 }
 </style>

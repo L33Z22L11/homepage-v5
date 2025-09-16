@@ -27,6 +27,7 @@ defineProps<CardProps>()
 	<div class="z-card-buttons">
 		<ZButton v-for="(button, buttonIndex) in buttons" v-bind="button" :key="buttonIndex" />
 	</div>
+	<!-- FIXME: 水合不匹配 -->
 	<p class="z-card-desc">
 		<ZRender :content="desc" />
 	</p>

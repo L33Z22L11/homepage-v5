@@ -19,7 +19,7 @@ useEventListener(emblaRef, 'wheel', (e) => {
 	if (Math.abs(delta) < 80)
 		return
 	delta > 0 ? emblaApi.value?.scrollNext() : emblaApi.value?.scrollPrev()
-})
+}, { passive: true })
 </script>
 
 <template>

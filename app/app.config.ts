@@ -8,10 +8,10 @@ import homepageConfig from '~~/homepage.config'
 export default defineAppConfig({
 	...homepageConfig,
 
-	footer: {
-		copyright: `© ${new Date().getFullYear()} 纸鹿本鹿 (L33Z22L11)`,
-		message: h('a', { href: 'https://beian.miit.gov.cn/', target: '_blank', rel: 'noopener nofollow' }, '陕ICP备2025072742号-1'),
-	},
+	footer: [
+		`© ${new Date().getFullYear()} 纸鹿本鹿 (L33Z22L11)`,
+		h('a', { href: 'https://beian.miit.gov.cn/', target: '_blank', rel: 'noopener nofollow' }, '陕ICP备2025072742号-1'),
+	],
 
 	// 用于在主页展示下游引用
 	fork: [
@@ -19,11 +19,6 @@ export default defineAppConfig({
 			img: 'https://image.m-c.top/?/images/2024/07/21/iyt3mhQCDe/b_a3f6e95501bcc4ce64c19c63a1211bcd.png',
 			link: 'https://oio.mckfs.com/',
 			text: 'Oiolosse MC服',
-		},
-		{
-			img: 'https://bu.dusays.com/2024/07/13/66929d307adb9.png',
-			link: 'https://henrywhu.cn/',
-			text: 'Henry Moreau',
 		},
 		{
 			img: 'https://api-space.tnxg.top/avatar?s=qq',
@@ -60,41 +55,45 @@ export default defineAppConfig({
 			link: 'https://gr114.com/',
 			text: 'GreenRoc',
 		},
+		{
+			img: 'https://wsrv.nl/?url=github.com/scfcn.png%3fsize=92',
+			link: 'https://www.qxzhan.cn/',
+			text: '筱序二十',
+		},
 	],
 
 	nav: [
 		{
 			title: '',
 			items: [
-				{ icon: 'ph:house-duotone', text: '主页', url: '/' },
-				{ icon: 'ph:pen-nib-duotone', text: '文章', url: '/article' },
-				// { icon: "ph:pen-nib-duotone", text: "文章", url: "https://blog.zhilu.cyou", external: true },
-				{ icon: 'ph:code-duotone', text: '项目', url: '/project' },
-				{ icon: 'ph:globe-duotone', text: '站点', url: '/site' },
-				{ icon: 'ph:files-duotone', text: '日志', url: '/log' },
+				{ icon: 'ri:id-card-line', text: '简介', url: '/' },
+				{ icon: 'ri:quill-pen-line', text: '文章', url: '/article' },
+				{ icon: 'ri:code-line', text: '项目', url: '/project' },
+				{ icon: 'ri:planet-line', text: '站点', url: '/site' },
+				{ icon: 'ri:history-line', text: '日志', url: '/log' },
 			],
 		},
 		{
 			title: '社交',
 			items: [
-				{ icon: 'basil:qq-outline', text: '群: 169994096', url: 'https://jq.qq.com/?_wv=1027&k=lQfNSeEd', external: true },
-				{ icon: 'ph:github-logo-duotone', text: 'Github', url: 'https://github.com/L33Z22L11', external: true },
-				{ icon: 'ph:telegram-logo-duotone', text: 'Telegram', url: 'https://t.me/L33Z22L11', external: true },
+				{ icon: 'ri:qq-line', text: '群: 169994096', url: 'https://jq.qq.com/?_wv=1027&k=lQfNSeEd' },
+				{ icon: 'ri:mail-line', text: 'hi@zhilu.cyou', url: 'mailto:hi@zhilu.cyou' },
+				{ icon: 'ri:github-line', text: 'Github', url: 'https://github.com/L33Z22L11' },
 			],
 		},
 	] satisfies Nav,
 
 	themes: {
 		light: {
-			icon: 'ph:sun-duotone',
+			icon: 'ri:sun-line',
 			tip: '浅色模式',
 		},
 		system: {
-			icon: 'ph:monitor-duotone',
+			icon: 'ri:tv-2-line',
 			tip: '跟随系统',
 		},
 		dark: {
-			icon: 'ph:moon-duotone',
+			icon: 'ri:moon-line',
 			tip: '深色模式',
 		},
 	},
