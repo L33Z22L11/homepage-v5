@@ -1,7 +1,4 @@
 <script setup lang="ts">
-import { formatDistanceToNow } from 'date-fns'
-import { zhCN } from 'date-fns/locale'
-
 const props = defineProps<{
 	title: string
 	github?: string
@@ -36,9 +33,6 @@ const repo = ref<Repo>({
 	defaultBranch: '',
 })
 
-const lastUpdate = computed(() => repo.value.updatedAt
-	? formatDistanceToNow(repo.value.updatedAt, { addSuffix: true, locale: zhCN })
-	: '')
 const author = computed(() => props.github?.split('/')[0] || '')
 const authorAvatar = computed(() => getGhAvatar(author.value, { size: null }))
 
@@ -56,25 +50,23 @@ onMounted(async () => {
 	</div>
 
 	<div class="project-stats">
-		<div>
+		<span>
 			<Icon name="ri:star-line" />
 			{{ repo.stars }}
-		</div>
+		</span>
 
-		<div>
+		<span>
 			<Icon name="ri:git-fork-line" />
 			{{ repo.forks }}
-		</div>
+		</span>
 
-		<div>
-			<Icon name="ri:calendar-line" />
-			{{ lastUpdate }}
-		</div>
+		<ZDate v-if="repo.updatedAt" class="project-date" icon="ri:calendar-line" :date="repo.updatedAt" />
 	</div>
 
 	<div v-if="description" class="project-description">
 		{{ description || repo.description }}
 	</div>
+
 	<NuxtImg class="project-author-avatar" :src="authorAvatar" :alt="author" />
 </ZRawLink>
 </template>

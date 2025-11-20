@@ -9,6 +9,11 @@ const projects = [
 		description: '个人博客网站，收获 100 star，被多人使用',
 	},
 	{
+		title: 'homepage-v5',
+		github: 'L33Z22L11/homepage-v5',
+		description: '个人首页，使用 Nuxt.js 构建',
+	},
+	{
 		title: 'hexo-theme-stellar',
 		github: 'xaoxuu/hexo-theme-stellar',
 		description: '简洁优雅的 Hexo 主题',
@@ -35,7 +40,7 @@ const projects = [
 <style lang="scss" scoped>
 section {
 	display: grid;
-	grid-gap: 1rem;
 	grid-template-columns: repeat(auto-fill, minmax(20em, 1fr));
+	gap: 1rem;
 }
 </style>

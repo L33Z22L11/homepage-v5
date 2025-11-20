@@ -6,8 +6,9 @@ import { WheelGesturesPlugin } from 'embla-carousel-wheel-gestures'
 
 defineProps<{ dataList: CardProps[] }>()
 const [emblaRef, emblaApi] = emblaCarouselVue({
-	skipSnaps: true,
+	containScroll: false,
 	loop: true,
+	skipSnaps: true,
 }, [
 	Autoplay({ stopOnInteraction: false, stopOnMouseEnter: true }),
 	WheelGesturesPlugin(),

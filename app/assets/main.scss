@@ -1,13 +1,17 @@
 :root {
-	--font-family: "Inter-Local", "Inter", "Noto Sans SC-Local", "Noto Sans SC", sans-serif;
-	--font-monospace: "JetBrains Mono-Local", "JetBrains Mono", "SFMono-Regular", "Cascadia Code", "Fira Code", "Menlo", "Monaco", "Consolas", "Noto Sans Mono", "monospace", sans-serif, monospace;
+	--font-family: "InterVariable", "Noto Sans SC", system-ui, sans-serif;
+	--font-monospace: ui-monospace, "JetBrains Mono", "Cascadia Code", "Consolas", "monospace", var(--font-family), monospace;
 
+	overflow-wrap: break-word;
 	background-color: var(--c-bg);
 	font-family: var(--font-family);
 	line-height: 1.4;
+	text-autospace: normal;
+	text-size-adjust: none;
 	color: var(--c-text-1);
 	transition: color 0.1s, background-color 0.2s;
 	scrollbar-color: var(--c-text-3) var(--c-bg-2);
+	font-variant-alternates: styleset(open-digits, disambiguation, round-quotes-and-commas);
 }
 
 * {
@@ -33,6 +37,7 @@ a {
 code, pre {
 	font-family: var(--font-monospace);
 	font-size: 0.9em;
+	text-autospace: no-autospace;
 }
 
 menu, ol, ul {
@@ -61,7 +66,7 @@ p {
 	line-height: 1.4;
 
 	& + p {
-		margin-top: 0.5em;
+		margin-top: 0.8em;
 	}
 }
 

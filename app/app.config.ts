@@ -10,7 +10,7 @@ export default defineAppConfig({
 
 	footer: [
 		`© ${new Date().getFullYear()} 纸鹿本鹿 (L33Z22L11)`,
-		h('a', { href: 'https://beian.miit.gov.cn/', target: '_blank', rel: 'noopener nofollow' }, '陕ICP备2025072742号-1'),
+		h('a', { href: 'https://beian.miit.gov.cn/', target: '_blank', rel: 'noopener nofollow' }, '陕ICP备2025082251号'),
 	],
 
 	// 用于在主页展示下游引用
@@ -30,11 +30,11 @@ export default defineAppConfig({
 			link: 'https://ykc.im/',
 			text: 'York Chou',
 		},
-		{
-			img: 'https://www.xxfer.cn/icon.png',
-			link: 'https://www.xxfer.cn/',
-			text: '小李同学',
-		},
+		// {
+		// 	img: 'https://www.xxfer.cn/icon.png',
+		// 	link: 'https://www.xxfer.cn/',
+		// 	text: '小李同学',
+		// },
 		{
 			img: 'https://q1.qlogo.cn/g?b=qq&nk=1043865083&s=2',
 			link: 'https://www.xlenco.top/',
@@ -59,6 +59,11 @@ export default defineAppConfig({
 			img: 'https://wsrv.nl/?url=github.com/scfcn.png%3fsize=92',
 			link: 'https://www.qxzhan.cn/',
 			text: '筱序二十',
+		},
+		{
+			img: 'https://file.furrys.im/img/logo.webp',
+			link: 'https://www.furrys.im/',
+			text: 'lpcay',
 		},
 	],
 

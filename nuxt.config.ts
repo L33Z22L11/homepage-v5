@@ -6,6 +6,8 @@ export default defineNuxtConfig({
 		head: {
 			link: [
 				{ rel: 'icon', href: homepageConfig.favicon },
+				// "InterVariable", "Inter", "InterDisplay"
+				{ rel: 'stylesheet', href: 'https://rsms.me/inter/inter.css', media: 'print', onload: 'this.media="all"' },
 			],
 			meta: [
 				{ name: 'author', content: `${homepageConfig.author.name} <${homepageConfig.author.email}>` },
@@ -33,10 +35,10 @@ export default defineNuxtConfig({
 		'@/assets/main.scss',
 	],
 
-	// BUG: 3.14+ Windows 平台内存泄漏
-	devtools: { enabled: false },
-
+	// @keep-sorted
 	experimental: {
+		extractAsyncDataHandlers: true,
+		typescriptPlugin: true,
 		viewTransition: true,
 	},
 
